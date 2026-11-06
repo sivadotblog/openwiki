@@ -43,6 +43,7 @@ def test_doc_key():
 
 PAGE = """<html><body><main>
 <h1>Detect issues with Insights</h1>
+<nav><h2 id="ms--in-this-article">In this article</h2></nav>
 <div class="IMPORTANT"><p>Important</p><p>This feature is in <a href="../../release-notes/release-types">Beta</a>.
 To use it, a workspace admin must turn on <strong>Lakebase Insights</strong> from the <strong>Previews</strong> page.</p></div>
 <h2 id="prereqs">Prerequisites</h2><p>text</p>
@@ -67,7 +68,10 @@ def test_banners(monkeypatch=None):
     b = fi.page_banner("oltp/projects/observability-ai-insights")
     assert (b.status, b.scope, b.preview_name, b.page_title) == ("beta", "page", "Lakebase Insights", "Detect issues with Insights")
     assert fi.page_banner("oltp/projects/snapshots#create-snapshot").status == "ga"
-    assert fi.page_banner("oltp/projects/snapshots#gone") is None
+    gone = fi.page_banner("oltp/projects/snapshots#gone")
+    assert (gone.status, gone.anchor_missing) == ("ga", True)
+    ins = fi.page_banner("oltp/projects/observability-ai-insights#missing")
+    assert (ins.status, ins.anchor_missing) == ("beta", True)
     assert fi.page_banner("x/thing#new").status == "public-preview"
     assert fi.page_banner("x/thing#old").status == "ga"
 

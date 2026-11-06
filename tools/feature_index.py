@@ -55,6 +55,8 @@ STATUS_WORDS = {
     "public preview": "public-preview",
 }
 
+RANK = {"private-preview": 0, "experimental": 1, "beta": 1, "public-preview": 2, "ga": 3}
+
 # Title rules. Order matters: the first match wins. Each rule is a fixed regex.
 TITLE_RULES = [
     (re.compile(r"\bgenerally available\b|\bis now ga\b|\(ga\)", re.I), "ga"),
@@ -129,7 +131,8 @@ class Doc(HTMLParser):
             self.in_main += 1
         if not self.in_main:
             return
-        if tag in ("h1", "h2", "h3", "h4"):
+        if tag in ("h1", "h2", "h3", "h4") and not (a.get("id") or "").startswith("ms--"):
+            # ms--* headings are Learn page chrome ("In this article"), not content.
             self._h = [int(tag[1]), a.get("id") or "", []]
         elif tag == "a" and a.get("href"):
             self._a = [a["href"], []]
@@ -214,8 +217,8 @@ def feed_entries(match: re.Pattern) -> list[Entry]:
     for item in root.iter("item"):
         title = (item.findtext("title") or "").strip()
         desc = item.findtext("description") or ""
-        if not (match.search(title) or match.search(desc)):
-            continue
+        if not match.search(title):
+            continue  # a passing mention in the description is not a product change
         link = (item.findtext("link") or "").strip()
         guid = (item.findtext("guid") or link).strip()
         pub = (item.findtext("pubDate") or "").strip()
@@ -241,6 +244,7 @@ class Banner:
     scope: str  # page | section
     preview_name: str | None
     page_title: str
+    anchor_missing: bool = False
 
 
 def page_banner(key: str) -> Banner | None:
@@ -274,7 +278,10 @@ def page_banner(key: str) -> Banner | None:
     if anchor:
         start = next((i for i, t in enumerate(tokens) if t[0] == "h" and t[2] == anchor), None)
         if start is None:
-            return None  # anchor no longer exists: unresolved
+            # Docs renamed the section. Anchors are hints, the page is the identity.
+            if page:
+                return Banner(page[0], "page", page[1], title, anchor_missing=True)
+            return Banner("ga", "page", None, title, anchor_missing=True)
         level = tokens[start][1]
         end = next((i for i in range(start + 1, len(tokens))
                     if tokens[i][0] == "h" and tokens[i][1] <= level), len(tokens))
@@ -332,13 +339,20 @@ def build(product: str) -> tuple[dict, list[dict]]:
         if b.preview_name:
             f["preview_toggle"] = b.preview_name
         f["latest_release_note_status"] = latest
+        if b.anchor_missing:
+            f["anchor_missing"] = True
+            review.append({"reason": "section anchor no longer on page; used page banner",
+                           "feature": k, "action": "info"})
         if latest != b.status:
+            ahead = RANK[b.status] > RANK[latest]
             review.append({
-                "reason": "release note status differs from docs banner",
+                "reason": ("docs ahead of release notes (promoted without a matching note in sources)"
+                           if ahead else "docs behind release notes"),
                 "feature": k, "docs": b.status, "release_note": latest,
                 "release_note_title": f["history"][-1]["title"],
+                "action": "info" if ahead else "needs-review",
             })
-    ordered = {k: {kk: f[kk] for kk in ("title", "status", "status_source", "preview_toggle",
+    ordered = {k: {kk: f[kk] for kk in ("title", "status", "status_source", "preview_toggle", "anchor_missing",
                                          "latest_release_note_status", "history") if kk in f}
                for k, f in sorted(features.items())}
     return ordered, review
@@ -363,7 +377,11 @@ def main() -> int:
     counts: dict[str, int] = {}
     for f in features.values():
         counts[f["status"]] = counts.get(f["status"], 0) + 1
-    print(json.dumps({"features": len(features), "by_status": counts, "review": len(review)}))
+    actions: dict[str, int] = {}
+    for r in review:
+        actions[r.get("action", "needs-review")] = actions.get(r.get("action", "needs-review"), 0) + 1
+    print(json.dumps({"features": len(features), "by_status": dict(sorted(counts.items())),
+                      "review": dict(sorted(actions.items()))}))
     return 0
 
 
