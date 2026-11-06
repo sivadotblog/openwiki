@@ -1,0 +1,54 @@
+name: Feature index
+
+# Builds index/<product>-features.yaml from public Azure Databricks docs.
+# Deterministic: no model, sorted output, no run timestamps.
+
+on:
+  push:
+    branches: [experiment/feature-index]
+    paths: ["tools/**", ".github/workflows/feature-index.yml"]
+  workflow_dispatch:
+  schedule:
+    - cron: "17 7 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Unit tests
+        run: python tools/test_feature_index.py
+
+      - name: Inspect live HTML shape (debug)
+        run: |
+          curl -sSL -A "feature-index/0.1" https://learn.microsoft.com/en-us/azure/databricks/oltp/projects/observability-ai-insights -o /tmp/p.html
+          grep -o '.\{300\}release-types.\{200\}' /tmp/p.html | head -3
+          curl -sSL -A "feature-index/0.1" https://learn.microsoft.com/en-us/azure/databricks/release-notes/lakebase/ -o /tmp/rn.html
+          grep -o '<h2[^>]*>[^<]*</h2>.\{0,200\}' /tmp/rn.html | head -3
+          curl -sSL -A "feature-index/0.1" https://learn.microsoft.com/en-us/azure/databricks/feed.xml -o /tmp/feed.xml
+          head -c 1500 /tmp/feed.xml; echo; grep -c "<item>" /tmp/feed.xml
+
+      - name: Build index (run 1)
+        run: python tools/feature_index.py --product lakebase --out index
+      - name: Build index (run 2) and check determinism
+        run: |
+          python tools/feature_index.py --product lakebase --out /tmp/index2
+          diff -r index /tmp/index2 && echo "DETERMINISTIC: identical output"
+
+      - name: Show results
+        run: cat index/lakebase-features.yaml | head -200; cat index/lakebase-review.yaml
+
+      - name: Commit index
+        run: |
+          git config user.name "feature-index-bot"
+          git config user.email "feature-index-bot@users.noreply.github.com"
+          git add index
+          git diff --cached --quiet || git commit -m "index: update lakebase feature status"
+          git push
