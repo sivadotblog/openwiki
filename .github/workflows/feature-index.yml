@@ -26,6 +26,19 @@ jobs:
       - name: Unit tests
         run: python tools/test_feature_index.py
 
+      - name: Debug oltp/instances banner
+        run: |
+          python - <<'EOF2'
+          import sys; sys.path.insert(0, "tools")
+          import feature_index as fi, urllib.request
+          url = fi.BASE + "oltp/instances"
+          r = urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": fi.UA}))
+          print("final url:", r.geturl())
+          h = r.read().decode()
+          i = h.find("release-types"); print("release-types at", i); print(h[max(0,i-700):i+200])
+          toks = fi.parse(h)
+          print([t for t in toks if t[0] in ("h","a")][:15])
+          EOF2
       - name: Build index (run 1)
         run: python tools/feature_index.py --product lakebase --out index
       - name: Build index (run 2) and check determinism
