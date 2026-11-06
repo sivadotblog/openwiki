@@ -1,44 +1,37 @@
 # Items the rules could not settle. A human resolves these.
 review:
-- reason: docs ahead of release notes (promoted without a matching note in sources)
+- reason: 'no preview banner and no GA release note: GA, retired, or a context link'
   feature: oltp/instances
-  docs: ga
   release_note: public-preview
   release_note_title: Lakebase, a managed PostgreSQL OLTP database, is in Public Preview
-  action: info
-- reason: docs behind release notes
-  feature: oltp/projects/api-usage
-  docs: beta
-  release_note: ga
-  release_note_title: Lakebase Postgres APIs are now generally available
   action: needs-review
-- reason: docs ahead of release notes (promoted without a matching note in sources)
+- reason: page says only some parts are in preview
+  feature: oltp/projects/api-usage
+  release_note: ga
+  action: needs-review
+- reason: 'no preview banner and no GA release note: GA, retired, or a context link'
   feature: oltp/projects/lakebase-genie
-  docs: ga
   release_note: beta
   release_note_title: Diagnose and fix Lakebase issues with Genie, using telemetry in Unity Catalog (Beta)
-  action: info
-- reason: docs ahead of release notes (promoted without a matching note in sources)
+  action: needs-review
+- reason: 'no preview banner and no GA release note: GA, retired, or a context link'
   feature: oltp/projects/manage-projects
-  docs: ga
   release_note: public-preview
   release_note_title: Budget policy support for Lakebase database instances and synced tables (Public Preview)
-  action: info
-- reason: docs ahead of release notes (promoted without a matching note in sources)
+  action: needs-review
+- reason: 'no preview banner and no GA release note: GA, retired, or a context link'
   feature: oltp/projects/monitor
-  docs: ga
   release_note: beta
   release_note_title: Diagnose and fix Lakebase issues with Genie, using telemetry in Unity Catalog (Beta)
-  action: info
+  action: needs-review
 - reason: section anchor no longer on page; used page banner
   feature: oltp/projects/snapshots#create-snapshot
   action: info
 - reason: section anchor no longer on page; used page banner
   feature: oltp/projects/snapshots#snapshot-schedules
   action: info
-- reason: docs ahead of release notes (promoted without a matching note in sources)
+- reason: 'no preview banner and no GA release note: GA, retired, or a context link'
   feature: oltp/projects/sync-tables
-  docs: ga
   release_note: beta
   release_note_title: ai_search can search Lakebase synced tables (Beta)
-  action: info
+  action: needs-review

@@ -14,8 +14,8 @@ features:
       source: https://learn.microsoft.com/azure/databricks/release-notes/product/2025/august#budget-policy-support-for-lakebase-database-instances-and-synced-tables-public-preview
   oltp/instances:
     title: Lakebase Provisioned
-    status: ga
-    status_source: docs-page-banner
+    status: unmarked
+    status_source: no-page-banner
     latest_release_note_status: public-preview
     history:
     - date: '2025-06-11'
@@ -24,7 +24,7 @@ features:
       source: https://learn.microsoft.com/azure/databricks/release-notes/product/2025/june#lakebase-a-managed-postgresql-oltp-database-is-in-public-preview
   oltp/projects/api-usage:
     title: Lakebase API guide
-    status: beta
+    status: mixed
     status_source: docs-page-banner
     latest_release_note_status: ga
     history:
@@ -35,7 +35,7 @@ features:
   oltp/projects/data-protection#compliance:
     title: Data protection
     status: ga
-    status_source: docs-section-banner
+    status_source: no-section-banner+ga-release-note
     latest_release_note_status: ga
     history:
     - date: '2026-03-04'
@@ -45,7 +45,7 @@ features:
   oltp/projects/get-started:
     title: Get a Postgres database
     status: ga
-    status_source: docs-page-banner
+    status_source: no-page-banner+ga-release-note
     latest_release_note_status: ga
     history:
     - date: '2026-02-04'
@@ -68,8 +68,8 @@ features:
       source: https://learn.microsoft.com/en-us/azure/databricks/release-notes/lakebase/#lakebase-change-data-feed-cdf-is-now-in-public-preview
   oltp/projects/lakebase-genie:
     title: Investigate and fix issues with Genie
-    status: ga
-    status_source: docs-page-banner
+    status: unmarked
+    status_source: no-page-banner
     latest_release_note_status: beta
     history:
     - date: '2026-07-24'
@@ -79,7 +79,7 @@ features:
   oltp/projects/lakebase-search:
     title: Lakebase Search
     status: ga
-    status_source: docs-page-banner
+    status_source: no-page-banner+ga-release-note
     latest_release_note_status: ga
     history:
     - date: '2026-06-16'
@@ -93,7 +93,7 @@ features:
   oltp/projects/lakebase-text:
     title: lakebase_text
     status: ga
-    status_source: docs-page-banner
+    status_source: no-page-banner+ga-release-note
     latest_release_note_status: ga
     history:
     - date: '2026-06-16'
@@ -107,7 +107,7 @@ features:
   oltp/projects/lakebase-vector:
     title: lakebase_vector
     status: ga
-    status_source: docs-page-banner
+    status_source: no-page-banner+ga-release-note
     latest_release_note_status: ga
     history:
     - date: '2026-06-16'
@@ -120,8 +120,8 @@ features:
       source: https://learn.microsoft.com/en-us/azure/databricks/release-notes/lakebase/#lakebase-search-is-generally-available
   oltp/projects/manage-projects:
     title: Manage projects
-    status: ga
-    status_source: docs-page-banner
+    status: unmarked
+    status_source: no-page-banner
     latest_release_note_status: public-preview
     history:
     - date: '2025-08-11'
@@ -134,8 +134,8 @@ features:
       source: https://learn.microsoft.com/azure/databricks/release-notes/product/2025/august#budget-policy-support-for-lakebase-database-instances-and-synced-tables-public-preview
   oltp/projects/monitor:
     title: Observability
-    status: ga
-    status_source: docs-page-banner
+    status: unmarked
+    status_source: no-page-banner
     latest_release_note_status: beta
     history:
     - date: '2026-07-24'
@@ -171,7 +171,7 @@ features:
   oltp/projects/private-link:
     title: Private Link for Lakebase
     status: ga
-    status_source: docs-page-banner
+    status_source: no-page-banner+ga-release-note
     latest_release_note_status: ga
     history:
     - date: '2026-09-28'
@@ -181,7 +181,7 @@ features:
   oltp/projects/snapshots:
     title: Snapshots
     status: ga
-    status_source: docs-page-banner
+    status_source: no-page-banner+ga-release-note
     latest_release_note_status: ga
     history:
     - date: '2026-10-26'
@@ -191,7 +191,7 @@ features:
   oltp/projects/snapshots#create-snapshot:
     title: Snapshots
     status: ga
-    status_source: docs-page-banner
+    status_source: no-page-banner+ga-release-note
     anchor_missing: true
     latest_release_note_status: ga
     history:
@@ -207,7 +207,7 @@ features:
   oltp/projects/snapshots#snapshot-schedules:
     title: Snapshots
     status: ga
-    status_source: docs-page-banner
+    status_source: no-page-banner+ga-release-note
     anchor_missing: true
     latest_release_note_status: ga
     history:
@@ -222,8 +222,8 @@ features:
       via: oltp/projects/snapshots
   oltp/projects/sync-tables:
     title: Serve lakehouse data with synced tables
-    status: ga
-    status_source: docs-page-banner
+    status: unmarked
+    status_source: no-page-banner
     latest_release_note_status: beta
     history:
     - date: '2025-08-25'
