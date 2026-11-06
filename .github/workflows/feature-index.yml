@@ -29,7 +29,16 @@ jobs:
       - name: Inspect live HTML shape (debug)
         run: |
           curl -sSL -A "feature-index/0.1" https://learn.microsoft.com/en-us/azure/databricks/oltp/projects/observability-ai-insights -o /tmp/p.html
-          grep -o '.\{300\}release-types.\{200\}' /tmp/p.html | head -3
+          wc -c /tmp/p.html
+          python - <<'EOF'
+          import re
+          h = open("/tmp/p.html", encoding="utf-8").read()
+          for m in list(re.finditer(r"release-types|This feature is in|Beta", h))[:6]:
+              print("----", m.group(0), m.start()); print(h[max(0, m.start()-500):m.start()+300])
+          i = h.find("<main"); print("MAIN AT", i, h[i:i+200])
+          EOF
+          curl -sSL -A "feature-index/0.1" https://learn.microsoft.com/en-us/azure/databricks/oltp/projects/snapshots -o /tmp/s.html
+          grep -o '<h[23][^>]*>' /tmp/s.html | head -12
           curl -sSL -A "feature-index/0.1" https://learn.microsoft.com/en-us/azure/databricks/release-notes/lakebase/ -o /tmp/rn.html
           grep -o '<h2[^>]*>[^<]*</h2>.\{0,200\}' /tmp/rn.html | head -3
           curl -sSL -A "feature-index/0.1" https://learn.microsoft.com/en-us/azure/databricks/feed.xml -o /tmp/feed.xml
