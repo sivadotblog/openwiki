@@ -1,0 +1,10 @@
+__pycache__/
+*.egg-info/
+.venv/
+.pytest_cache/
+.ruff_cache/
+dist/
+build/
+.env
+# transient run progress; .state.json is committed so updates can diff sources
+wiki/.run.json

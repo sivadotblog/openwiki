@@ -1,0 +1,17 @@
+# Prefect deployments. Sample source for the dpwiki prototype.
+name: dp-orchestration
+prefect-version: 3.1.0
+
+deployments:
+  - name: reference-data-refresh-weekly
+    entrypoint: flows/reference_data_refresh.py:reference_data_refresh
+    work_pool:
+      name: dp-k8s-pool
+      job_variables:
+        image: dpregistry.azurecr.io/prefect-flows:2026.10
+        cpu_request: "1"
+        memory_request: 4Gi
+    schedules:
+      - cron: "0 6 * * 1"   # Mondays 06:00
+        timezone: America/New_York
+    tags: [reference-data, tier-2]

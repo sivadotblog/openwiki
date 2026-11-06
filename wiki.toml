@@ -1,0 +1,43 @@
+# dpwiki configuration for the Data Platform team wiki.
+# Paths are relative to this file.
+
+[wiki]
+title = "Data Platform Team Wiki"
+dir = "wiki"                      # where the generated wiki lives
+instructions = "wiki/INSTRUCTIONS.md"
+# Top-level sections the planner may use. Keeps the wiki shape stable across runs.
+sections = ["platforms", "orchestration", "governance", "runbooks", "onboarding", "catalog"]
+
+[model]
+# provider: "anthropic" (ANTHROPIC_API_KEY) or "bedrock" (AWS credentials + AWS_REGION)
+provider = "anthropic"
+id = "claude-sonnet-5-5"
+max_page_turns = 12               # tool-use turns allowed per page job
+max_pages_per_run = 25            # safety cap for one update run
+
+# Each [[sources]] entry is one connector instance.
+# kind = "filesystem": local repos and doc folders (code, Terraform, DAGs, runbooks).
+# kind = "catalog":    a JSON export of table metadata (Unity Catalog / Snowflake information_schema).
+
+[[sources]]
+id = "platform-infra"
+kind = "filesystem"
+path = "sources/repos/platform-infra"
+include = ["**/*.tf", "**/*.md", "**/*.yml", "**/*.yaml"]
+
+[[sources]]
+id = "orchestration"
+kind = "filesystem"
+path = "sources/repos/orchestration"
+include = ["**/*.py", "**/*.md", "**/*.yaml"]
+
+[[sources]]
+id = "team-docs"
+kind = "filesystem"
+path = "sources/docs"
+include = ["**/*.md"]
+
+[[sources]]
+id = "lakehouse-catalog"
+kind = "catalog"
+path = "sources/catalog/unity_catalog_export.json"

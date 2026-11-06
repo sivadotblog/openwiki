@@ -1,0 +1,81 @@
+{
+  "schema": 1,
+  "page": "platforms/snowflake.md",
+  "page_hash": "sha256:5d31bf75de93d5d60fbe3e125dc192ea704bf8c63f5ff29687cc32eb08c9f93f",
+  "claims": [
+    {
+      "id": "c-99d7c53ebad2",
+      "statement": "TRANSFORM_WH is size LARGE, auto-suspends after 120 seconds, and scales from 1 to 3 clusters with the STANDARD policy.",
+      "evidence": [
+        {
+          "resource": "src://platform-infra/terraform/snowflake/warehouses.tf#L4-L11",
+          "version": "lines-v1:8:sha256:4c79f03c28d1402046fe8b0dc6fd091d9f24e812707546158a0aeea908c0fddd"
+        }
+      ]
+    },
+    {
+      "id": "c-f1ead3eae74f",
+      "statement": "TRANSFORM_WH is used for dbt and Airflow loads and owned by data-platform-eng.",
+      "evidence": [
+        {
+          "resource": "src://platform-infra/terraform/snowflake/warehouses.tf#L13-L13",
+          "version": "lines-v1:1:sha256:7b9d4cd7ba62526329be478f3667fcc0079c53b1030c2748960f5fdfe624371a"
+        }
+      ]
+    },
+    {
+      "id": "c-c7cc0545dfde",
+      "statement": "BI_WH is size MEDIUM, auto-suspends after 60 seconds, and scales from 1 to 6 clusters with the ECONOMY policy.",
+      "evidence": [
+        {
+          "resource": "src://platform-infra/terraform/snowflake/warehouses.tf#L16-L23",
+          "version": "lines-v1:8:sha256:423618a69afac9612f442ceb6916b22d50827e823e614f38f4fc6945c2d6043f"
+        }
+      ]
+    },
+    {
+      "id": "c-3613bb1fc4f6",
+      "statement": "TRANSFORM_MONTHLY allows 4000 credits per month.",
+      "evidence": [
+        {
+          "resource": "src://platform-infra/terraform/snowflake/warehouses.tf#L29-L29",
+          "version": "lines-v1:1:sha256:7e9a4deffeef531907b42050b3f9bfe398a568064b1837c3378c145a049f708f"
+        }
+      ]
+    },
+    {
+      "id": "c-05fc586e00c6",
+      "statement": "TRANSFORM_MONTHLY notifies at 75 and 90 percent and suspends at 100 percent.",
+      "evidence": [
+        {
+          "resource": "src://platform-infra/terraform/snowflake/warehouses.tf#L31-L32",
+          "version": "lines-v1:2:sha256:9c61fbf37ef228a9c1c5a5db45d22104cedd358ecbd1921175e9f51db34cfda5"
+        }
+      ]
+    },
+    {
+      "id": "c-b2996a4e5821",
+      "statement": "TRANSFORM_WH is attached to the TRANSFORM_MONTHLY resource monitor.",
+      "evidence": [
+        {
+          "resource": "src://platform-infra/terraform/snowflake/warehouses.tf#L12-L12",
+          "version": "lines-v1:1:sha256:14432cc2c9ac94f955c2008efe928bf5eb8332db0a7a09699ee75123c3cb9458"
+        }
+      ]
+    },
+    {
+      "id": "c-b73d34b53251",
+      "statement": "The dp-snowflake-transform group grants the TRANSFORMER role and TRANSFORM_WH usage.",
+      "evidence": [
+        {
+          "resource": "src://team-docs/onboarding/access-requests.md#L8-L8",
+          "version": "lines-v1:1:sha256:0a69e171a5d4da50c6124c768fb36da72f7473c48340de7bbd245525e99d587b"
+        }
+      ]
+    }
+  ],
+  "verified": {
+    "by": "dpwiki/0.1.0",
+    "at": "2026-11-06T00:07:53+00:00"
+  }
+}

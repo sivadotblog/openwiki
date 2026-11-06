@@ -1,0 +1,61 @@
+{
+  "schema": 1,
+  "page": "onboarding/new-engineer.md",
+  "page_hash": "sha256:154e7520f1deda6d8dc18e12d7b500cf7c8753db86cbb2bad9c15a049b3ff457",
+  "claims": [
+    {
+      "id": "c-96d2cd5c9b17",
+      "statement": "dp-engineers grants Databricks workspace user, lakehouse catalog USE, and Airflow viewer.",
+      "evidence": [
+        {
+          "resource": "src://team-docs/onboarding/access-requests.md#L7-L7",
+          "version": "lines-v1:1:sha256:6cf7b8329746b4ec124dab6d87918e2a921e1c04da0f58b51127d721108c7d26"
+        }
+      ]
+    },
+    {
+      "id": "c-ca01cc63d067",
+      "statement": "dp-snowflake-transform grants the TRANSFORMER role and TRANSFORM_WH usage.",
+      "evidence": [
+        {
+          "resource": "src://team-docs/onboarding/access-requests.md#L8-L8",
+          "version": "lines-v1:1:sha256:0a69e171a5d4da50c6124c768fb36da72f7473c48340de7bbd245525e99d587b"
+        }
+      ]
+    },
+    {
+      "id": "c-728987f9659a",
+      "statement": "dp-prefect-devs grants Prefect workspace developer.",
+      "evidence": [
+        {
+          "resource": "src://team-docs/onboarding/access-requests.md#L9-L9",
+          "version": "lines-v1:1:sha256:31011ea9524ecbc619c2a5c383e4f1d144c2a8cdec146153a02af784979dcbf9"
+        }
+      ]
+    },
+    {
+      "id": "c-3a2ef7704274",
+      "statement": "dp-platform-admins grants Terraform apply approvals and is for leads only.",
+      "evidence": [
+        {
+          "resource": "src://team-docs/onboarding/access-requests.md#L10-L10",
+          "version": "lines-v1:1:sha256:e469fc9022f226e8000b1c42e524094583067469a4d3b41a0fe7ffa9dd92010e"
+        }
+      ]
+    },
+    {
+      "id": "c-ce41bf228e23",
+      "statement": "New engineers join #dp-platform-help, #dp-oncall, and #dp-data-quality-alerts.",
+      "evidence": [
+        {
+          "resource": "src://team-docs/onboarding/access-requests.md#L13-L13",
+          "version": "lines-v1:1:sha256:0d3ab5f005cbc99042076e3d3198b5fce7d15bb0d0c0a93341b1a31356da1237"
+        }
+      ]
+    }
+  ],
+  "verified": {
+    "by": "dpwiki/0.1.0",
+    "at": "2026-11-06T00:07:53+00:00"
+  }
+}

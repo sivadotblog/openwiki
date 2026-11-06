@@ -1,0 +1,71 @@
+{
+  "schema": 1,
+  "page": "runbooks/airflow-backfill.md",
+  "page_hash": "sha256:3e1202353e379ded51c71479d346f833f99ba05c29be8cbe3e98174265f221ca",
+  "claims": [
+    {
+      "id": "c-9a47c890debc",
+      "statement": "The first backfill step is pausing the DAG in the UI.",
+      "evidence": [
+        {
+          "resource": "src://team-docs/runbooks/airflow-backfill.md#L5-L5",
+          "version": "lines-v1:1:sha256:36030ed286142a741da9b5a520cdf5c7f4105934e4fe3212f5f2fdc8bb7b59cf"
+        }
+      ]
+    },
+    {
+      "id": "c-013d7939c440",
+      "statement": "Task instances are cleared with airflow tasks clear and a start and end date.",
+      "evidence": [
+        {
+          "resource": "src://team-docs/runbooks/airflow-backfill.md#L6-L6",
+          "version": "lines-v1:1:sha256:91c878da04816d14d670f5cf2fcad772299aa171d40b2cab076caf1b97b71a62"
+        }
+      ]
+    },
+    {
+      "id": "c-bb1f9d480dd4",
+      "statement": "Backfills longer than 7 days run in batches of 7 days.",
+      "evidence": [
+        {
+          "resource": "src://team-docs/runbooks/airflow-backfill.md#L7-L7",
+          "version": "lines-v1:1:sha256:2920823f8d8cbdda2992fed32ccbb49f5deb0cc8563cc7c8268cacb33ec88adc"
+        }
+      ]
+    },
+    {
+      "id": "c-7bdf73a0bba8",
+      "statement": "After backfilling, unpause the DAG and post the date range in #dp-oncall.",
+      "evidence": [
+        {
+          "resource": "src://team-docs/runbooks/airflow-backfill.md#L9-L9",
+          "version": "lines-v1:1:sha256:2c0e4f9c86eacbd78a9351af30edd94dd23ec2998f6446329ef2f9cff9c2a3df"
+        }
+      ]
+    },
+    {
+      "id": "c-72a39d687fce",
+      "statement": "orders_ingest has max_active_runs=1.",
+      "evidence": [
+        {
+          "resource": "src://orchestration/airflow/dags/orders_ingest.py#L26-L26",
+          "version": "lines-v1:1:sha256:ad2856c8b90aa7cb5b8db995beabe4a57f4a72afc6af1ad8548b6a6c858574d4"
+        }
+      ]
+    },
+    {
+      "id": "c-a8d4bfb3fd38",
+      "statement": "The Monday handoff note includes pending backfills.",
+      "evidence": [
+        {
+          "resource": "src://team-docs/oncall.md#L16-L17",
+          "version": "lines-v1:2:sha256:eeb1123f5dd605a1e5722611148d333eb8e3a9b3d294a6edb44d9f7ccbc825d8"
+        }
+      ]
+    }
+  ],
+  "verified": {
+    "by": "dpwiki/0.1.0",
+    "at": "2026-11-06T00:07:53+00:00"
+  }
+}

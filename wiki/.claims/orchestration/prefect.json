@@ -1,0 +1,101 @@
+{
+  "schema": 1,
+  "page": "orchestration/prefect.md",
+  "page_hash": "sha256:909e636ba523841077c009c33b8cd8c530ff43460734ab091815d8a886ecf2ab",
+  "claims": [
+    {
+      "id": "c-cc8ced329c20",
+      "statement": "New pipelines use Prefect 3 flows on the dp-k8s-pool work pool.",
+      "evidence": [
+        {
+          "resource": "src://team-docs/decisions/adr-003-prefect-for-new-pipelines.md#L12-L12",
+          "version": "lines-v1:1:sha256:5c52ae7ba3c9a4e82fe9ca905a5cddf0eb3f924b3153451166d89bd54ffa40f9"
+        }
+      ]
+    },
+    {
+      "id": "c-c57e0859a196",
+      "statement": "The reference-data-refresh-weekly deployment runs Mondays at 06:00 America/New_York.",
+      "evidence": [
+        {
+          "resource": "src://orchestration/prefect/prefect.yaml#L15-L16",
+          "version": "lines-v1:2:sha256:0c50e10623a87f34f903587312cdc2acd77ed0f5d7292b09781c25faeedaaeb6"
+        }
+      ]
+    },
+    {
+      "id": "c-ad7e83fdb11c",
+      "statement": "The reference-data-refresh deployment is tagged tier-2.",
+      "evidence": [
+        {
+          "resource": "src://orchestration/prefect/prefect.yaml#L17-L17",
+          "version": "lines-v1:1:sha256:27d5182d3b43fc41f662c3e08c845d4cd596a87c2687dfa26ebb3b8896389405"
+        }
+      ]
+    },
+    {
+      "id": "c-7804d29e7641",
+      "statement": "The deployment runs image prefect-flows:2026.10 with 1 CPU and 4Gi memory.",
+      "evidence": [
+        {
+          "resource": "src://orchestration/prefect/prefect.yaml#L11-L13",
+          "version": "lines-v1:3:sha256:b2d66bb44e83173fec135501a07b493b5889b21c4a30124648843efc7268378f"
+        }
+      ]
+    },
+    {
+      "id": "c-4aa67f4178e2",
+      "statement": "The flow times out after 2 hours.",
+      "evidence": [
+        {
+          "resource": "src://orchestration/prefect/flows/reference_data_refresh.py#L28-L28",
+          "version": "lines-v1:1:sha256:9ee31de706d3f7908056fe86a7cf16dfaa993eda5b26016f8cb65bad689a9d43"
+        }
+      ]
+    },
+    {
+      "id": "c-0628a13490e7",
+      "statement": "fetch_drop retries 4 times with exponential backoff.",
+      "evidence": [
+        {
+          "resource": "src://orchestration/prefect/flows/reference_data_refresh.py#L11-L11",
+          "version": "lines-v1:1:sha256:e8c51e36616ccdf2964387b38d44f8380ee06ec7167f0805a8f7bb20343f27f0"
+        }
+      ]
+    },
+    {
+      "id": "c-af0b877ae4d1",
+      "statement": "Validation rejects files whose row count drops more than 20 percent from the previous drop.",
+      "evidence": [
+        {
+          "resource": "src://orchestration/prefect/flows/reference_data_refresh.py#L18-L18",
+          "version": "lines-v1:1:sha256:b3c2a4b8362eb6be967d5253a5e0e3a1047440e8ae9de5553adb8f7c539301d4"
+        }
+      ]
+    },
+    {
+      "id": "c-68ca0b1df489",
+      "statement": "publish merges into lakehouse.silver.reference_codes on (code_system, code).",
+      "evidence": [
+        {
+          "resource": "src://orchestration/prefect/flows/reference_data_refresh.py#L24-L24",
+          "version": "lines-v1:1:sha256:c52eadb23a1ff5490af878ffed1be2de7a3003a0a6b06b66004949bba12e3f7a"
+        }
+      ]
+    },
+    {
+      "id": "c-09ea71efb229",
+      "statement": "dp-prefect-devs grants Prefect workspace developer access.",
+      "evidence": [
+        {
+          "resource": "src://team-docs/onboarding/access-requests.md#L9-L9",
+          "version": "lines-v1:1:sha256:31011ea9524ecbc619c2a5c383e4f1d144c2a8cdec146153a02af784979dcbf9"
+        }
+      ]
+    }
+  ],
+  "verified": {
+    "by": "dpwiki/0.1.0",
+    "at": "2026-11-06T00:07:53+00:00"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "schema": 1,
+  "page": "runbooks/oncall.md",
+  "page_hash": "sha256:6ff8297f44bf1f52f07ab3012a027f1b0bcd519623ce88b1a3edda19de3ffb6c",
+  "claims": [
+    {
+      "id": "c-0fd88d9937a3",
+      "statement": "The on-call rotation is dp-platform-oncall in PagerDuty.",
+      "evidence": [
+        {
+          "resource": "src://team-docs/oncall.md#L3-L3",
+          "version": "lines-v1:1:sha256:3be2f2b0794b360e80177fde4f85fad18729cf90d19d3b75e2b98c5a3b745a60"
+        }
+      ]
+    },
+    {
+      "id": "c-89b519cf1ed0",
+      "statement": "Shifts are one week from Monday 10:00 ET with a primary and a secondary.",
+      "evidence": [
+        {
+          "resource": "src://team-docs/oncall.md#L3-L4",
+          "version": "lines-v1:2:sha256:66a5ac516491703efebc9e633402d09c95536e9427bb6a98723acf40d14d2a2e"
+        }
+      ]
+    },
+    {
+      "id": "c-9b6e6ffa5996",
+      "statement": "SEV1 is a tier-1 pipeline missing its SLA or a production warehouse being down.",
+      "evidence": [
+        {
+          "resource": "src://team-docs/oncall.md#L8-L8",
+          "version": "lines-v1:1:sha256:639ce0129d33f52ca2f5948340913800a62820c7f896e761ee5cb328d07516bc"
+        }
+      ]
+    },
+    {
+      "id": "c-28c827714c01",
+      "statement": "For SEV1 the secondary joins after 15 minutes without acknowledgement.",
+      "evidence": [
+        {
+          "resource": "src://team-docs/oncall.md#L9-L9",
+          "version": "lines-v1:1:sha256:a992aeef30fce5aa7e4126ec175156e7c2838fe03fc1b5b458ca5c332cccb39d"
+        }
+      ]
+    },
+    {
+      "id": "c-8bab5db7ee4a",
+      "statement": "SEV2 requires a response within 4 business hours.",
+      "evidence": [
+        {
+          "resource": "src://team-docs/oncall.md#L11-L11",
+          "version": "lines-v1:1:sha256:2f303e0c0de641b521bbce4357f0a52835d02bbc55c64599158efb556df82607"
+        }
+      ]
+    },
+    {
+      "id": "c-81226771ae7b",
+      "statement": "SEV3 is handled in the weekly triage.",
+      "evidence": [
+        {
+          "resource": "src://team-docs/oncall.md#L12-L12",
+          "version": "lines-v1:1:sha256:2bde1f5a852f545cbd492403bb6688e24ce3b6a341b2c968ed7da7881637934e"
+        }
+      ]
+    },
+    {
+      "id": "c-c70312dfbfde",
+      "statement": "The weekly handoff note goes in #dp-oncall and lists open incidents, silenced monitors, and pending backfills.",
+      "evidence": [
+        {
+          "resource": "src://team-docs/oncall.md#L16-L17",
+          "version": "lines-v1:2:sha256:eeb1123f5dd605a1e5722611148d333eb8e3a9b3d294a6edb44d9f7ccbc825d8"
+        }
+      ]
+    }
+  ],
+  "verified": {
+    "by": "dpwiki/0.1.0",
+    "at": "2026-11-06T00:07:53+00:00"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "page": "governance/adr-003-prefect-for-new-pipelines.md",
+  "page_hash": "sha256:6fcc1d9ee10ee21a39665480ff3fd8492aeee33d3a3287bd6a4f8061495aa4e2",
+  "claims": [
+    {
+      "id": "c-35f1a94d3b90",
+      "statement": "ADR-003 was accepted in 2025-09.",
+      "evidence": [
+        {
+          "resource": "src://team-docs/decisions/adr-003-prefect-for-new-pipelines.md#L3-L3",
+          "version": "lines-v1:1:sha256:596a64541537add79cbcb36c92955de5b38717988bbc731c753b0c3f77890a08"
+        }
+      ]
+    },
+    {
+      "id": "c-e5ebca7bc553",
+      "statement": "The Airflow DAG count passed 400 and peak scheduler latency reached several minutes.",
+      "evidence": [
+        {
+          "resource": "src://team-docs/decisions/adr-003-prefect-for-new-pipelines.md#L7-L8",
+          "version": "lines-v1:2:sha256:e389af45c457b792bcc740778c23ea42fe915587d27090c5e7c16b1d60835b55"
+        }
+      ]
+    },
+    {
+      "id": "c-fed39cf85c1a",
+      "statement": "Existing Airflow DAGs stay until their owning team migrates them, and tier-1 DAGs migrate last.",
+      "evidence": [
+        {
+          "resource": "src://team-docs/decisions/adr-003-prefect-for-new-pipelines.md#L13-L13",
+          "version": "lines-v1:1:sha256:488bb360afc805f87326a82d4d0a55905f301e757a509095cd53b8dba7250c82"
+        }
+      ]
+    },
+    {
+      "id": "c-852d515748dd",
+      "statement": "Two orchestrators run in parallel for at least 2026 and on-call must know both.",
+      "evidence": [
+        {
+          "resource": "src://team-docs/decisions/adr-003-prefect-for-new-pipelines.md#L17-L17",
+          "version": "lines-v1:1:sha256:8a24aa2cf5269a98c17b6dcb717f19149824c532c3c82f39cc883a2b0b3bc130"
+        }
+      ]
+    }
+  ],
+  "verified": {
+    "by": "dpwiki/0.1.0",
+    "at": "2026-11-06T00:07:53+00:00"
+  }
+}

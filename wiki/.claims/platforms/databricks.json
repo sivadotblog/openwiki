@@ -1,0 +1,101 @@
+{
+  "schema": 1,
+  "page": "platforms/databricks.md",
+  "page_hash": "sha256:ae7858c975e318ba6f99a6e51b79a9424c1869a527dbf6e00ce984aec3a7e122",
+  "claims": [
+    {
+      "id": "c-0ec8781513a7",
+      "statement": "The Unity Catalog metastore is named dp-primary-metastore and is in region eastus2.",
+      "evidence": [
+        {
+          "resource": "src://platform-infra/terraform/databricks/workspace.tf#L4-L7",
+          "version": "lines-v1:4:sha256:89d2530675fe555a56e2923aad7b74a8bae42cf6b3974712449ab5175af21b33"
+        }
+      ]
+    },
+    {
+      "id": "c-7297644968b9",
+      "statement": "The lakehouse catalog is owned by dp-platform-admins.",
+      "evidence": [
+        {
+          "resource": "src://platform-infra/terraform/databricks/workspace.tf#L11-L15",
+          "version": "lines-v1:5:sha256:ffeb8f936ce7f536ce78eaf5b1e796dd894eb5b1055b61b7e1bfd14094836b7a"
+        }
+      ]
+    },
+    {
+      "id": "c-dfb30b95fb93",
+      "statement": "The jobs-standard cluster policy fixes auto-termination at 20 minutes.",
+      "evidence": [
+        {
+          "resource": "src://platform-infra/terraform/databricks/workspace.tf#L22-L22",
+          "version": "lines-v1:1:sha256:fa65e1550b4ae37ac8ddd16fcacd7d0255bcdaaa81d727150fd64184b681470f"
+        }
+      ]
+    },
+    {
+      "id": "c-4a28c0ae85db",
+      "statement": "The jobs-standard cluster policy caps autoscaling at 16 workers.",
+      "evidence": [
+        {
+          "resource": "src://platform-infra/terraform/databricks/workspace.tf#L24-L24",
+          "version": "lines-v1:1:sha256:7b563dcf81a95be370a41cbd19b6a27932a74a27af6470c961a3b76e4b92e136"
+        }
+      ]
+    },
+    {
+      "id": "c-b76087a50f32",
+      "statement": "The jobs-standard policy allows only Standard_D8ds_v5 and Standard_D16ds_v5 nodes.",
+      "evidence": [
+        {
+          "resource": "src://platform-infra/terraform/databricks/workspace.tf#L23-L23",
+          "version": "lines-v1:1:sha256:6531b327b9db54c651c327ebb855b26dff150089cc4d97d8faf400a9b9777b98"
+        }
+      ]
+    },
+    {
+      "id": "c-7149290f2a81",
+      "statement": "The interactive-small policy allows up to 60 minutes auto-termination with a default of 30 and max 4 workers.",
+      "evidence": [
+        {
+          "resource": "src://platform-infra/terraform/databricks/workspace.tf#L32-L33",
+          "version": "lines-v1:2:sha256:cb91c30279d6a95180f86201ecd1216abc0c879a2595fadb6ef5e74b05996037"
+        }
+      ]
+    },
+    {
+      "id": "c-470df42284bc",
+      "statement": "Cluster policies force the custom tag cost_center = data-platform.",
+      "evidence": [
+        {
+          "resource": "src://platform-infra/terraform/databricks/workspace.tf#L25-L25",
+          "version": "lines-v1:1:sha256:98d3f07fed33cc1352ea0fa160ec58158cfd251c4ac8a3e00c8acadfaa49ad31"
+        }
+      ]
+    },
+    {
+      "id": "c-2af2645d7845",
+      "statement": "The bi-serving SQL warehouse is serverless, Medium, scales 1 to 4 clusters, and auto-stops after 15 minutes.",
+      "evidence": [
+        {
+          "resource": "src://platform-infra/terraform/databricks/workspace.tf#L38-L44",
+          "version": "lines-v1:7:sha256:d758e0a716e5cd75c5006d16de59c7291b71d9722e6883ad98cde798dc693b29"
+        }
+      ]
+    },
+    {
+      "id": "c-150ec11969bd",
+      "statement": "orders_ingest triggers the Databricks job silver_orders_merge.",
+      "evidence": [
+        {
+          "resource": "src://orchestration/airflow/dags/orders_ingest.py#L41-L41",
+          "version": "lines-v1:1:sha256:9a89a783f666295ba1c84436bc16d0e7623b424046ac4d5fe9cea0349b4b6984"
+        }
+      ]
+    }
+  ],
+  "verified": {
+    "by": "dpwiki/0.1.0",
+    "at": "2026-11-06T00:07:53+00:00"
+  }
+}

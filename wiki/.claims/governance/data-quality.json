@@ -1,0 +1,71 @@
+{
+  "schema": 1,
+  "page": "governance/data-quality.md",
+  "page_hash": "sha256:411ba353165196202a546a11328987fdc0534b769d2ad2c5ef38b5dca0af8623",
+  "claims": [
+    {
+      "id": "c-1b09da88966b",
+      "statement": "Bigeye checks lakehouse.silver.orders freshness with an upper bound of 26 hours.",
+      "evidence": [
+        {
+          "resource": "src://platform-infra/bigeye/monitors.yml#L5-L8",
+          "version": "lines-v1:4:sha256:2abb35e46ba4c14571b80ac8bc81f48528ad43c616c80eda0f75cf09bd20d6cb"
+        }
+      ]
+    },
+    {
+      "id": "c-3efc95d8f0da",
+      "statement": "Bigeye checks lakehouse.silver.orders row count with a medium-sensitivity autothreshold.",
+      "evidence": [
+        {
+          "resource": "src://platform-infra/bigeye/monitors.yml#L9-L10",
+          "version": "lines-v1:2:sha256:9981edbcadc3f07e926f088d269496c52d351488e7e57f258685e837a60125e6"
+        }
+      ]
+    },
+    {
+      "id": "c-55ea91985ac4",
+      "statement": "order_id in lakehouse.silver.orders must be 0 percent null and have 0 duplicates.",
+      "evidence": [
+        {
+          "resource": "src://platform-infra/bigeye/monitors.yml#L12-L16",
+          "version": "lines-v1:5:sha256:c3f70ea266d5410550da9a2bdde8b86f509ae16ceab96a98aeb875426f149e7d"
+        }
+      ]
+    },
+    {
+      "id": "c-8b25511c77da",
+      "statement": "Bigeye checks lakehouse.gold.daily_revenue freshness with an upper bound of 30 hours.",
+      "evidence": [
+        {
+          "resource": "src://platform-infra/bigeye/monitors.yml#L18-L21",
+          "version": "lines-v1:4:sha256:b916ed2c46372b91cf3e3790739c586349b4a04376302e31dcca64d0b66d9229"
+        }
+      ]
+    },
+    {
+      "id": "c-6a02efe36f81",
+      "statement": "Bigeye alerts go to #dp-data-quality-alerts and PagerDuty dp-platform-oncall.",
+      "evidence": [
+        {
+          "resource": "src://platform-infra/bigeye/monitors.yml#L22-L24",
+          "version": "lines-v1:3:sha256:ce174c1e253acbe0e0446ac12cca49cfdcba56cac08256c18870ed876bffca7b"
+        }
+      ]
+    },
+    {
+      "id": "c-0dadc95c168d",
+      "statement": "A data quality monitor firing on a gold table is SEV2.",
+      "evidence": [
+        {
+          "resource": "src://team-docs/oncall.md#L10-L10",
+          "version": "lines-v1:1:sha256:292ac4f4421a4bed3b75a7858ff5b0b05decea1a5b614350b7733a6e78d4bb26"
+        }
+      ]
+    }
+  ],
+  "verified": {
+    "by": "dpwiki/0.1.0",
+    "at": "2026-11-06T00:07:53+00:00"
+  }
+}

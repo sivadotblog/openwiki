@@ -1,0 +1,54 @@
+{
+  "exported_at": "2026-11-05T06:00:00+00:00",
+  "platform": "databricks-unity-catalog",
+  "tables": [
+    {
+      "catalog": "lakehouse",
+      "schema": "silver",
+      "name": "orders",
+      "owner": "data-platform-eng",
+      "comment": "One row per order. Merged daily by silver_orders_merge from the landing zone.",
+      "columns": [
+        {"name": "order_id", "type": "string", "comment": "Primary key"},
+        {"name": "customer_key", "type": "string", "comment": "Surrogate key, not PII"},
+        {"name": "order_ts", "type": "timestamp", "comment": "UTC"},
+        {"name": "amount", "type": "decimal(18,2)", "comment": "Order total in USD"},
+        {"name": "status", "type": "string", "comment": "placed | shipped | cancelled"}
+      ],
+      "tags": {"tier": "1", "domain": "commerce"},
+      "upstream": ["landing.orders_raw"],
+      "freshness_sla_hours": 26
+    },
+    {
+      "catalog": "lakehouse",
+      "schema": "gold",
+      "name": "daily_revenue",
+      "owner": "analytics-eng",
+      "comment": "Revenue by day and status. Built in Snowflake by GOLD.BUILD_DAILY_REVENUE and mirrored.",
+      "columns": [
+        {"name": "revenue_date", "type": "date", "comment": ""},
+        {"name": "status", "type": "string", "comment": ""},
+        {"name": "revenue_usd", "type": "decimal(18,2)", "comment": ""}
+      ],
+      "tags": {"tier": "1", "domain": "commerce"},
+      "upstream": ["lakehouse.silver.orders"],
+      "freshness_sla_hours": 30
+    },
+    {
+      "catalog": "lakehouse",
+      "schema": "silver",
+      "name": "reference_codes",
+      "owner": "data-platform-eng",
+      "comment": "Vendor code sets refreshed weekly by the reference-data-refresh Prefect flow.",
+      "columns": [
+        {"name": "code_system", "type": "string", "comment": ""},
+        {"name": "code", "type": "string", "comment": ""},
+        {"name": "description", "type": "string", "comment": ""},
+        {"name": "effective_from", "type": "date", "comment": ""}
+      ],
+      "tags": {"tier": "2", "domain": "reference"},
+      "upstream": ["vendor_sftp.code_sets"],
+      "freshness_sla_hours": 192
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "schema": 1,
+  "page": "orchestration/airflow.md",
+  "page_hash": "sha256:8905a47d1c928a0df965780ff0bf94254341ca5bc00d35e114088b1f88a60e54",
+  "claims": [
+    {
+      "id": "c-f48e16e070ac",
+      "statement": "Airflow DAGs run on the managed Airflow environment dp-airflow-prod.",
+      "evidence": [
+        {
+          "resource": "src://orchestration/README.md#L5-L5",
+          "version": "lines-v1:1:sha256:d7fedcd959b0143538a9e15a7c893f1f7ebf0364c7cbf5257b9d1160dc71c247"
+        }
+      ]
+    },
+    {
+      "id": "c-a977b3aec8f8",
+      "statement": "Connections databricks_default and snowflake_transform come from the secrets backend, not code.",
+      "evidence": [
+        {
+          "resource": "src://orchestration/README.md#L10-L10",
+          "version": "lines-v1:1:sha256:8ed2f3392a2a92a33ca606b349f82057877414b294eaefd081bc45c994f023ff"
+        }
+      ]
+    },
+    {
+      "id": "c-b841d0e8086a",
+      "statement": "orders_ingest runs daily at 05:30 UTC.",
+      "evidence": [
+        {
+          "resource": "src://orchestration/airflow/dags/orders_ingest.py#L24-L24",
+          "version": "lines-v1:1:sha256:cccdd8134c13263ee3e8c8381f1ae6711cdc1ccf873fce598de3cfdfad856b48"
+        }
+      ]
+    },
+    {
+      "id": "c-6dadba3e93b8",
+      "statement": "orders_ingest has owner data-platform-eng, 3 retries 10 minutes apart, and a 4 hour SLA.",
+      "evidence": [
+        {
+          "resource": "src://orchestration/airflow/dags/orders_ingest.py#L14-L17",
+          "version": "lines-v1:4:sha256:f412b2300f5aaaf3fc2f60746874ce2be20a7d9f14b06bc2694c3a654f658329"
+        }
+      ]
+    },
+    {
+      "id": "c-42fb4079600a",
+      "statement": "orders_ingest runs with max_active_runs=1 and catchup disabled.",
+      "evidence": [
+        {
+          "resource": "src://orchestration/airflow/dags/orders_ingest.py#L25-L26",
+          "version": "lines-v1:2:sha256:087b16e5b77dd49a86e8d56459a9d7a31326cf41640b3ec6b37f196e8344911b"
+        }
+      ]
+    },
+    {
+      "id": "c-925cd01c51ca",
+      "statement": "orders_ingest is tagged tier-1.",
+      "evidence": [
+        {
+          "resource": "src://orchestration/airflow/dags/orders_ingest.py#L28-L28",
+          "version": "lines-v1:1:sha256:54244ff0b728cdc5c61c101f75b76b7dd9587ea36afcabdcd5898b13c429caa2"
+        }
+      ]
+    },
+    {
+      "id": "c-8cb7c345b8fb",
+      "statement": "The landing sensor waits for /landing/orders/{{ ds }}/_SUCCESS, pokes every 300 seconds, and times out after 3 hours in reschedule mode.",
+      "evidence": [
+        {
+          "resource": "src://orchestration/airflow/dags/orders_ingest.py#L32-L35",
+          "version": "lines-v1:4:sha256:44f56ee8f7f7c7b15e4fca7c94652760299aec45a9585dbc37aa967ff5de3175"
+        }
+      ]
+    },
+    {
+      "id": "c-333b937b2285",
+      "statement": "gold_daily_revenue calls GOLD.BUILD_DAILY_REVENUE on TRANSFORM_WH.",
+      "evidence": [
+        {
+          "resource": "src://orchestration/airflow/dags/orders_ingest.py#L48-L49",
+          "version": "lines-v1:2:sha256:d3c76ebadaf4eb8eda20ded274aa57107201385935ad53699eb3889c26348d6f"
+        }
+      ]
+    },
+    {
+      "id": "c-153e418597ca",
+      "statement": "Task order is wait_for_landing, then silver_orders, then gold_daily_revenue.",
+      "evidence": [
+        {
+          "resource": "src://orchestration/airflow/dags/orders_ingest.py#L52-L52",
+          "version": "lines-v1:1:sha256:23b19f70519a1d7bd28ccfa665e35d188c845b890da8105077f872d26f3d7af0"
+        }
+      ]
+    }
+  ],
+  "verified": {
+    "by": "dpwiki/0.1.0",
+    "at": "2026-11-06T00:07:53+00:00"
+  }
+}
