@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:c6d2690efe204837578f50b9cb40dd24663209432521dca817fa55bdd0131696",
+  "claims": [
+    {
+      "id": "claim_d74323964338438ea3253297f24a50e0",
+      "statement": "Backfill starts by pausing the DAG in the UI.",
+      "evidence": [
+        {
+          "resource": "repo://docs/runbooks/airflow-backfill.md#L5-L5",
+          "version": "repo-lines-v1:sha256:4822e31a725bbcf76acb9ed771a5cc68f3da3447d3e81e3031c9374c27f512e1:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDgyMmUzMWE3MjViYmNmNzZhY2I5ZWQ3NzFhNWNjNjhmM2RhMzQ0N2QzZTgxZTMwMzFjOTM3NGMyN2Y1MTJlMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDgyMmUzMWE3MjViYmNmNzZhY2I5ZWQ3NzFhNWNjNjhmM2RhMzQ0N2QzZTgxZTMwMzFjOTM3NGMyN2Y1MTJlMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjZhNDRjZDI5YTdhNDYxODIzZWQ1NWMyZWY1YTdjY2Y2ZmMyZWM5ZjNmMWExZWFkNDUzZmY4NzQ5ZGYxYjgyYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTQyMmY0MjkxZjZjMzhjOTUxYjI3ZmUwMGYyMzkyNzI1YTg4MjUwMjE5ZGYyNTk5Y2EwZTIyMDA0NDA3ZjI1ZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_8ab7614822e14a9780f5b40df0ab528f",
+      "statement": "Affected task instances are cleared with airflow tasks clear and a start and end date.",
+      "evidence": [
+        {
+          "resource": "repo://docs/runbooks/airflow-backfill.md#L6-L6",
+          "version": "repo-lines-v1:sha256:67cb2e9d00e7f767e71c50bff4740b78bc437d878e7c67e47136c057b0eeab07:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjdjYjJlOWQwMGU3Zjc2N2U3MWM1MGJmZjQ3NDBiNzhiYzQzN2Q4NzhlN2M2N2U0NzEzNmMwNTdiMGVlYWIwNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjdjYjJlOWQwMGU3Zjc2N2U3MWM1MGJmZjQ3NDBiNzhiYzQzN2Q4NzhlN2M2N2U0NzEzNmMwNTdiMGVlYWIwNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDZkYjEzZTNiNTZkYmIzMTAzNGJmZjJhYzdmMmZkNjFkZTQ1NDkxMzlmZmZlNWNlOTk2NDI5MjIxN2IzODUwYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2I1ZTVlNzY4ODI2ZTcyMjJjMDAyMzcxZDI1YzIxZWYyZmU0Y2U3MDc5ZWYxYmE0ODAzYWQwY2RlODk5MzEwZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_39233d98daf34156b87e44f53793d482",
+      "statement": "Backfills over 7 days run in batches of 7 days.",
+      "evidence": [
+        {
+          "resource": "repo://docs/runbooks/airflow-backfill.md#L7-L7",
+          "version": "repo-lines-v1:sha256:99147c1714fa05cf5f7041e9dce61162f5eb7a60e461d3062773f3ed08e9174c:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTkxNDdjMTcxNGZhMDVjZjVmNzA0MWU5ZGNlNjExNjJmNWViN2E2MGU0NjFkMzA2Mjc3M2YzZWQwOGU5MTc0YyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTkxNDdjMTcxNGZhMDVjZjVmNzA0MWU5ZGNlNjExNjJmNWViN2E2MGU0NjFkMzA2Mjc3M2YzZWQwOGU5MTc0YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjUzMjVlYTZlMDgyNWFjMGNhOGMyYmU0NzE2Njc3MGQ1NzE2MmE5NDdlNzA4MmRlY2U4MGY2ODc2N2EyN2ZhNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjIsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTRmNmMwMjNlY2I3YTFkZGJkMTMzNzEyYWM3N2ZmMzUwZDQyNTkxYWUxZmY5ZmY0NmU5NWVjYjc1MzQ5MzkxZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_c4787e05dbd44cb6909fa262328290fa",
+      "statement": "Watch Bigeye freshness downstream until green, then unpause the DAG and post the date range in #dp-oncall.",
+      "evidence": [
+        {
+          "resource": "repo://docs/runbooks/airflow-backfill.md#L8-L9",
+          "version": "repo-lines-v1:sha256:94f6c023ecb7a1ddbd133712ac77ff350d42591ae1ff9ff46e95ecb75349391f:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2I5NWI4MGQ2MjBhNWY1NDZlNTc3M2Q3YzIyYTBjNGFiNGQ0ODFjMjMyODQ4Zjg1OTdhOGYyNzQwZTkyY2Y3YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjQ1ODQ1Mjc5OGUzMDBkMTJhMGVlMDUyMjFhMzg2NDY3MmJlZGZjY2YyYWU1ZjM0ZGUxMTJjZGNmNDc4MWZjZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzBmNmNlYTMzMzI0MTg3NDhmOTJlNWYzYTY1MmYzZWUzMjBjZmUzMGEwOTM0YjU4ZDBmNDg1M2Q2ZWMxYjFmYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_fa4fdcc6b3cb40d4b2d81f3bdd552d25",
+      "statement": "orders_ingest has max_active_runs=1.",
+      "evidence": [
+        {
+          "resource": "repo://orchestration/airflow/dags/orders_ingest.py#L26-L26",
+          "version": "repo-lines-v1:sha256:f26b8320317cb15d8a22e8010eda608e2adc66ac01edd7e97fa066d949c10e3d:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjI2YjgzMjAzMTdjYjE1ZDhhMjJlODAxMGVkYTYwOGUyYWRjNjZhYzAxZWRkN2U5N2ZhMDY2ZDk0OWMxMGUzZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjI2YjgzMjAzMTdjYjE1ZDhhMjJlODAxMGVkYTYwOGUyYWRjNjZhYzAxZWRkN2U5N2ZhMDY2ZDk0OWMxMGUzZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjkzNmFkNDkyM2JhMGUyZDk2NWU4MWZhYzM4YjFjNmM3OTgxZWI2Mzk1MTY1OWM1NzdkZGU2MWJhNTFmNjFjZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTk4ZWU0MTI1MTI0MjIwY2VjNDA4NTBlNDkwMzc1ODVlNjQ0ODVmZGZhYTQ4OTRhMTBhOWJhZTU5MjI3OGJjYSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_f19d31ac108b4d9d86d933ba04d1e955",
+      "statement": "Pending backfills go in the Monday handoff note.",
+      "evidence": [
+        {
+          "resource": "repo://docs/oncall.md#L16-L17",
+          "version": "repo-lines-v1:sha256:89e9f46583957fa1ccb7df125ffa6242b9d3a96d54cc4f1d626c77f62d5efcf0:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDczYzcxMzA3YzA0Mjk4ZTFkZGFjMDNiOWNmZTQ4Y2RhMTY4ZjY5MTY1OWZmM2Q1OTRlYTJlNWI1ZTUzYjI0YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzlkYWM1YTBhNzI0MmNiYTdmODhhMTIxY2ZlNzQxYmJjMmM0Y2Y2OTZiNDM3OTRlYzM0MmI5ZGUzOThmMTM2OSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMGI3ZWYzNWM3ZjJlMjE5ODA3NzJmNTYyZGQ1ODE4Yzg5YmIyNzgyYTFmZGI0NDg4NTkyY2E4OGI5M2MyYWVkNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.9.0",
+    "at": "2026-11-06T00:45:25.143Z"
+  }
+}

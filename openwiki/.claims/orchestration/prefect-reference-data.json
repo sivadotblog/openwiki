@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:eb909691ee3b3b0851d17af253f2f696236d32721ee04ea403f19b46a9906764",
+  "claims": [
+    {
+      "id": "claim_9294c911cd634100b3e76cce718020ca",
+      "statement": "Prefect 3 flows run on the dp-k8s-pool Kubernetes work pool and all new pipelines start there.",
+      "evidence": [
+        {
+          "resource": "repo://orchestration/README.md#L7-L8",
+          "version": "repo-lines-v1:sha256:bb7ec83f6a9660271718b909061465c06f7bf3a17d39676edd89c5f596eb78c9:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGE1MjQ4YjZiOGVhZjIxOWNkYTViNzFiZjc5NTQwNTA2MzcyM2RiMmFjNDQ3ZDExOGFiMmQ1N2RkMTQ3NTE1YyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTFhNGVmYWM0M2E3MDI3YTRlNjI2NTRhYTkyYTFlNjJiZDZjOTlkZTQ5NGY0ZmFiN2E1Y2NiYjM5ZjllODRlZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWViNDIwMjM1ZTBlNDhhNWY2OTRhNDZmMjM2MTZhZWU4N2VhOWEyODA3YTc1ZjNjZDM4MmUyMTgxMDBhNjBiZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzgyNGQ4MmFlMDJiZDg4N2RiMDY0YWRhODcyZmJmMTliNTk4NTU2ZTM1NGYwMmVmMWEyMGIxZmEzZDdhMDQ5MSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_66d5b49038a54fbfa82ada26cf421223",
+      "statement": "The Prefect project is dp-orchestration on Prefect 3.1.0.",
+      "evidence": [
+        {
+          "resource": "repo://orchestration/prefect/prefect.yaml#L2-L3",
+          "version": "repo-lines-v1:sha256:1154272cd2af140f67105c42f019e6b3e3a1a9531776722528f1eefbe4b9c37b:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjJhNzQxNzMyOGI4NmM0N2IxZTIzNDQ4NDgwZmZkM2Y5ZmRhNWI2NGJiNzViYzVkMDMyNTg1MjYyYzIxYTAxYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWUzYzY0MTIxODUyZmExZGRhMTUxNDZmYzNkODk0YTJhZjJmNjRlMTljYTk1ODBlZmJiMmM1MzkzOTUxNzI4MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjEsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMGI2YmM5ZWExYTJiNTgxNDA4ODM3YTM1MzY5ZDY0ZWUyNDgwZGQyMjI2NTgwZGEzM2M1ODBhNjcxOGM2Yjg5MyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDhkM2JmNTIyMWMzZDA0OTliNjFiOTUwNDg5NzI0OTlkN2YyZTljYzZhYzhkMmJjYzg3YzVmZjY1MWIzYTE1NCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_ce6c54eb38294d8a88a07e82b6d94855",
+      "statement": "fetch_drop retries 4 times with exponential backoff using backoff factor 30.",
+      "evidence": [
+        {
+          "resource": "repo://orchestration/prefect/flows/reference_data_refresh.py#L11-L13",
+          "version": "repo-lines-v1:sha256:bb79600e549b01c3fd60ab5a37541c25273e2598a1453d16f8a9f36c4c8b6d0e:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjdjMzZjZmY3M2Y1NDgxODc5MmZjNDRmNzMzMzZmODEyYjQ4ZGVmMmQ1YjU0MTkxOTQxZjdjZmM1OTY3ZDBiMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTQ4MWJjMWVhODFiNmQ1MDViMzMwYjY4MDMzYWU0ODZiZWZmYjA5MjljMGI2ZmVlMDY1ZGM5NTI0MDNjODhlMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTNjZjljOTViNDk1MjdjNjM4NDE0OTEzZTkxYTJiYzMyM2Y5NzcwNDhiODM2NDlkNjg3ZTNkNWI5YWM2OTU0NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMmE0ZTVjMzljMTAwZjgwOTgxYzgwYjNiNmRkMzNmZDQ3M2RlNzlkMDIwOTgyOWE2OGEzNTEyMTQwODM1ZjAyYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_c8cd36afb9264785b94a94bf91a08f14",
+      "statement": "validate rejects files whose row count drops more than 20 percent from the previous drop.",
+      "evidence": [
+        {
+          "resource": "repo://orchestration/prefect/flows/reference_data_refresh.py#L16-L19",
+          "version": "repo-lines-v1:sha256:f750e5563e3941f7b5921752fbf9400d6ccacdea2dbeac351e4fac6f348f4d18:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzIxNjk2NjZjNjNiZGJhNTFkZDU1N2M5MTNlYjc5MzRjMGMyNDgzZjIzMDFlMjllNmE0MmMzODE1YjYyNTQzNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTQ4MWJjMWVhODFiNmQ1MDViMzMwYjY4MDMzYWU0ODZiZWZmYjA5MjljMGI2ZmVlMDY1ZGM5NTI0MDNjODhlMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjIxZmQzY2M3ZTUyMzU3NTZmOWE0MGMzZDIyNWU0NmI5NjUxMDE4ZDBkMDY2ZjlkMWI0NTM1NTQ1ZGJjYzZmYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMmE0ZTVjMzljMTAwZjgwOTgxYzgwYjNiNmRkMzNmZDQ3M2RlNzlkMDIwOTgyOWE2OGEzNTEyMTQwODM1ZjAyYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_e1593a89b4534ef7b01b66c588fa259c",
+      "statement": "publish merges into lakehouse.silver.reference_codes on (code_system, code).",
+      "evidence": [
+        {
+          "resource": "repo://orchestration/prefect/flows/reference_data_refresh.py#L22-L25",
+          "version": "repo-lines-v1:sha256:702c3587a5cca3e2dbd6fe6c6b761cf0c2f2562e704794b96104ac7ca4ddf2cd:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzIxNjk2NjZjNjNiZGJhNTFkZDU1N2M5MTNlYjc5MzRjMGMyNDgzZjIzMDFlMjllNmE0MmMzODE1YjYyNTQzNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTQ4MWJjMWVhODFiNmQ1MDViMzMwYjY4MDMzYWU0ODZiZWZmYjA5MjljMGI2ZmVlMDY1ZGM5NTI0MDNjODhlMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjIxZmQzY2M3ZTUyMzU3NTZmOWE0MGMzZDIyNWU0NmI5NjUxMDE4ZDBkMDY2ZjlkMWI0NTM1NTQ1ZGJjYzZmYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTI4NWZiY2YyNTIwMzdiZjFkODZhOTUzZjhjNTFkZjJkZDM0YTMyODIzZDM2OWQ0NDY1ZTA1OWM2ZWYwZWMyMSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_25238911f65148449d96b0f15bdcd2bf",
+      "statement": "The reference-data-refresh flow times out after 2 hours and runs fetch_drop, validate, publish in order.",
+      "evidence": [
+        {
+          "resource": "repo://orchestration/prefect/flows/reference_data_refresh.py#L28-L32",
+          "version": "repo-lines-v1:sha256:e913d3836692c3263cc51a1b9927b6e16e68915277ae412a3afd8dfc4b260904:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDkyZDZiOTFmNWM1MzQ0YWNkOTc0ZTA0ZTQyNGY1ZGU3NmVmMzBkMmY4MTI5MjE1OTVjY2FjY2E2ZWU0YjUwNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWRkMmZmYjJhYjk3YWJiMTIzZTEzNDU1YjA3NmU2Nzc0NzY4NjIxMjk4NjYyYWVjODhhOTEyMDkzY2NlODBiMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjIxZmQzY2M3ZTUyMzU3NTZmOWE0MGMzZDIyNWU0NmI5NjUxMDE4ZDBkMDY2ZjlkMWI0NTM1NTQ1ZGJjYzZmYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_25935e5e973a4c2a8930c770979cbad3",
+      "statement": "reference-data-refresh-weekly runs Mondays at 06:00 America/New_York.",
+      "evidence": [
+        {
+          "resource": "repo://orchestration/prefect/prefect.yaml#L14-L16",
+          "version": "repo-lines-v1:sha256:7b807b068219d76c8f7846de429463a2db0ce4475b87ae0b19f2a74d251757d6:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzVjMjY2MDQ1Mjk5NmI4MTExMmQ1ZTcwNjQwZjgzMjJmZmM4YmFhZjgwNGM2MGM5YmIyZTZkNDMyYWQ0OTMwZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTAyYjQ3Mzk4YzlkNTEyNzYzZjIzMjA4YjFmMmMyYzIwYTU4ZDdkYTc3YzdlZWQ5NmRkNWNlYWIyMDRhNTczOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWEwZjM2Y2NhOWQwNmVkMzE4ZDYzZmI4YWNmOGEyMTUzOTljMDQ2OTc3YWIzNmVmZWMzNGE4MWVmZDY1ZTg2OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjhlMTYyNzFkOGMxZjJiMjA3YTJjMWIwYWRkNzZkMmQyZWQyNzUyNDY1YjIxMTYxNDY4MTY3OWYwMDBkMmNiYiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_6db9e441c10d491ea42464b1fea680e3",
+      "statement": "The deployment uses image dpregistry.azurecr.io/prefect-flows:2026.10 requesting 1 CPU and 4Gi memory.",
+      "evidence": [
+        {
+          "resource": "repo://orchestration/prefect/prefect.yaml#L8-L13",
+          "version": "repo-lines-v1:sha256:8790e140521fc3375296b81dee7540d010b9d4c1a699025bea43072f8d2aec7b:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzQ2YjdhZjhiYzgwMDNmOWU0YWNhOTQ3NzI0MDhmNGI3MDJhMDJkMjQ1YmU4MmI4YmUzOWRhNTliMzIwY2NlNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjBiYjM4YjU1YWY0N2JlMTkwNzY2YjJlZWQ1NTNjYTA2OTQ0YTllNjVjMWIyZmY3ZGI4MjcyOGE3Mjk0NTA3ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDE0YTljYjNmNGRlZDY5ZGNiODc2MjEzMGIzODQ3Yzk4MThhODc3MjQzY2NhOWFjODk3MjIyN2JjZTZiNmVkZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2I4MDdiMDY4MjE5ZDc2YzhmNzg0NmRlNDI5NDYzYTJkYjBjZTQ0NzViODdhZTBiMTlmMmE3NGQyNTE3NTdkNiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_55cf839db4bc42328b1c83719a013ee8",
+      "statement": "The deployment is tagged reference-data and tier-2.",
+      "evidence": [
+        {
+          "resource": "repo://orchestration/prefect/prefect.yaml#L17-L17",
+          "version": "repo-lines-v1:sha256:b8e16271d8c1f2b207a2c1b0add76d2d2ed2752465b211614681679f000d2cbb:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjhlMTYyNzFkOGMxZjJiMjA3YTJjMWIwYWRkNzZkMmQyZWQyNzUyNDY1YjIxMTYxNDY4MTY3OWYwMDBkMmNiYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjhlMTYyNzFkOGMxZjJiMjA3YTJjMWIwYWRkNzZkMmQyZWQyNzUyNDY1YjIxMTYxNDY4MTY3OWYwMDBkMmNiYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiN2I4MDdiMDY4MjE5ZDc2YzhmNzg0NmRlNDI5NDYzYTJkYjBjZTQ0NzViODdhZTBiMTlmMmE3NGQyNTE3NTdkNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_8e726f1e533c4be1b98f2e501c448a3e",
+      "statement": "lakehouse.silver.reference_codes has a 192 hour freshness SLA.",
+      "evidence": [
+        {
+          "resource": "repo://catalog/unity_catalog_export.json#L51-L51",
+          "version": "repo-lines-v1:sha256:2adf2e8d0cb934cf7a4ea08b12cce88ad7500b29b1c8f8f704a9d28b650a5f9c:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmFkZjJlOGQwY2I5MzRjZjdhNGVhMDhiMTJjY2U4OGFkNzUwMGIyOWIxYzhmOGY3MDRhOWQyOGI2NTBhNWY5YyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmFkZjJlOGQwY2I5MzRjZjdhNGVhMDhiMTJjY2U4OGFkNzUwMGIyOWIxYzhmOGY3MDRhOWQyOGI2NTBhNWY5YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzkwZWZhNjNlNDJiZWRmMGQ3ZWZiODk3ZGU0ZTVkMGZjMzhhM2IxYjllYzE5ZWE3ZTMyMGIwZDI1MGMyYWI4NiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGI0OGIzMTdlMTlkZDc0N2M3OGQ5MjViMzYxN2NmOGUxMmI3MWYxODY3NTJkY2I1ZmNmYTkzN2UzZjM0YWU0ZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_6f7e8f5dbac343a08cac7daf1fc5836b",
+      "statement": "A tier-2 pipeline failure is SEV2 with a 4 business hour response.",
+      "evidence": [
+        {
+          "resource": "repo://docs/oncall.md#L10-L11",
+          "version": "repo-lines-v1:sha256:b5658e6d4f49340f1a0bd8dc643fea0a6c6314c987f7466717590b2d6dff3aa4:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGMxNDA5MWYxNDBlMThmNmZmZjdiOWU5OGVjZmZhOWFkNjAyMmM1MWE3OTU2OThmMzU1M2MxOTU4NWQ3ZTM3MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZWFkMjZjNjJiYzdjODFiMGUxMWVmMjc0NzdhNGMzNDc5OGE4MTNlOGQyODQ3OGRhOGYyNmE3Mzk3MmE3NmQ2NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNGNhMzcxOWFkZjUzYmQ2MDc3OTNiNzRjN2ZjNjQzYjZkMjBlMDU2ODlkYWJlZmZlYjk1ODdhMmI0ZTZlNzk0ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2Q0ODFkYjhiN2IxY2NiNjg5OTUzOGU2NTM0MzZjNjc2MzgwNjk1OGNlMTlhY2I3Njc0YzY2NGZhYzQzODBlMiJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.9.0",
+    "at": "2026-11-06T00:45:25.143Z"
+  }
+}

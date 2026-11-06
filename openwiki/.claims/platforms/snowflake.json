@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:cb435bbb05f014b1f5c9663f29ff565761c001e13081ec68b4b7c6d2231fc805",
+  "claims": [
+    {
+      "id": "claim_f6f46af9abed4303b9ec32ffd9381b71",
+      "statement": "TRANSFORM_WH is LARGE, auto-suspends after 120 seconds, auto-resumes, and scales 1 to 3 clusters with the STANDARD policy.",
+      "evidence": [
+        {
+          "resource": "repo://platform-infra/terraform/snowflake/warehouses.tf#L4-L11",
+          "version": "repo-lines-v1:sha256:e53fa1d9e3cee2ffa1f005898273699f05dc9dbf0707bb422dd71623d83b6857:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzg4YzU5N2U1Y2UzMGIxODRmMWY1MzBjYTI2ZWZlYmZlMjI5MzMyZmMxNDM4NmMzOWY5MjYzM2Q5NDZlYjk3YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDE2ZmVlNDhhYTkxMjA4Mjg2NzEzZGFlNjBhOWM1ODg4MmY1OGE0NDA3ZmUzOWU3NTM4ZjNiYWI0NTE4YjkwMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmI0NTUxZGU2M2VhMjNhNDQzNTZlZmU4OGNiMzRiODhmOWFmODJhNGJlYjYyMmY2NTY5NTA3MDVjNmMzN2Y4ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzVlNDM0ZWU5YmM2OWEyNjcyYjM3MWVhYmRiN2JlMzQyNTQ3NzFjZWZhNGRhNWQwMzVmMzQwN2Q4YzIxNjRkMyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b1b05ecd8087457d80b0bfb808a3f80d",
+      "statement": "TRANSFORM_WH is for dbt and Airflow loads and owned by data-platform-eng.",
+      "evidence": [
+        {
+          "resource": "repo://platform-infra/terraform/snowflake/warehouses.tf#L13-L13",
+          "version": "repo-lines-v1:sha256:05e744971af9ed3dd7546fa555b1dffed45bd594ab3a785521dc164644e8c9b0:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDVlNzQ0OTcxYWY5ZWQzZGQ3NTQ2ZmE1NTViMWRmZmVkNDViZDU5NGFiM2E3ODU1MjFkYzE2NDY0NGU4YzliMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDVlNzQ0OTcxYWY5ZWQzZGQ3NTQ2ZmE1NTViMWRmZmVkNDViZDU5NGFiM2E3ODU1MjFkYzE2NDY0NGU4YzliMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjA3OTRmNzEzYmI3NjJkYmFjZmMwMTVmZDFkYTlhYmQ5MDZiZTc0YjczMjQ5MjM4YmMzZDU5M2Q5ZjQ2ZjgwMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNWJjYjAyNjMwMjJiZjM0MWFhYzAyOTkxYTQ1OTA4MzRhM2E0ZWNlZDRhMDUwODc3YThkNDZjOWY0ZTBlZjdiYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_c12fd6c0550a42f79431db72f218d5e3",
+      "statement": "BI_WH is MEDIUM, auto-suspends after 60 seconds, auto-resumes, and scales 1 to 6 clusters with the ECONOMY policy.",
+      "evidence": [
+        {
+          "resource": "repo://platform-infra/terraform/snowflake/warehouses.tf#L16-L24",
+          "version": "repo-lines-v1:sha256:a917bd71633ef3439679d1a3323bc051bf3177140c7e169cf74cff5f4faf0fa2:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDZjZTg2NzE0NWZjMGZlMTExNDAzNTA5MjUyN2QxM2VhMGE1NjdlNmJmMjNhMDAwYmM0ZmFmMTE4YzVjNjcxYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGQ1Y2U4NTNjMjM2YmYzNTFkZWJkM2VmNTZmNjdiM2M1N2VhOTY1ZmMxZWYwZjEyNDFhM2EyYTk4NTJmNGNlZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTdiY2VkMzRhYzhiZjNhOWU0ODg4ZjY1MjRiYmZmMjE5YmQ0NDY0N2UyZDQ1MWQxODFiZDk1NDUyMWZjYjQwNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTczMjE2ZTQyMjE3OTI4M2Y1ZjQyODM2MDk4OWY3YTMyYzY4ZTRmZDNmZjY1YWU4MWFhNWM0OTkxY2U3YmNlZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_56fea3eea4d44b069dad6d6121161b5b",
+      "statement": "TRANSFORM_WH is attached to the TRANSFORM_MONTHLY resource monitor.",
+      "evidence": [
+        {
+          "resource": "repo://platform-infra/terraform/snowflake/warehouses.tf#L12-L12",
+          "version": "repo-lines-v1:sha256:257c9ad1d2266906b07f8b502766230d959d5ecca26a790a40ea6884d65e60f5:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjU3YzlhZDFkMjI2NjkwNmIwN2Y4YjUwMjc2NjIzMGQ5NTlkNWVjY2EyNmE3OTBhNDBlYTY4ODRkNjVlNjBmNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjU3YzlhZDFkMjI2NjkwNmIwN2Y4YjUwMjc2NjIzMGQ5NTlkNWVjY2EyNmE3OTBhNDBlYTY4ODRkNjVlNjBmNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzY3MzdiOTNjOWJjZTVlZWZjZDc3NzBlZWU5NzY2ZmMzMzZkYzM5ZjhhNzU2Nzg3NTRkYmRjOTVhODIyYzk4OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTdiY2VkMzRhYzhiZjNhOWU0ODg4ZjY1MjRiYmZmMjE5YmQ0NDY0N2UyZDQ1MWQxODFiZDk1NDUyMWZjYjQwNCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_3b5b9a6d42d84dc7886a1b0975842fa6",
+      "statement": "TRANSFORM_MONTHLY has a 4000 credit monthly quota, notifies at 75 and 90 percent, and suspends at 100 percent.",
+      "evidence": [
+        {
+          "resource": "repo://platform-infra/terraform/snowflake/warehouses.tf#L27-L33",
+          "version": "repo-lines-v1:sha256:5fd7dc9b1ea0d2da46dafdf6808a5824e95f5ad0f8bb7aadb3be896adfc26e47:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGFkMzJhMjZjMTU1ZGQzYmQwNzU4ODM0OTRjZjNjYjI5MjlmMWViNWRjMmYwYTJjMzA3ZTFiZGNhNjE2N2NhOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDEyY2EzNDVjY2Y3NWJmOWMwODA2YmNlNjk1YmU4ZGU4MDhiNzk5ODQyNTFhN2E1NGQyMDJjZjYxMDFkZDQ1MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzJkZmJiZjA0YmZjYTNlOWNlOGQwYzgyZTlkNjBiZTJhY2EyMDI5N2ZkOTFhZTAzOWI4ZTIxNmFlMzk0Nzc1ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_2b5f47a6b58f4272a1e1413b268a4197",
+      "statement": "gold_daily_revenue runs on TRANSFORM_WH.",
+      "evidence": [
+        {
+          "resource": "repo://orchestration/airflow/dags/orders_ingest.py#L45-L49",
+          "version": "repo-lines-v1:sha256:e5b73d0660d12288b1c6600e1846779281633acc82335335def205fa71263d49:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTMxNGRlMTg5NzFlZGYyNGEwN2NiMjkyODVjZjlkZGE1NWNkZGEwYzgxZjk0NTA5NzhiZjI4YzBlYzEyYzE4OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDkzY2FkNTc1YzhhNTQ1ZDFkOGI5OTk1NmI4YzRmNWQ1NmU4OTY5NTEwZTVjNWRhYWI4YmYxNDkwZTQwYzc1YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWE5N2Y4OTYwODNmNTgxZWZhYTBmMWI1OTJkZTJmMjFiYmIxYjAzZTEwNjgxOWNmZjU5MDRlZjRjYWZjNmY0ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGJiMjZhZWQ4ODQ2ZWUwMmMyMTk0NjVlMDgzZDI3N2MzMmMyYWM2MmM5NTRlNzljNDczNjI5NjZkNmI2Yzg1MSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_be1e596f65f1467eacd56b6ef90c8179",
+      "statement": "dp-snowflake-transform grants role TRANSFORMER and TRANSFORM_WH usage.",
+      "evidence": [
+        {
+          "resource": "repo://docs/onboarding/access-requests.md#L8-L8",
+          "version": "repo-lines-v1:sha256:b576c15be4f473226ecc72b470c82091f759db7b66510335b29781dc31f2cf57:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjU3NmMxNWJlNGY0NzMyMjZlY2M3MmI0NzBjODIwOTFmNzU5ZGI3YjY2NTEwMzM1YjI5NzgxZGMzMWYyY2Y1NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjU3NmMxNWJlNGY0NzMyMjZlY2M3MmI0NzBjODIwOTFmNzU5ZGI3YjY2NTEwMzM1YjI5NzgxZGMzMWYyY2Y1NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzNiMTc4ZGYwMTkxMDFkMzA1YmM2NmM2YTU0OWI3ZGMxYjAwNmMyOWQxNTEzZDdiZGRjZTE1YjU2ZjIzYmZlZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTU1NjgxNTQyNmQxNTZhMzY1NjY2NGY2ZWNiNDc4ZDcwYTQ3YTYzMjE3MzQ3ZGJkMWY3ODRmMGU0OGYyOGRhZiJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.9.0",
+    "at": "2026-11-06T00:45:25.143Z"
+  }
+}

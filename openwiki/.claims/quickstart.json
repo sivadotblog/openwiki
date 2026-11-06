@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:64069955d175b52e0bbf68ab1d20ae608d0836d07b9cb7f3184f1c6126f3d1b8",
+  "claims": [
+    {
+      "id": "claim_bdc64bbe47dd4cde8fc5265af5861534",
+      "statement": "platform-infra holds Terraform for Databricks and Snowflake and Bigeye data quality monitors as code.",
+      "evidence": [
+        {
+          "resource": "repo://platform-infra/README.md#L1-L7",
+          "version": "repo-lines-v1:sha256:8b6a90a263b5035063db98c28f90ed0497dcb90ce9770060aec8fa5657057cdf:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzg4NjAzOTZhMDcxMjBjZGUxMWU4MDAzMjI3MmVlNzFhM2Q5NmMzNzM3MjRkNWE2ZDkzMGNmNjA0NjA1YzQ0MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzZjZmM0ZjdhMzQ3Njg2ZmM2MWZhYzc1NGFjMjhhNDM2NTU3MWM0ODIzMjk0ZDVmZDkyMDY2MTVjZTI3MWRkOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTMzZTJmZWU1ZWQxZTA3YmQ1YTBlMWY0ODc2NDVkN2FkODEzMjUyMWU0ZTI5YWRjNDJiYmMxODNjMDhiZjlmMCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_9a71f543ecb748c0bc5ff3ac788a2dc1",
+      "statement": "orders_ingest waits for landing files, runs the Databricks job silver_orders_merge, then builds the gold revenue table in Snowflake on TRANSFORM_WH.",
+      "evidence": [
+        {
+          "resource": "repo://orchestration/airflow/dags/orders_ingest.py#L30-L52",
+          "version": "repo-lines-v1:sha256:c5771daee3208c135732d22ee914a1811f18ea78a1379bd9cb9776aacbe6ecfb:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFkNTRlMWY4NjQ1YjBkNjdjMDM2NTU2NjVhYTg5MjQxNWUwYWIxMGIzMzQ4MGMzODhlOTRmYzFlN2Y1MzFlM2UiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM4YjFkNDg0Njg0ZWJhMzk4NzJlNmRhODY3MTIyMjFkNTE1MTc5MTI2MDMzNzAwZTcyNjEyMDg2ZDdhYmJmYWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk5OGVlNDEyNTEyNDIyMGNlYzQwODUwZTQ5MDM3NTg1ZTY0NDg1ZmRmYWE0ODk0YTEwYTliYWU1OTIyNzhiY2EiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_5fc3882f17f34d95b10abf1dd6e36482",
+      "statement": "A Prefect deployment refreshes reference data weekly.",
+      "evidence": [
+        {
+          "resource": "repo://orchestration/prefect/prefect.yaml#L5-L17",
+          "version": "repo-lines-v1:sha256:dd58eaa8d074a2c4c836892508af922235814ddaecf818176566ee5f48743545:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE1YzQwYTViZTE4ZjNhMWUzZWNkNmZjMGNiNmExY2ZiM2MwNWVkY2FiMTIyMjY4MTM0ZGI0MGQwMDFlOTRlMTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI4ZTE2MjcxZDhjMWYyYjIwN2EyYzFiMGFkZDc2ZDJkMmVkMjc1MjQ2NWIyMTE2MTQ2ODE2NzlmMDAwZDJjYmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjMxZTY5NjRmNDhkOTJmZmYxYTBmMTc1NTczYzg1ODIwZTI1OTdhODM5ZTMyYzQ3NDA0NGY5ZDNiOGQxMzYyYzUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_807ff08c9f5048adbb73d7696b018826",
+      "statement": "Bigeye alerts route to PagerDuty dp-platform-oncall.",
+      "evidence": [
+        {
+          "resource": "repo://platform-infra/bigeye/monitors.yml#L22-L24",
+          "version": "repo-lines-v1:sha256:0c17bf3dc37be01b18d9a6743c6041aa4fd97a28e98283d9cf43766888402742:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjc5OTdiMDc5NzYwMzAxNWZlODNiMWMxOGQ2MjE0NTI5YjBiYmQ3MTY1NjNhZDdiMDc3ZmU4MmMzNDQwZTViNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjgwOWU0YTZkZGUzOWQ0YTkxYjNhNmIwOGM5MzNjOWIzOWIyZTJjY2NjM2FkYzEzNjMyYTM2M2M5ZjM5YzEzYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWQ3MWNjN2ZlZWM5NjRlODlhMTExY2YyYjBlNWM3ZDNkZjk5MjA4NjBlYTYzMWIyYWI4MmZmNjMxNWViNDFjNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.9.0",
+    "at": "2026-11-06T00:45:25.143Z"
+  }
+}

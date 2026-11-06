@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:0988c54eefe13f7bc2f8aa2fcc23b586af2a99e883bd2a5df7a37b0a676f090b",
+  "claims": [
+    {
+      "id": "claim_49155ad45bcb468b8e492b67f7efb2d9",
+      "statement": "ADR-003 was accepted in 2025-09.",
+      "evidence": [
+        {
+          "resource": "repo://docs/decisions/adr-003-prefect-for-new-pipelines.md#L3-L3",
+          "version": "repo-lines-v1:sha256:727d75a7707e55989684dad09b2fe87ec87e79c65481346fa90917d6defdd64e:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzI3ZDc1YTc3MDdlNTU5ODk2ODRkYWQwOWIyZmU4N2VjODdlNzljNjU0ODEzNDZmYTkwOTE3ZDZkZWZkZDY0ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzI3ZDc1YTc3MDdlNTU5ODk2ODRkYWQwOWIyZmU4N2VjODdlNzljNjU0ODEzNDZmYTkwOTE3ZDZkZWZkZDY0ZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjIsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDc5ZDU2Y2Q1MDYyNWNmYWRmZjYwNDQxZTkyYjk3NzFiM2UxMDI3OTc1YmRlZjQxNGYwNjQ2MTU1NjAyODRmNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWZjYjBhZDZhZWJjMjU4OTdhYzY4OTA5NGFkNTQ5NmFmN2U0ZTY2OTA0YTA2ZWI3ZmRmMDMwNWM4Nzk4Y2UxZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_ffab56f136f94a7e8b17b07a8dbe1973",
+      "statement": "Airflow passed 400 DAGs and scheduler latency at the 05:00 to 07:00 UTC peak reached several minutes.",
+      "evidence": [
+        {
+          "resource": "repo://docs/decisions/adr-003-prefect-for-new-pipelines.md#L7-L8",
+          "version": "repo-lines-v1:sha256:ec60e54a0288fe5bf4ce975c28d0c717219ce2a45e25ef2778ab852ec77dcc01:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjdmZTM1ZmU5NjQxYTRlNmYxNjQ4ZTBlZjczNzY5OWEzMzM2OTFlMjYzYzhiNzEwYTg1ZTVmZjZmNzFhZGRkZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDYzZTA2ZTY5ODI4NTNjYTQzMmNkNDE0ZDllNGVhMWZiMWQ3NjdmN2I1Y2JlYWIxNTg1MThhMWEyY2NiN2YwMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWZjYjBhZDZhZWJjMjU4OTdhYzY4OTA5NGFkNTQ5NmFmN2U0ZTY2OTA0YTA2ZWI3ZmRmMDMwNWM4Nzk4Y2UxZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2IxNTdhNmQyNzY3ZmY3ZjQxMzNlZTI3NjUxMzY3YzZmZGZmN2FiNGZkOWJhM2NiNDI2MmUyYWE0NDkwY2NhMyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_aff74962fae04e3d96609165d6004070",
+      "statement": "All new pipelines are Prefect 3 flows on dp-k8s-pool.",
+      "evidence": [
+        {
+          "resource": "repo://docs/decisions/adr-003-prefect-for-new-pipelines.md#L12-L12",
+          "version": "repo-lines-v1:sha256:1a032bae2d8e77597af8cc049cfe965c115c69c1344f1d0b420eca522da48baf:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWEwMzJiYWUyZDhlNzc1OTdhZjhjYzA0OWNmZTk2NWMxMTVjNjljMTM0NGYxZDBiNDIwZWNhNTIyZGE0OGJhZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWEwMzJiYWUyZDhlNzc1OTdhZjhjYzA0OWNmZTk2NWMxMTVjNjljMTM0NGYxZDBiNDIwZWNhNTIyZGE0OGJhZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2IxNTdhNmQyNzY3ZmY3ZjQxMzNlZTI3NjUxMzY3YzZmZGZmN2FiNGZkOWJhM2NiNDI2MmUyYWE0NDkwY2NhMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTBkZWUxYWViZjUwOGI4OTE3OGQ2OGYwOTRjN2YyNmE1MDc5OWI5MGNlNjkwODM2MTM3YmQzMTc2MTI5ZmFmZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_0b7b51e0a8f0464094fd55fe97758edf",
+      "statement": "Existing Airflow DAGs stay until their owning team migrates them and tier-1 DAGs migrate last.",
+      "evidence": [
+        {
+          "resource": "repo://docs/decisions/adr-003-prefect-for-new-pipelines.md#L13-L13",
+          "version": "repo-lines-v1:sha256:e3bc952d25f41f099fdb219ddb0351946c778c5c73681331d4c49878050718b7:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTNiYzk1MmQyNWY0MWYwOTlmZGIyMTlkZGIwMzUxOTQ2Yzc3OGM1YzczNjgxMzMxZDRjNDk4NzgwNTA3MThiNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTNiYzk1MmQyNWY0MWYwOTlmZGIyMTlkZGIwMzUxOTQ2Yzc3OGM1YzczNjgxMzMxZDRjNDk4NzgwNTA3MThiNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTBlMTEyZmRiMDRjZGQzMzZlMWUyMTViNzgxNzQ5YWFjYmZkNzdmMTI4YTY1MjRhNmZmODRhOWE3NWVhZjNlOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZWY3MzI4OWRlMWJiNWUzYTg0MzRjZmYzNjE2NzM4Zjg1ZTdkNDMyYzkxMzZjYTgwOTQwYjQ1OTgwYThhZWI4ZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_228fd9abf06d4aab8bef53137ba2e3e4",
+      "statement": "orders_ingest is a tier-1 DAG.",
+      "evidence": [
+        {
+          "resource": "repo://orchestration/airflow/dags/orders_ingest.py#L28-L28",
+          "version": "repo-lines-v1:sha256:9fbc4b0490587bf36a1ac5f4a8c2ee222417e73eb384a965b2cf5f493f0c10f6:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOWZiYzRiMDQ5MDU4N2JmMzZhMWFjNWY0YThjMmVlMjIyNDE3ZTczZWIzODRhOTY1YjJjZjVmNDkzZjBjMTBmNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWZiYzRiMDQ5MDU4N2JmMzZhMWFjNWY0YThjMmVlMjIyNDE3ZTczZWIzODRhOTY1YjJjZjVmNDkzZjBjMTBmNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjJkMWMyNzY5ZmM1ZGNiY2ZiOTIxYmM0OTYyZWZlZTgzNmM2OGU2Y2U5MTgxZGZkYzNhYjQ3NzI2Yjk2MGE2NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNGE5M2YxOWNlY2VjOTE3OWEyZWY5ZmZlOGFkYTA4MjRhOTA3MmEyNmY1ZDQzN2VmYWQ4OTAxZDE1Y2IzNjU3MyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_5648f2c26aa74a558f6fd92d9880259b",
+      "statement": "Two orchestrators run in parallel through at least 2026 and on-call must know both.",
+      "evidence": [
+        {
+          "resource": "repo://docs/decisions/adr-003-prefect-for-new-pipelines.md#L17-L17",
+          "version": "repo-lines-v1:sha256:088ac7497861ff224f270209f26b103c96ade5b753d293ade3dba668f00431f9:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDg4YWM3NDk3ODYxZmYyMjRmMjcwMjA5ZjI2YjEwM2M5NmFkZTViNzUzZDI5M2FkZTNkYmE2NjhmMDA0MzFmOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDg4YWM3NDk3ODYxZmYyMjRmMjcwMjA5ZjI2YjEwM2M5NmFkZTViNzUzZDI5M2FkZTNkYmE2NjhmMDA0MzFmOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWY3MzI4OWRlMWJiNWUzYTg0MzRjZmYzNjE2NzM4Zjg1ZTdkNDMyYzkxMzZjYTgwOTQwYjQ1OTgwYThhZWI4ZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNGY4ZGJjYmM2NTQ5MTFiYmI3MWI1ZDBlYzRiNjI4MThmYWE2MGNmODhhM2UyYmQwNzEzZDQ0OTcyMzZiYjBmZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_958ee2931ae7403fa77db7c5f998fc5c",
+      "statement": "Shared connections live in the secrets backend so both tools use the same credentials path.",
+      "evidence": [
+        {
+          "resource": "repo://docs/decisions/adr-003-prefect-for-new-pipelines.md#L18-L18",
+          "version": "repo-lines-v1:sha256:4f8dbcbc654911bbb71b5d0ec4b62818faa60cf88a3e2bd0713d4497236bb0fe:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGY4ZGJjYmM2NTQ5MTFiYmI3MWI1ZDBlYzRiNjI4MThmYWE2MGNmODhhM2UyYmQwNzEzZDQ0OTcyMzZiYjBmZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGY4ZGJjYmM2NTQ5MTFiYmI3MWI1ZDBlYzRiNjI4MThmYWE2MGNmODhhM2UyYmQwNzEzZDQ0OTcyMzZiYjBmZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2EzOTk1MjljMGFmYmU4NzU2ZDYxMWZiZjRiNzc2ZGM5ODZiMzUzNjRjOWNlZDdiZWFmZjY1ZDNmZTcwOWM5ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.9.0",
+    "at": "2026-11-06T00:45:25.143Z"
+  }
+}

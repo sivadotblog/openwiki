@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:ce6af7914cb5ada925c5122f96465f040c8f2a4b0bd684e606394b495488bb29",
+  "claims": [
+    {
+      "id": "claim_5a4e78cd7911467da965483d8a90b4e3",
+      "statement": "The rotation is dp-platform-oncall in PagerDuty with one week shifts from Monday 10:00 ET and a primary and secondary.",
+      "evidence": [
+        {
+          "resource": "repo://docs/oncall.md#L3-L4",
+          "version": "repo-lines-v1:sha256:11f0eca3c6c8b3ee58ac2439dec5349ed2ad23e8888fd1a90b70de28238ec38e:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDI0ZTEwM2NjZTZhY2I5NTg3MzJiNTY0MTFlMzc0OGVjMzQ3ODkwZDEwOWZkMmNkMGIzYjU4Y2UzZGRlNzRkNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjViZjUwOWJlYjQzZTdmMjJjNjBmMmE5ZDhiYTQyNDIwYzc4NTFjZWRlYTk1YjE0NTUwNmUwYWU4OWJhZTZhNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjIsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWU5ODhkNmY5ZGVjMzI5MDgyM2ExZGI3MTliMWJiY2RlYzljNDM2OTM1NDU4N2M4ZDhkYTYwYTZiNzhjZDc4YyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjAxNzU1YjVlNDU4MzdkNWJhY2E1MTk2NjFkOWE1MzQwNDNjNzExM2Y4ZmJiYWU5MmM0MTA0MzU2ODM5MmM0MSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_9f2d807dda974f89b3d5a0d2dd8cff4f",
+      "statement": "SEV1 is a tier-1 SLA miss or a production warehouse down; page primary immediately and secondary joins after 15 minutes without ack.",
+      "evidence": [
+        {
+          "resource": "repo://docs/oncall.md#L8-L9",
+          "version": "repo-lines-v1:sha256:394e18a7d86c078c53721e92cbe41cef6a656691353e6d817b49b7625882104b:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWIzZDI2YmQwYmI2NWJiMzQyZWFiZmM4NzU1NjZjZTdlZjIxOGI2NDcxNGRlMTAyYTdiZmJkNmVhZjE5MjQ0NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDkyM2RkZTFhMzlmYmViMzRlODBlNDk2OTY1ZWRmZDRiN2I1Y2I3ODczNjcyMmJmMWU3NWNhMjAyZTM3YWQ2NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjAxNzU1YjVlNDU4MzdkNWJhY2E1MTk2NjFkOWE1MzQwNDNjNzExM2Y4ZmJiYWU5MmM0MTA0MzU2ODM5MmM0MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzUzOTJhOTkwYjlmNTI3MzQ1NDAzZGYyM2Q2NzhmZjljNDI3YTRkNzY2MGFmYzg4NGQzZmY4NDUyOTViOGEzYSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_55d6fd8f52e44097988d8e91e0256f00",
+      "statement": "SEV2 is a tier-2 pipeline failure or a data quality monitor on a gold table, with a 4 business hour response.",
+      "evidence": [
+        {
+          "resource": "repo://docs/oncall.md#L10-L11",
+          "version": "repo-lines-v1:sha256:b5658e6d4f49340f1a0bd8dc643fea0a6c6314c987f7466717590b2d6dff3aa4:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGMxNDA5MWYxNDBlMThmNmZmZjdiOWU5OGVjZmZhOWFkNjAyMmM1MWE3OTU2OThmMzU1M2MxOTU4NWQ3ZTM3MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZWFkMjZjNjJiYzdjODFiMGUxMWVmMjc0NzdhNGMzNDc5OGE4MTNlOGQyODQ3OGRhOGYyNmE3Mzk3MmE3NmQ2NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNGNhMzcxOWFkZjUzYmQ2MDc3OTNiNzRjN2ZjNjQzYjZkMjBlMDU2ODlkYWJlZmZlYjk1ODdhMmI0ZTZlNzk0ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2Q0ODFkYjhiN2IxY2NiNjg5OTUzOGU2NTM0MzZjNjc2MzgwNjk1OGNlMTlhY2I3Njc0YzY2NGZhYzQzODBlMiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_e0ce951e0f6a4b9ba3f62380bda9e147",
+      "statement": "SEV3 is everything else and is handled in the weekly triage.",
+      "evidence": [
+        {
+          "resource": "repo://docs/oncall.md#L12-L12",
+          "version": "repo-lines-v1:sha256:65ed7923f4a8c24e06f03dd211fa895c84d136d6c6260133d626b5b0d92029e7:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjVlZDc5MjNmNGE4YzI0ZTA2ZjAzZGQyMTFmYTg5NWM4NGQxMzZkNmM2MjYwMTMzZDYyNmI1YjBkOTIwMjllNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjVlZDc5MjNmNGE4YzI0ZTA2ZjAzZGQyMTFmYTg5NWM4NGQxMzZkNmM2MjYwMTMzZDYyNmI1YjBkOTIwMjllNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDM5NDVmNzEzYjczM2NiMWYzMTAwMThjZjhjYzg3MjI3OGZhZDkzMjFmNGEzNmQ0NmIzODJiNGE5ZGJkM2YyMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGI3ZWYzNWM3ZjJlMjE5ODA3NzJmNTYyZGQ1ODE4Yzg5YmIyNzgyYTFmZGI0NDg4NTkyY2E4OGI5M2MyYWVkNiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_96c0201b36304ee6ad229fddedb58574",
+      "statement": "The Monday handoff note in #dp-oncall lists open incidents, silenced monitors, and pending backfills.",
+      "evidence": [
+        {
+          "resource": "repo://docs/oncall.md#L16-L17",
+          "version": "repo-lines-v1:sha256:89e9f46583957fa1ccb7df125ffa6242b9d3a96d54cc4f1d626c77f62d5efcf0:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDczYzcxMzA3YzA0Mjk4ZTFkZGFjMDNiOWNmZTQ4Y2RhMTY4ZjY5MTY1OWZmM2Q1OTRlYTJlNWI1ZTUzYjI0YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzlkYWM1YTBhNzI0MmNiYTdmODhhMTIxY2ZlNzQxYmJjMmM0Y2Y2OTZiNDM3OTRlYzM0MmI5ZGUzOThmMTM2OSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMGI3ZWYzNWM3ZjJlMjE5ODA3NzJmNTYyZGQ1ODE4Yzg5YmIyNzgyYTFmZGI0NDg4NTkyY2E4OGI5M2MyYWVkNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_5c1509d136834ee8876c8830db976739",
+      "statement": "On-call must know both Airflow and Prefect.",
+      "evidence": [
+        {
+          "resource": "repo://docs/decisions/adr-003-prefect-for-new-pipelines.md#L17-L17",
+          "version": "repo-lines-v1:sha256:088ac7497861ff224f270209f26b103c96ade5b753d293ade3dba668f00431f9:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDg4YWM3NDk3ODYxZmYyMjRmMjcwMjA5ZjI2YjEwM2M5NmFkZTViNzUzZDI5M2FkZTNkYmE2NjhmMDA0MzFmOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDg4YWM3NDk3ODYxZmYyMjRmMjcwMjA5ZjI2YjEwM2M5NmFkZTViNzUzZDI5M2FkZTNkYmE2NjhmMDA0MzFmOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWY3MzI4OWRlMWJiNWUzYTg0MzRjZmYzNjE2NzM4Zjg1ZTdkNDMyYzkxMzZjYTgwOTQwYjQ1OTgwYThhZWI4ZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNGY4ZGJjYmM2NTQ5MTFiYmI3MWI1ZDBlYzRiNjI4MThmYWE2MGNmODhhM2UyYmQwNzEzZDQ0OTcyMzZiYjBmZSJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.9.0",
+    "at": "2026-11-06T00:45:25.143Z"
+  }
+}

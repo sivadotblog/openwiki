@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:58b2343956180035067274acafb0cd2082074875a5dd05614fa382d024e18b68",
+  "claims": [
+    {
+      "id": "claim_e6c1746e764c46debe38fdc46f7d4e88",
+      "statement": "platform-infra holds Terraform for Databricks and Snowflake and Bigeye monitors.",
+      "evidence": [
+        {
+          "resource": "repo://platform-infra/README.md#L5-L7",
+          "version": "repo-lines-v1:sha256:c5f2bd6d3bebada167ba0dd0a3e78946b2fb99f0fd5a9e19bd5b2f712b903305:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzBkNGNhZjBjYjE4OWMyNmQyZjE1NDFlMjM1N2MwZTlhNGYxN2NjODhkMmIyMWVlMjE2MzQ1MDMyMTY2ZjA4ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzZjZmM0ZjdhMzQ3Njg2ZmM2MWZhYzc1NGFjMjhhNDM2NTU3MWM0ODIzMjk0ZDVmZDkyMDY2MTVjZTI3MWRkOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTcyOGMxN2VlMDU3NWRhZjA3MDRjYzI0NThlNGJhOWUwMmE5ODRkNzZlOTAxZGIxNGM4ZDFlNDAxNDAyYjIzMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTMzZTJmZWU1ZWQxZTA3YmQ1YTBlMWY0ODc2NDVkN2FkODEzMjUyMWU0ZTI5YWRjNDJiYmMxODNjMDhiZjlmMCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_920de8809964429182755169ab6f80c6",
+      "statement": "terraform plan runs on every PR and terraform apply runs from main after one dp-platform-admins approval.",
+      "evidence": [
+        {
+          "resource": "repo://platform-infra/README.md#L9-L10",
+          "version": "repo-lines-v1:sha256:72e941de0b8e472937ee9cb3238fd1f6c2598db338d428ff5c351f6d1f6a770a:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmY5Yjc5NzMxNmJhNzYyYzI3ZmFhNjRiM2FjNjRhZDkyMDI1NTkxZjU5NWFiOTUyZGQxODFlNWY0NTk0ODBjOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTg2ZjEyYmQxOGI4Yjk0MDBhNzEzYzg0ZDE1MGI4YTg2MzIyMTIyYjQ0OThiNmUxNGQ5NmE4Zjg5YjJlYzZlMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzM1YWI3ZDUxMWViMmY2ZjI5YzU4ZTQzNjYyNzZmNzAxMzI3ZGViYTczZmQyMWRmY2ZjNDgxMTdmOTI3OGFkNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWM4ZGNlOGRiODQ2YzQyMGJmOWQ5ZWFiNzg0MTAyMjE4YWUzYzRjNTJlODZmYmQ1ZmE4YTJlMmE3OTA5MzIyZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_cadaf4180d364c1082a67c5bc8f93e63",
+      "statement": "Terraform state is in the dp-tfstate storage account with one state file per workspace.",
+      "evidence": [
+        {
+          "resource": "repo://platform-infra/README.md#L11-L11",
+          "version": "repo-lines-v1:sha256:1c8dce8db846c420bf9d9eab784102218ae3c4c52e86fbd5fa8a2e2a7909322f:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWM4ZGNlOGRiODQ2YzQyMGJmOWQ5ZWFiNzg0MTAyMjE4YWUzYzRjNTJlODZmYmQ1ZmE4YTJlMmE3OTA5MzIyZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWM4ZGNlOGRiODQ2YzQyMGJmOWQ5ZWFiNzg0MTAyMjE4YWUzYzRjNTJlODZmYmQ1ZmE4YTJlMmE3OTA5MzIyZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTMzZTJmZWU1ZWQxZTA3YmQ1YTBlMWY0ODc2NDVkN2FkODEzMjUyMWU0ZTI5YWRjNDJiYmMxODNjMDhiZjlmMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_f71683abe6984b6ba9af7c627e714572",
+      "statement": "Production write access is never granted to individuals.",
+      "evidence": [
+        {
+          "resource": "repo://docs/onboarding/access-requests.md#L12-L12",
+          "version": "repo-lines-v1:sha256:43c5a64c3a1eb7c32d72751e23756a8255d2626f3ff0109a32ce13a89de3256c:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDNjNWE2NGMzYTFlYjdjMzJkNzI3NTFlMjM3NTZhODI1NWQyNjI2ZjNmZjAxMDlhMzJjZTEzYTg5ZGUzMjU2YyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDNjNWE2NGMzYTFlYjdjMzJkNzI3NTFlMjM3NTZhODI1NWQyNjI2ZjNmZjAxMDlhMzJjZTEzYTg5ZGUzMjU2YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTU1NjgxNTQyNmQxNTZhMzY1NjY2NGY2ZWNiNDc4ZDcwYTQ3YTYzMjE3MzQ3ZGJkMWY3ODRmMGU0OGYyOGRhZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjRjMWY0ZGYzMWU2ZTA1OTIwMzZjNDc1OGZhOTA0MzE5MWVjZDA5YjUxMDI4NjRkMjc4MjM4MjUyOWNjNDc4NCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_80ea40ebbca442849f884e8c2d87b5de",
+      "statement": "dp-platform-admins grants Terraform apply approvals and is for leads only.",
+      "evidence": [
+        {
+          "resource": "repo://docs/onboarding/access-requests.md#L10-L10",
+          "version": "repo-lines-v1:sha256:80b6d2cb674c8defec4e7be32b820ab6c35089eea8c1ade6450dabb0c2871a74:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODBiNmQyY2I2NzRjOGRlZmVjNGU3YmUzMmI4MjBhYjZjMzUwODllZWE4YzFhZGU2NDUwZGFiYjBjMjg3MWE3NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODBiNmQyY2I2NzRjOGRlZmVjNGU3YmUzMmI4MjBhYjZjMzUwODllZWE4YzFhZGU2NDUwZGFiYjBjMjg3MWE3NCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2VlODJkYzEzY2U2MTczYjI5MzFlNTBiYTIwZTIzMzA2MDkzMDczNWIzMzM1OWI4ZWUzZGIyYzE5NzBjOWMzNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzdkOGFhOTFjOWI3ZTQ3MzJmYzQwNDRjNjJlMTBmZGI3NjhlNTllZGNlYmMwZjcxNzU1ZWU2NDczY2NhZGQ0OSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_3cafd9972590471ca6e19f6cf7ff51df",
+      "statement": "Manual warehouse changes must be followed by a platform-infra PR to make them permanent or revert them.",
+      "evidence": [
+        {
+          "resource": "repo://docs/runbooks/snowflake-warehouse-saturation.md#L7-L9",
+          "version": "repo-lines-v1:sha256:614341bc233d859ac8bfbb25d25ef97b9012d0c7312b54d6d1b510fa3bf42454:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYWExMDQ5NDhmZjZkMzRjZWJkMWM2NjI5ZTY1Y2Y3OGUzNzg4MWUxODMxZjg1ODNmZjdiNDJlMzNhNWQ3ZTM0NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTgxNjhhOTlkZTU4MDllMWRjNGQ0NWQ2YThjYTgwNDE5Nzk4OGRkMjQyMTA2MGIyZGUzZjg5NDIxNzI5MjA4YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNWVmNTk3YjgzMzljYjIyMTdhY2Q2YjYxZGM5MTcxYTU3ODdiNDQ2ZjkyNzQ1MmZiYmI5ZGU1ZDRiOTkzZGIzZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGU5YjFjNzg4MmM4YzIyZDBmMTNlMjA5ZDkxMzA4NTk4MmEyMDYxNjExZTY5ZTAxNjUwNjJiZjY3YWMxOTdiYSJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.9.0",
+    "at": "2026-11-06T00:45:25.143Z"
+  }
+}

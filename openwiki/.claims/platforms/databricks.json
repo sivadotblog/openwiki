@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:88b7fbdb43c127842342e831c447b65d94da471a399cddd91102e9ad9f253da5",
+  "claims": [
+    {
+      "id": "claim_2a182438f4d74c40a77ead4b312e4bbe",
+      "statement": "The metastore dp-primary-metastore is in eastus2, rooted in the dpplatformlake storage account, with force_destroy disabled.",
+      "evidence": [
+        {
+          "resource": "repo://platform-infra/terraform/databricks/workspace.tf#L4-L9",
+          "version": "repo-lines-v1:sha256:90edcc8fdba27233b8ae45d3daef1fb6dec22635896adb81e23be645cb603f2a:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2JiOTMyODQ0MDk5OGRlMTg1NjEwMWI1Yjc4ZmU3M2I0NDI5NDNmNWE5ODQ2NDZlMmUyYTBmNjU4OWFmZGFmNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDEyY2EzNDVjY2Y3NWJmOWMwODA2YmNlNjk1YmU4ZGU4MDhiNzk5ODQyNTFhN2E1NGQyMDJjZjYxMDFkZDQ1MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDg5N2MyZmYwZmFiMGI2NjhjYTYzNzkzOGEyNTc0NmRlMThjMDE4YjYwM2IzZTQ3YjI5MzU3MjI3MjM0MzE2MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODBhNTE4NmJiZDZkOTZkNDM5ZGJiNjdkMDIxZTE5M2Y4NmRmM2VhYzg4MDA5OThkZTM5ZTU0MDlkMDlmYTExYiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_51e5a24c769640ccbc0af9581f6e9576",
+      "statement": "The lakehouse catalog is owned by dp-platform-admins.",
+      "evidence": [
+        {
+          "resource": "repo://platform-infra/terraform/databricks/workspace.tf#L11-L16",
+          "version": "repo-lines-v1:sha256:350a8da865755748ae979c5df89dd572c11e48fe72a217986ab90cd96fcde2c6:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2MwMGM0MmM4NDI1Nzk4ODk4NDU3M2YxM2IyYWMzZjQ0Y2I2ZjRkZWQ2MTBkMmZiZGIwNjRkODY2OTYwMTc2YyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDEyY2EzNDVjY2Y3NWJmOWMwODA2YmNlNjk1YmU4ZGU4MDhiNzk5ODQyNTFhN2E1NGQyMDJjZjYxMDFkZDQ1MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjM1OGQ0MjE2YzA5YTdmNzMyNTk5NWVhNTUyNzhjMTM3YjFiZGZhZTQyMWJhNjU2MmZkMTkzMWVkYjg1MzQ2OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTMwMDFiZGVhMGY5NzQxODJjOTQ5NmRlNTBmMDUxMmVhMmQ2OTI1Mjg0MGRkYjcxMTQyMTQzNjMwZTNmNjczZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_e0d2c216f4e3441fb7856c729f51dbfb",
+      "statement": "The jobs-standard policy allows only 15.x Spark runtimes and fixes auto-termination at 20 minutes.",
+      "evidence": [
+        {
+          "resource": "repo://platform-infra/terraform/databricks/workspace.tf#L21-L22",
+          "version": "repo-lines-v1:sha256:9a0a99bd6b49b566a8565359b16ae37e0952da51889a276d86a92db48d054305:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjNjY2EwM2NiY2E4NDlhNDg5YWM0Y2IzZDJiMmQ4OTBhMThjMWZiYzBhMzNiZDEwZjdjMWNkMDUzZmI0NTVmYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODJhNTgwNmNkMGNlOGE1NzcwYzczNzQxNTExMGE5ODI4MDkyNDI5ZmI0OWRlZDMxMDYxMWVlZWZlMTBmMGMwMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzAxM2Q4ZTRhZTljMGQ3NzgwMjUxMGY0YThiNDk5OTExMjkwZjJlYzI2MTVhNTcyN2E1NjFjNGZhYzRjZjkwZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNGM5YWRkMjk0MGI1N2Q0YjZhMTM4NGNkMTM0NDNiMGUwNTIzOTQ0NGRhMTJiY2YwNGJhNTJkZGZmOWM1ODkzYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_25b3e41746a34d63bfeded4eb10a0908",
+      "statement": "The jobs-standard policy allows only Standard_D8ds_v5 and Standard_D16ds_v5 nodes and at most 16 workers.",
+      "evidence": [
+        {
+          "resource": "repo://platform-infra/terraform/databricks/workspace.tf#L23-L24",
+          "version": "repo-lines-v1:sha256:cb03e5f224584a7772bf3e6a5a811d77b0713068295afbfadd8e87efeabce074:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWM0NzA5MzAzZTJlYTJlYWYxZDU3NTA3ZjBmNDNhZmFkYTAyYTFmYmI1Yjk1NTdhNDczYTZiM2RmNGUwMGU4NiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTRlNTVlYWU0MTYzNWRiYTgzMGY2NjVlYWU3MzYwZDBlMzkwYmE1YmM2YTZlMDM5OGZmZGVhMzk3Y2IzZDczOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTViOWU5YjQxMDYzNTViYjA0MmMyYjE3YzRhYzllOGVlMTc3ZGE2NzIzMjQ1MWE3OTc5NDhiNTZkZDYwODg4NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODgzM2E2MTYxYWQ1ZTBlZTE5N2VhNjUxYTNlN2M5NzQ5OTUwNTM0NDU5YWJiMzgyNGE2ZDA0NDA5N2Q5NzIyZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_92cf127af12145d3b00f19d2fd385666",
+      "statement": "The interactive-small policy allows up to 60 minutes auto-termination with a default of 30 and at most 4 workers.",
+      "evidence": [
+        {
+          "resource": "repo://platform-infra/terraform/databricks/workspace.tf#L29-L33",
+          "version": "repo-lines-v1:sha256:c38cd7855eb09b7bd62877366ea0850cd6fe4a37fc56309449998a4f952ad139:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDY3MzkxMDZmYWYyNDZiOTBmY2Y0MDNiMGRjYzE4ZjAyYzY0YTg1OWM3M2MzYWNlOGVmMTE4ZWQwOTk0NGM3NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmY1ZjQyMTA4OTYyZWI0NGVlYjc2Y2VlOTcxMDQyYTE0MzczZmFhMTQwZTI2MzBmNGFlMGI2N2ViMzhhYTU4NSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZGNmOTVmMmEyZmY0NTQ0MmUxMzVkMDRmNjZmYjI1NGJhNzAxMGVlMzJiZThiM2FjYTAwMjczZTE3N2QwOWYyMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODgzM2E2MTYxYWQ1ZTBlZTE5N2VhNjUxYTNlN2M5NzQ5OTUwNTM0NDU5YWJiMzgyNGE2ZDA0NDA5N2Q5NzIyZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_09b89c0d89154fe785f29a5cfd5c6b5e",
+      "statement": "Both cluster policies fix the cost_center tag to data-platform.",
+      "evidence": [
+        {
+          "resource": "repo://platform-infra/terraform/databricks/workspace.tf#L25-L25",
+          "version": "repo-lines-v1:sha256:2f2008f574ccec4499982806244d91ecd45ae9c04f3dacdd41e3570f99c1abba:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmYyMDA4ZjU3NGNjZWM0NDk5OTgyODA2MjQ0ZDkxZWNkNDVhZTljMDRmM2RhY2RkNDFlMzU3MGY5OWMxYWJiYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmYyMDA4ZjU3NGNjZWM0NDk5OTgyODA2MjQ0ZDkxZWNkNDVhZTljMDRmM2RhY2RkNDFlMzU3MGY5OWMxYWJiYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzU3OTA3MjU4YTlkZmMzMmY5YjM4NDU0NjQ2MjM1NzFkODFmNzM5ODNmNWRlOGU4NmM2ZWFlYzBlZjZhOTVmNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZGNmOTVmMmEyZmY0NTQ0MmUxMzVkMDRmNjZmYjI1NGJhNzAxMGVlMzJiZThiM2FjYTAwMjczZTE3N2QwOWYyMyJ9"
+        },
+        {
+          "resource": "repo://platform-infra/terraform/databricks/workspace.tf#L34-L34",
+          "version": "repo-lines-v1:sha256:2f2008f574ccec4499982806244d91ecd45ae9c04f3dacdd41e3570f99c1abba:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmYyMDA4ZjU3NGNjZWM0NDk5OTgyODA2MjQ0ZDkxZWNkNDVhZTljMDRmM2RhY2RkNDFlMzU3MGY5OWMxYWJiYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmYyMDA4ZjU3NGNjZWM0NDk5OTgyODA2MjQ0ZDkxZWNkNDVhZTljMDRmM2RhY2RkNDFlMzU3MGY5OWMxYWJiYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDU1YmVmNDRiY2ViN2M3MTdhOTg3YWJlMWQ5YjI2ZGU1Y2U5MTkyOTQ3MTExZGQ5MzRlMmM3ZTI4NGRhOGI2NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZGNmOTVmMmEyZmY0NTQ0MmUxMzVkMDRmNjZmYjI1NGJhNzAxMGVlMzJiZThiM2FjYTAwMjczZTE3N2QwOWYyMyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_4d53a09dbd204c2eafaaad1e136f12b8",
+      "statement": "The bi-serving SQL warehouse is serverless, Medium, scales 1 to 4 clusters, and auto-stops after 15 minutes.",
+      "evidence": [
+        {
+          "resource": "repo://platform-infra/terraform/databricks/workspace.tf#L38-L45",
+          "version": "repo-lines-v1:sha256:8ef66e87b19cf63466500343cfdb253f54d72e879382ff8de61991ae340c16d5:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjU2NmMxZDlkZWU4NjZlNWM2ZTJkMGY3M2JjMjU0NjdmNjAxZGE1OGRmMzI3YzNkMzBjYmUzZTY5YTc1YjE4ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDEyY2EzNDVjY2Y3NWJmOWMwODA2YmNlNjk1YmU4ZGU4MDhiNzk5ODQyNTFhN2E1NGQyMDJjZjYxMDFkZDQ1MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZGNmOTVmMmEyZmY0NTQ0MmUxMzVkMDRmNjZmYjI1NGJhNzAxMGVlMzJiZThiM2FjYTAwMjczZTE3N2QwOWYyMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_5a5b1b11d72647a488ffe717f4700c54",
+      "statement": "orders_ingest triggers the Databricks job silver_orders_merge through the databricks_default connection.",
+      "evidence": [
+        {
+          "resource": "repo://orchestration/airflow/dags/orders_ingest.py#L38-L43",
+          "version": "repo-lines-v1:sha256:61bf35810dfb3c8f3a1652ec82249e80583c01c14427b56420ade77b124ecb2a:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjc4MjRjY2I3MDhmNTFlMzIwOGZlYWM1MjExNDExNjFkMDMwYmUxOTRjNmQzMzZhNmIzYWNlNWFlMjhjYzI3YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzBjMWYxODhmMTQyZWQ3YTgyNDY4MGIyMDcxNzJjNTUxOWJjNjE0YTQ4ZmRhN2NmMTY3ZWRiOGRkZjc5OTU2YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjY4NDc1NmNiZmYwNDRlNDcwOTBiNGZkMzdlYTcyYTU0NGExZjllYzE5NWQ2OGQxZDM0NzUxZWJmZjdhYjMxNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWI3YzYxZjRhYmE3NDRhMzI5ODFhNGU4YzI4NzljM2I2MWE5N2U5MWFkMDY2ODUzZGY2MjM2OTk3NmViMGI0YSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_495bb66999894af6be848b65f025e2fe",
+      "statement": "dp-engineers grants Databricks workspace user and USE on the lakehouse catalog.",
+      "evidence": [
+        {
+          "resource": "repo://docs/onboarding/access-requests.md#L7-L7",
+          "version": "repo-lines-v1:sha256:ed40fbf4342f237b46030fee6394f841a681f3b3254aae8f57d04d268c41401e:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWQ0MGZiZjQzNDJmMjM3YjQ2MDMwZmVlNjM5NGY4NDFhNjgxZjNiMzI1NGFhZThmNTdkMDRkMjY4YzQxNDAxZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZWQ0MGZiZjQzNDJmMjM3YjQ2MDMwZmVlNjM5NGY4NDFhNjgxZjNiMzI1NGFhZThmNTdkMDRkMjY4YzQxNDAxZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDA3MmUxZjllZWM5ZDBmMDA1NWE0OThhZjczYjNmYzRlZDIzZjRkNjg3YzUyMjQ3YzI0MmQ1Njg4Mzg2MjYwNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNWFjMmQyNTBjODhlZTBmYmQ5NDNmNzA5NGYyMTVjNjgwYjI3MDRlYTNiY2VjM2I1NWFmZmRjZDkzZGRiNzJkYSJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.9.0",
+    "at": "2026-11-06T00:45:25.143Z"
+  }
+}

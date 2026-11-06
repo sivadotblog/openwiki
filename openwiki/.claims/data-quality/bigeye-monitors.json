@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:66c27eadef4a4d2e930ec600f36738f7434a2321fc67c4c1fe0a66fac988413f",
+  "claims": [
+    {
+      "id": "claim_375f885610af4978b114e31f19fc4471",
+      "statement": "lakehouse.silver.orders has a freshness monitor with an upper bound of 26 hours.",
+      "evidence": [
+        {
+          "resource": "repo://platform-infra/bigeye/monitors.yml#L5-L8",
+          "version": "repo-lines-v1:sha256:2d6f37d19eb8e27adb332950365d0d878799085f307a23c825ba0080109a709a:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTlkZjlkZTI1MDc1YzY5OTA5YzhjZDE0ZDMyMGJkYzJiM2IyYTlhOTViMDE4ODJiY2I4YTI4YzM3OGIwNWE3ZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzM2NWVkZWY1YTM0OTRkZTVjMDQzMTEzMDZmMWU0MWEyYmZlYTE1M2Y0YzUyNDIyZWFkZjhjYmJlOGY1MmM1ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTUxNjJhNjZhYTZlM2UzN2ViMjEwZDJmNmNiYzg5NWFhZTA5ZDU1MzA4MjAxNjdiYWQ2MzJkZTQ3N2Y1MzFkOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDk0MmVhMTEyYzMyM2M0YTdkNDgxZjM2YjlhNzFjYThkNTU5ZmY1ZTBiYjZlMTI0NmZkZjg5YzMxYmNkNmZlYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_4f47859f01204e5e946dcfe255965790",
+      "statement": "lakehouse.silver.orders has a row count autothreshold monitor at medium sensitivity.",
+      "evidence": [
+        {
+          "resource": "repo://platform-infra/bigeye/monitors.yml#L9-L10",
+          "version": "repo-lines-v1:sha256:e228f45c2829b3cf2a674237d7b516c6a9359c2ddf873ab7253cddaff8ea5acd:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzIwNDliMGMyM2Q5OGEyZjVjYzYwZDg3N2U2YTdhOTJlYTZiYzU0ODg2MDgxZmU3ZjljNTgxZDI4MjcyMDg2OCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTUwMjJiYTBmMGMyYzRhMWJjY2U3ZTU1YjEzOWYzMTg3NTIzNDQ1OTAyZDkwOTExNTk1MDc1YTcwNDViMjNlZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMmEzNDlmYjg2NTdlYTI5NThkMzA2ZGYxODBhODBmMGEyMDBiYTAwODc0MmM3ZDJkYThiOGE5NzU2NWM5ODEzOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTljYWNlYzBjZWUyYTc0ZGM2NjNkOTZmODJhZDAwZjkyMDVkNmY0OWE5MTcyZmU5YzIyMTRkYmE3MzUwZDFkZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_458d71eecd49411e9272b28295df9ffc",
+      "statement": "order_id must have 0 percent nulls and 0 duplicates.",
+      "evidence": [
+        {
+          "resource": "repo://platform-infra/bigeye/monitors.yml#L12-L17",
+          "version": "repo-lines-v1:sha256:3c7206e607d6fc1de9c8967aa0d991320eebab70190a0bedfd3420e5a5842b77:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjA2YTAyYTA4YTU3NGRjMTk4Nzc4MWZlMjZlNzgxMzY0MTA2NWNiMjg5Y2E3ODY3OGFiYTdjNGYwYWYxM2QwYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTU2NmZkMGE1YWI0ZmZkMzRkNTJmMjhhZTUzYjUxM2E1ZGU3ZjgwMGZjM2RjMzg5YmNiMzQwZmQ0YzA5NjFiYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDk0MmVhMTEyYzMyM2M0YTdkNDgxZjM2YjlhNzFjYThkNTU5ZmY1ZTBiYjZlMTI0NmZkZjg5YzMxYmNkNmZlYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjE5MjIxMzM4ZDE5ODY0ODYxZjI1Mzk1YmQ0MjgzZWRkMjJkMGE0MDI5OGQzN2E1ODM1Mjc4M2Q0Y2JkMjhjYiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_3943c35982d04a29b17d97f9062b5229",
+      "statement": "lakehouse.gold.daily_revenue has a freshness monitor with an upper bound of 30 hours.",
+      "evidence": [
+        {
+          "resource": "repo://platform-infra/bigeye/monitors.yml#L18-L21",
+          "version": "repo-lines-v1:sha256:9fe5933809e6faee39cd0d497c68195e40e0a6a439ae966e5c9d5d6c3a165701:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjIzYzlkMWI5ZjM1ZmRmMjQyMDYzNGFlYmRlMDcxMWQ0NGY3NGI2N2QwNWIwMjYwMzUxYzA5MzY4ZWRmYWMzMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZGM1NzhmYWQwYTRiZDE0ZDNkYjEwNjc4NzAzY2Q4MzI4NzI5MTcwODk5MDljYWZiMDI5MDlhNDc0ZDdjZTZkNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmU4OGQ5NTgzMzRkNGY1YjkzNzEwNTUyNTg3ZjhmMzQyNWMzZGZmOGQ0M2NjZWMxMDllNjgyMTFjY2M1YWM0OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGMxN2JmM2RjMzdiZTAxYjE4ZDlhNjc0M2M2MDQxYWE0ZmQ5N2EyOGU5ODI4M2Q5Y2Y0Mzc2Njg4ODQwMjc0MiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_f5c5a28d611443cba90b8dabd183a3bf",
+      "statement": "Bigeye notifies Slack #dp-data-quality-alerts and PagerDuty dp-platform-oncall.",
+      "evidence": [
+        {
+          "resource": "repo://platform-infra/bigeye/monitors.yml#L22-L24",
+          "version": "repo-lines-v1:sha256:0c17bf3dc37be01b18d9a6743c6041aa4fd97a28e98283d9cf43766888402742:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjc5OTdiMDc5NzYwMzAxNWZlODNiMWMxOGQ2MjE0NTI5YjBiYmQ3MTY1NjNhZDdiMDc3ZmU4MmMzNDQwZTViNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjgwOWU0YTZkZGUzOWQ0YTkxYjNhNmIwOGM5MzNjOWIzOWIyZTJjY2NjM2FkYzEzNjMyYTM2M2M5ZjM5YzEzYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWQ3MWNjN2ZlZWM5NjRlODlhMTExY2YyYjBlNWM3ZDNkZjk5MjA4NjBlYTYzMWIyYWI4MmZmNjMxNWViNDFjNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_f87cda7746b141628a796c2fe08971fc",
+      "statement": "The catalog freshness SLAs are 26 hours for orders and 30 hours for daily_revenue.",
+      "evidence": [
+        {
+          "resource": "repo://catalog/unity_catalog_export.json#L20-L20",
+          "version": "repo-lines-v1:sha256:b97dab8c4d189834641ed3048b9808520ab4d289d5dbe5a6fef60f893abd3d50:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjk3ZGFiOGM0ZDE4OTgzNDY0MWVkMzA0OGI5ODA4NTIwYWI0ZDI4OWQ1ZGJlNWE2ZmVmNjBmODkzYWJkM2Q1MCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjk3ZGFiOGM0ZDE4OTgzNDY0MWVkMzA0OGI5ODA4NTIwYWI0ZDI4OWQ1ZGJlNWE2ZmVmNjBmODkzYWJkM2Q1MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDBhZWE3YzY3MWI0NWU1OWUzNDU0YzUwMzczZjBjN2ExODlkMjQwMWE5NWYzOTA0NWUwNGRhMDM1MjBiMGRiNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzgxYTJiOGZlOWQyY2FkNzVkYjM0ZmEwZTdiNGE2MDhlZmJjODA2YjBiOGE3MDJlZDA3ZjFmNzZmZWVhNmU1YiJ9"
+        },
+        {
+          "resource": "repo://catalog/unity_catalog_export.json#L35-L35",
+          "version": "repo-lines-v1:sha256:a1b19a20c1d41dae26bf969b53692e015081a65ded1002715114fda8536d94d8:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTFiMTlhMjBjMWQ0MWRhZTI2YmY5NjliNTM2OTJlMDE1MDgxYTY1ZGVkMTAwMjcxNTExNGZkYTg1MzZkOTRkOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTFiMTlhMjBjMWQ0MWRhZTI2YmY5NjliNTM2OTJlMDE1MDgxYTY1ZGVkMTAwMjcxNTExNGZkYTg1MzZkOTRkOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNGJkMjQ5ZGEyNTEyNDBhNTliNmE3ZmQyYTkyOGUzZmYyMjVkYmYyOTliMWVlOTdlNmIxNDdiY2JjZWY4MTM1MyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzgxYTJiOGZlOWQyY2FkNzVkYjM0ZmEwZTdiNGE2MDhlZmJjODA2YjBiOGE3MDJlZDA3ZjFmNzZmZWVhNmU1YiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_57c34ac212f947be91ffbf701fa5b5cd",
+      "statement": "A data quality monitor firing on a gold table is SEV2.",
+      "evidence": [
+        {
+          "resource": "repo://docs/oncall.md#L10-L11",
+          "version": "repo-lines-v1:sha256:b5658e6d4f49340f1a0bd8dc643fea0a6c6314c987f7466717590b2d6dff3aa4:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGMxNDA5MWYxNDBlMThmNmZmZjdiOWU5OGVjZmZhOWFkNjAyMmM1MWE3OTU2OThmMzU1M2MxOTU4NWQ3ZTM3MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZWFkMjZjNjJiYzdjODFiMGUxMWVmMjc0NzdhNGMzNDc5OGE4MTNlOGQyODQ3OGRhOGYyNmE3Mzk3MmE3NmQ2NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNGNhMzcxOWFkZjUzYmQ2MDc3OTNiNzRjN2ZjNjQzYjZkMjBlMDU2ODlkYWJlZmZlYjk1ODdhMmI0ZTZlNzk0ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2Q0ODFkYjhiN2IxY2NiNjg5OTUzOGU2NTM0MzZjNjc2MzgwNjk1OGNlMTlhY2I3Njc0YzY2NGZhYzQzODBlMiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_d87302de175049308ac8b0a27e82a251",
+      "statement": "The backfill runbook says to watch Bigeye freshness until it is green.",
+      "evidence": [
+        {
+          "resource": "repo://docs/runbooks/airflow-backfill.md#L8-L8",
+          "version": "repo-lines-v1:sha256:cb95b80d620a5f546e5773d7c22a0c4ab4d481c232848f8597a8f2740e92cf7a:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2I5NWI4MGQ2MjBhNWY1NDZlNTc3M2Q3YzIyYTBjNGFiNGQ0ODFjMjMyODQ4Zjg1OTdhOGYyNzQwZTkyY2Y3YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2I5NWI4MGQ2MjBhNWY1NDZlNTc3M2Q3YzIyYTBjNGFiNGQ0ODFjMjMyODQ4Zjg1OTdhOGYyNzQwZTkyY2Y3YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzBmNmNlYTMzMzI0MTg3NDhmOTJlNWYzYTY1MmYzZWUzMjBjZmUzMGEwOTM0YjU4ZDBmNDg1M2Q2ZWMxYjFmYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjQ1ODQ1Mjc5OGUzMDBkMTJhMGVlMDUyMjFhMzg2NDY3MmJlZGZjY2YyYWU1ZjM0ZGUxMTJjZGNmNDc4MWZjZSJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.9.0",
+    "at": "2026-11-06T00:45:25.143Z"
+  }
+}

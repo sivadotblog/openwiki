@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:d911c6fffdd35f92f92f560b4fba13e0e90f3cc368c9998c7173b6a94519beed",
+  "claims": [
+    {
+      "id": "claim_a24bf776582248d784ee869d0f3cc1e7",
+      "statement": "dp-engineers grants Databricks workspace user, lakehouse catalog USE, and Airflow viewer.",
+      "evidence": [
+        {
+          "resource": "repo://docs/onboarding/access-requests.md#L7-L7",
+          "version": "repo-lines-v1:sha256:ed40fbf4342f237b46030fee6394f841a681f3b3254aae8f57d04d268c41401e:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWQ0MGZiZjQzNDJmMjM3YjQ2MDMwZmVlNjM5NGY4NDFhNjgxZjNiMzI1NGFhZThmNTdkMDRkMjY4YzQxNDAxZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZWQ0MGZiZjQzNDJmMjM3YjQ2MDMwZmVlNjM5NGY4NDFhNjgxZjNiMzI1NGFhZThmNTdkMDRkMjY4YzQxNDAxZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDA3MmUxZjllZWM5ZDBmMDA1NWE0OThhZjczYjNmYzRlZDIzZjRkNjg3YzUyMjQ3YzI0MmQ1Njg4Mzg2MjYwNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNWFjMmQyNTBjODhlZTBmYmQ5NDNmNzA5NGYyMTVjNjgwYjI3MDRlYTNiY2VjM2I1NWFmZmRjZDkzZGRiNzJkYSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_91ffa32032e04adca0ae83a111e6f377",
+      "statement": "dp-snowflake-transform grants Snowflake role TRANSFORMER and TRANSFORM_WH usage.",
+      "evidence": [
+        {
+          "resource": "repo://docs/onboarding/access-requests.md#L8-L8",
+          "version": "repo-lines-v1:sha256:b576c15be4f473226ecc72b470c82091f759db7b66510335b29781dc31f2cf57:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjU3NmMxNWJlNGY0NzMyMjZlY2M3MmI0NzBjODIwOTFmNzU5ZGI3YjY2NTEwMzM1YjI5NzgxZGMzMWYyY2Y1NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjU3NmMxNWJlNGY0NzMyMjZlY2M3MmI0NzBjODIwOTFmNzU5ZGI3YjY2NTEwMzM1YjI5NzgxZGMzMWYyY2Y1NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzNiMTc4ZGYwMTkxMDFkMzA1YmM2NmM2YTU0OWI3ZGMxYjAwNmMyOWQxNTEzZDdiZGRjZTE1YjU2ZjIzYmZlZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTU1NjgxNTQyNmQxNTZhMzY1NjY2NGY2ZWNiNDc4ZDcwYTQ3YTYzMjE3MzQ3ZGJkMWY3ODRmMGU0OGYyOGRhZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_bc61c957197042ecb8a979fde6b17620",
+      "statement": "dp-prefect-devs grants Prefect workspace developer.",
+      "evidence": [
+        {
+          "resource": "repo://docs/onboarding/access-requests.md#L9-L9",
+          "version": "repo-lines-v1:sha256:3f41dedf8fc60b5280d98565af9afaf0ec2da99e7cbc9d305c6af9deec5a3beb:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiM2Y0MWRlZGY4ZmM2MGI1MjgwZDk4NTY1YWY5YWZhZjBlYzJkYTk5ZTdjYmM5ZDMwNWM2YWY5ZGVlYzVhM2JlYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiM2Y0MWRlZGY4ZmM2MGI1MjgwZDk4NTY1YWY5YWZhZjBlYzJkYTk5ZTdjYmM5ZDMwNWM2YWY5ZGVlYzVhM2JlYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTM5MDRhOTUyZDk2ODQ2YjgzODkxZWRjOWRkNDg0ODFmODJmM2M0NmFkMDA3NWVlMGVkMjVhNzY3ZDVkMzU2NiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzVlNWVhYjNlOTVhMDk5Mzg2ODZhNTRjMWQzNWY0MzgwNWMxYjFkOGNiNjEwY2I2ZDQ2MTY4OWJhM2NjY2E4NCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_deca304c56ce481f8cdaa920c04b0a62",
+      "statement": "dp-platform-admins grants Terraform apply approvals and is for leads only.",
+      "evidence": [
+        {
+          "resource": "repo://docs/onboarding/access-requests.md#L10-L10",
+          "version": "repo-lines-v1:sha256:80b6d2cb674c8defec4e7be32b820ab6c35089eea8c1ade6450dabb0c2871a74:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODBiNmQyY2I2NzRjOGRlZmVjNGU3YmUzMmI4MjBhYjZjMzUwODllZWE4YzFhZGU2NDUwZGFiYjBjMjg3MWE3NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODBiNmQyY2I2NzRjOGRlZmVjNGU3YmUzMmI4MjBhYjZjMzUwODllZWE4YzFhZGU2NDUwZGFiYjBjMjg3MWE3NCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2VlODJkYzEzY2U2MTczYjI5MzFlNTBiYTIwZTIzMzA2MDkzMDczNWIzMzM1OWI4ZWUzZGIyYzE5NzBjOWMzNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzdkOGFhOTFjOWI3ZTQ3MzJmYzQwNDRjNjJlMTBmZGI3NjhlNTllZGNlYmMwZjcxNzU1ZWU2NDczY2NhZGQ0OSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_56c1a96fd2a14d88bfb34472aa1dbec3",
+      "statement": "Production write access is never granted to individuals.",
+      "evidence": [
+        {
+          "resource": "repo://docs/onboarding/access-requests.md#L12-L12",
+          "version": "repo-lines-v1:sha256:43c5a64c3a1eb7c32d72751e23756a8255d2626f3ff0109a32ce13a89de3256c:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDNjNWE2NGMzYTFlYjdjMzJkNzI3NTFlMjM3NTZhODI1NWQyNjI2ZjNmZjAxMDlhMzJjZTEzYTg5ZGUzMjU2YyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDNjNWE2NGMzYTFlYjdjMzJkNzI3NTFlMjM3NTZhODI1NWQyNjI2ZjNmZjAxMDlhMzJjZTEzYTg5ZGUzMjU2YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTU1NjgxNTQyNmQxNTZhMzY1NjY2NGY2ZWNiNDc4ZDcwYTQ3YTYzMjE3MzQ3ZGJkMWY3ODRmMGU0OGYyOGRhZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjRjMWY0ZGYzMWU2ZTA1OTIwMzZjNDc1OGZhOTA0MzE5MWVjZDA5YjUxMDI4NjRkMjc4MjM4MjUyOWNjNDc4NCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_e3da25257d4748d48dcf70e9762d9e92",
+      "statement": "New engineers join #dp-platform-help, #dp-oncall, and #dp-data-quality-alerts.",
+      "evidence": [
+        {
+          "resource": "repo://docs/onboarding/access-requests.md#L13-L13",
+          "version": "repo-lines-v1:sha256:b4c1f4df31e6e0592036c4758fa9043191ecd09b5102864d2782382529cc4784:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjRjMWY0ZGYzMWU2ZTA1OTIwMzZjNDc1OGZhOTA0MzE5MWVjZDA5YjUxMDI4NjRkMjc4MjM4MjUyOWNjNDc4NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjRjMWY0ZGYzMWU2ZTA1OTIwMzZjNDc1OGZhOTA0MzE5MWVjZDA5YjUxMDI4NjRkMjc4MjM4MjUyOWNjNDc4NCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzVlNWVhYjNlOTVhMDk5Mzg2ODZhNTRjMWQzNWY0MzgwNWMxYjFkOGNiNjEwY2I2ZDQ2MTY4OWJhM2NjY2E4NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.9.0",
+    "at": "2026-11-06T00:45:25.143Z"
+  }
+}

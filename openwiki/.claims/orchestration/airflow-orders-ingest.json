@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:ff4e6cefa1e164067f20f54f80999e2bab27ea6f28e26050fa3dcb93383d4d69",
+  "claims": [
+    {
+      "id": "claim_bccdbc2121664973a9cb5e43cf1dd4bd",
+      "statement": "Airflow 2 DAGs run on the managed environment dp-airflow-prod and existing tier-1 pipelines stay on Airflow until migrated.",
+      "evidence": [
+        {
+          "resource": "repo://orchestration/README.md#L5-L6",
+          "version": "repo-lines-v1:sha256:5f4f119fafe765c1a117e55e5ca581b625654074dc6b67c28c40ad4c75decb6e:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjBlNDY5ODViMjQwYzQyNzcxNDBjNGQzYzc4YjA5M2RjZTRmZGJjODIwYjRlNzJjMWZjZDk3MDAzODdhMWY2YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGI2ZWNkODU2MGZhZmYxZmVjZGJiYzhlMjZlM2Q3NjkxMDAwMjFmOGVmNzNhZTBhYjljMDUzZTJlYjAxYTk5ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODMxMDRiZTlkOWU1Njc2YmJlN2YwMTA2ZjUwYTg5NGFjNjY4OWIyYWJhOTE0ZDkzYWQ3NzVjNjAwNjkzNmNlZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYmU1N2IyYjRlNzIzMWJkMDhlMmE3YjMwOTljZmEyZDYwNjc0N2Y5MDBlYjE0N2ZiNzU0MGY3NjA5MjVlY2E5ZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_e43287611c704c269aa159495933d9c8",
+      "statement": "Connections databricks_default and snowflake_transform come from the secrets backend, never from code.",
+      "evidence": [
+        {
+          "resource": "repo://orchestration/README.md#L10-L11",
+          "version": "repo-lines-v1:sha256:1307ef934b7caa528aaef65e9115e259fe6d39845d6a1bca2b918ad0e7ceb4d5:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTJjZjViZmE3NWU0NWRmZjFmMmJjOTAzZTczYmE0NjMxYmYyNWYwMjVlYzFiZTcwNmE2YmE1NGM0YTg5MWE0YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjMyM2E1YmJmNDQxMTRkZjRmNmE3MTEyZDMzMzBhZjU2ZTFmM2U1NTA0YTQ4ZTlhOGEzYzc2ZGFjZThmNmY0NCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmU1N2IyYjRlNzIzMWJkMDhlMmE3YjMwOTljZmEyZDYwNjc0N2Y5MDBlYjE0N2ZiNzU0MGY3NjA5MjVlY2E5ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_8e735fa1dc00430090b96b0bb4f78443",
+      "statement": "orders_ingest runs daily at 05:30 UTC with catchup disabled and one active run at a time.",
+      "evidence": [
+        {
+          "resource": "repo://orchestration/airflow/dags/orders_ingest.py#L21-L26",
+          "version": "repo-lines-v1:sha256:b4a857373650e103516c307658a56f2d4f8b1677e3be9360ae551c5967250595:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODdiYjZiYmFhNGRiZWY2ZDc1OGM5YmI5ZjU4YWM0YzczZWMyODJhYTY3NmEyZTA3ZDg4M2MxZDRlZmIzMWY1NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjI2YjgzMjAzMTdjYjE1ZDhhMjJlODAxMGVkYTYwOGUyYWRjNjZhYzAxZWRkN2U5N2ZhMDY2ZDk0OWMxMGUzZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTA3NzRhMWExZTk0NGE4NzFlYzliMzdmYjYzZmQ4NjVkMDE1NmY2ODg3ODdhNzRmOWM2NmZiMmY0MGM3YThkNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTk4ZWU0MTI1MTI0MjIwY2VjNDA4NTBlNDkwMzc1ODVlNjQ0ODVmZGZhYTQ4OTRhMTBhOWJhZTU5MjI3OGJjYSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_5a20b44b2b62487eb830f332ff1901c9",
+      "statement": "orders_ingest is owned by data-platform-eng, retries 3 times 10 minutes apart, has a 4 hour SLA, and does not email on failure.",
+      "evidence": [
+        {
+          "resource": "repo://orchestration/airflow/dags/orders_ingest.py#L13-L19",
+          "version": "repo-lines-v1:sha256:cd9995831562addbce225fd3595f01fc6390c0045ca1f0bc1b2c06046ef8e8df:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjk1MTJlNmIzMWRiY2ZmNDg0NDIzMWFiZDhkNjNjNjFjN2E4NDNiZDAwMDcyOTQxM2NhZWM2YmYyZWFlNTllMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDEyY2EzNDVjY2Y3NWJmOWMwODA2YmNlNjk1YmU4ZGU4MDhiNzk5ODQyNTFhN2E1NGQyMDJjZjYxMDFkZDQ1MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiN2MwMDNkNWU0NWY3YzMzYzBkMmFiNDhlNGVlNGFjM2NiODc3M2U0Yzk0NjU0MjBlYTY4ZjE0ZjM3OWU1MzE2ZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZWNmZWZiN2FmOTQ3YTBjNDNiOWU4NWEyMjliODBkNjI1MTliNzc4ZTBjMGRkZTMzYTE5MTM4ZWUxYWFiZmViZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_27217f04214f45e78d4a6e5ed2f9e041",
+      "statement": "orders_ingest is tagged orders and tier-1.",
+      "evidence": [
+        {
+          "resource": "repo://orchestration/airflow/dags/orders_ingest.py#L28-L28",
+          "version": "repo-lines-v1:sha256:9fbc4b0490587bf36a1ac5f4a8c2ee222417e73eb384a965b2cf5f493f0c10f6:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOWZiYzRiMDQ5MDU4N2JmMzZhMWFjNWY0YThjMmVlMjIyNDE3ZTczZWIzODRhOTY1YjJjZjVmNDkzZjBjMTBmNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWZiYzRiMDQ5MDU4N2JmMzZhMWFjNWY0YThjMmVlMjIyNDE3ZTczZWIzODRhOTY1YjJjZjVmNDkzZjBjMTBmNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjJkMWMyNzY5ZmM1ZGNiY2ZiOTIxYmM0OTYyZWZlZTgzNmM2OGU2Y2U5MTgxZGZkYzNhYjQ3NzI2Yjk2MGE2NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNGE5M2YxOWNlY2VjOTE3OWEyZWY5ZmZlOGFkYTA4MjRhOTA3MmEyNmY1ZDQzN2VmYWQ4OTAxZDE1Y2IzNjU3MyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_8ca8e36761a04b0cb3a8d2356feb2cdf",
+      "statement": "wait_for_landing waits for /landing/orders/{{ ds }}/_SUCCESS, pokes every 300 seconds, times out after 3 hours, and runs in reschedule mode.",
+      "evidence": [
+        {
+          "resource": "repo://orchestration/airflow/dags/orders_ingest.py#L30-L36",
+          "version": "repo-lines-v1:sha256:1bd2f504c76b553a0bbe73363055c4e57638810063950422f0657624f474e8c7:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYWQ1NGUxZjg2NDViMGQ2N2MwMzY1NTY2NWFhODkyNDE1ZTBhYjEwYjMzNDgwYzM4OGU5NGZjMWU3ZjUzMWUzZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzBjMWYxODhmMTQyZWQ3YTgyNDY4MGIyMDcxNzJjNTUxOWJjNjE0YTQ4ZmRhN2NmMTY3ZWRiOGRkZjc5OTU2YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTk4ZWU0MTI1MTI0MjIwY2VjNDA4NTBlNDkwMzc1ODVlNjQ0ODVmZGZhYTQ4OTRhMTBhOWJhZTU5MjI3OGJjYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGM4ODljZjQ4ODRlMTMzYzBhMmFlZGFlODc4ODhmN2MxNzdiNTJmNzA0YzQ3YTA3M2MzNWEyZDg2MTBhYjU3ZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_f9dd4d25ceb548c6ad132f68117f38d6",
+      "statement": "silver_orders runs the Databricks job silver_orders_merge with run_date set to the run date.",
+      "evidence": [
+        {
+          "resource": "repo://orchestration/airflow/dags/orders_ingest.py#L38-L43",
+          "version": "repo-lines-v1:sha256:61bf35810dfb3c8f3a1652ec82249e80583c01c14427b56420ade77b124ecb2a:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjc4MjRjY2I3MDhmNTFlMzIwOGZlYWM1MjExNDExNjFkMDMwYmUxOTRjNmQzMzZhNmIzYWNlNWFlMjhjYzI3YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzBjMWYxODhmMTQyZWQ3YTgyNDY4MGIyMDcxNzJjNTUxOWJjNjE0YTQ4ZmRhN2NmMTY3ZWRiOGRkZjc5OTU2YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjY4NDc1NmNiZmYwNDRlNDcwOTBiNGZkMzdlYTcyYTU0NGExZjllYzE5NWQ2OGQxZDM0NzUxZWJmZjdhYjMxNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWI3YzYxZjRhYmE3NDRhMzI5ODFhNGU4YzI4NzljM2I2MWE5N2U5MWFkMDY2ODUzZGY2MjM2OTk3NmViMGI0YSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_5f7d905da0f94809a8786728888df426",
+      "statement": "gold_daily_revenue calls GOLD.BUILD_DAILY_REVENUE on TRANSFORM_WH through snowflake_transform.",
+      "evidence": [
+        {
+          "resource": "repo://orchestration/airflow/dags/orders_ingest.py#L45-L50",
+          "version": "repo-lines-v1:sha256:645f28975dd27b4b439d48dd04c129c87dbb76ad2cb35a7d5b43c09d12a4b536:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTMxNGRlMTg5NzFlZGYyNGEwN2NiMjkyODVjZjlkZGE1NWNkZGEwYzgxZjk0NTA5NzhiZjI4YzBlYzEyYzE4OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzBjMWYxODhmMTQyZWQ3YTgyNDY4MGIyMDcxNzJjNTUxOWJjNjE0YTQ4ZmRhN2NmMTY3ZWRiOGRkZjc5OTU2YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWE5N2Y4OTYwODNmNTgxZWZhYTBmMWI1OTJkZTJmMjFiYmIxYjAzZTEwNjgxOWNmZjU5MDRlZjRjYWZjNmY0ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjIsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWUzZDRiN2IwMGIzMjY1NjNlNzA1Y2Q2MTJlMzAxNWI1ZmNhNGE2MmM4ZjM0ODUzMWJhMGU2M2MxZjM1YWE1MSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_25be44bffd2f44faa9a38666fec4e19c",
+      "statement": "The task order is wait_for_landing, silver_orders, gold_daily_revenue.",
+      "evidence": [
+        {
+          "resource": "repo://orchestration/airflow/dags/orders_ingest.py#L52-L52",
+          "version": "repo-lines-v1:sha256:38b1d484684eba39872e6da86712221d515179126033700e72612086d7abbfaf:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzhiMWQ0ODQ2ODRlYmEzOTg3MmU2ZGE4NjcxMjIyMWQ1MTUxNzkxMjYwMzM3MDBlNzI2MTIwODZkN2FiYmZhZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzhiMWQ0ODQ2ODRlYmEzOTg3MmU2ZGE4NjcxMjIyMWQ1MTUxNzkxMjYwMzM3MDBlNzI2MTIwODZkN2FiYmZhZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZGQ2MjI5YjRkMWY4OTVlMWE5ZThmNzkzMWY4NDBlYjFmOWM2MjY4YjM1NDc1MjdjMWQ1OWQzN2QwMzRmMGY3OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_1e4f634fef4140129082e71edd250429",
+      "statement": "A tier-1 pipeline missing its SLA is SEV1.",
+      "evidence": [
+        {
+          "resource": "repo://docs/oncall.md#L8-L9",
+          "version": "repo-lines-v1:sha256:394e18a7d86c078c53721e92cbe41cef6a656691353e6d817b49b7625882104b:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWIzZDI2YmQwYmI2NWJiMzQyZWFiZmM4NzU1NjZjZTdlZjIxOGI2NDcxNGRlMTAyYTdiZmJkNmVhZjE5MjQ0NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDkyM2RkZTFhMzlmYmViMzRlODBlNDk2OTY1ZWRmZDRiN2I1Y2I3ODczNjcyMmJmMWU3NWNhMjAyZTM3YWQ2NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjAxNzU1YjVlNDU4MzdkNWJhY2E1MTk2NjFkOWE1MzQwNDNjNzExM2Y4ZmJiYWU5MmM0MTA0MzU2ODM5MmM0MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzUzOTJhOTkwYjlmNTI3MzQ1NDAzZGYyM2Q2NzhmZjljNDI3YTRkNzY2MGFmYzg4NGQzZmY4NDUyOTViOGEzYSJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.9.0",
+    "at": "2026-11-06T00:45:25.143Z"
+  }
+}

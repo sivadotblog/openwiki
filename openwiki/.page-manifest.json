@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "pages": {
+    "/openwiki/architecture/overview.md": {
+      "pageVersion": "sha256:d9bdb6a307553793b2f54700dbc53c8beb1492756004417d3d40c7fd94ef43be",
+      "completedBy": "claude-code",
+      "completedRunId": "d9218848-8d05-4f27-af64-b0ed183e5934",
+      "gitHead": "7b67e45ded28e8aad3f1daf863d760799d6f1ae5",
+      "sourceFingerprint": "sha256:a2af3bf63068118a69b408c361b8a9cc974890d76b196376cf1cb3b9d0c895f3"
+    },
+    "/openwiki/data-quality/bigeye-monitors.md": {
+      "pageVersion": "sha256:66c27eadef4a4d2e930ec600f36738f7434a2321fc67c4c1fe0a66fac988413f",
+      "completedBy": "claude-code",
+      "completedRunId": "d9218848-8d05-4f27-af64-b0ed183e5934",
+      "gitHead": "7b67e45ded28e8aad3f1daf863d760799d6f1ae5",
+      "sourceFingerprint": "sha256:a2af3bf63068118a69b408c361b8a9cc974890d76b196376cf1cb3b9d0c895f3"
+    },
+    "/openwiki/datasets/lakehouse-tables.md": {
+      "pageVersion": "sha256:ce6bc232d33eb32fe57f5518f24a4d0c53a45bdf3d6473be8765aaadc8d923a8",
+      "completedBy": "claude-code",
+      "completedRunId": "d9218848-8d05-4f27-af64-b0ed183e5934",
+      "gitHead": "7b67e45ded28e8aad3f1daf863d760799d6f1ae5",
+      "sourceFingerprint": "sha256:a2af3bf63068118a69b408c361b8a9cc974890d76b196376cf1cb3b9d0c895f3"
+    },
+    "/openwiki/decisions/adr-003-prefect.md": {
+      "pageVersion": "sha256:0988c54eefe13f7bc2f8aa2fcc23b586af2a99e883bd2a5df7a37b0a676f090b",
+      "completedBy": "claude-code",
+      "completedRunId": "d9218848-8d05-4f27-af64-b0ed183e5934",
+      "gitHead": "7b67e45ded28e8aad3f1daf863d760799d6f1ae5",
+      "sourceFingerprint": "sha256:a2af3bf63068118a69b408c361b8a9cc974890d76b196376cf1cb3b9d0c895f3"
+    },
+    "/openwiki/onboarding/access.md": {
+      "pageVersion": "sha256:d911c6fffdd35f92f92f560b4fba13e0e90f3cc368c9998c7173b6a94519beed",
+      "completedBy": "claude-code",
+      "completedRunId": "d9218848-8d05-4f27-af64-b0ed183e5934",
+      "gitHead": "7b67e45ded28e8aad3f1daf863d760799d6f1ae5",
+      "sourceFingerprint": "sha256:a2af3bf63068118a69b408c361b8a9cc974890d76b196376cf1cb3b9d0c895f3"
+    },
+    "/openwiki/operations/change-management.md": {
+      "pageVersion": "sha256:58b2343956180035067274acafb0cd2082074875a5dd05614fa382d024e18b68",
+      "completedBy": "claude-code",
+      "completedRunId": "d9218848-8d05-4f27-af64-b0ed183e5934",
+      "gitHead": "7b67e45ded28e8aad3f1daf863d760799d6f1ae5",
+      "sourceFingerprint": "sha256:a2af3bf63068118a69b408c361b8a9cc974890d76b196376cf1cb3b9d0c895f3"
+    },
+    "/openwiki/operations/oncall.md": {
+      "pageVersion": "sha256:ce6af7914cb5ada925c5122f96465f040c8f2a4b0bd684e606394b495488bb29",
+      "completedBy": "claude-code",
+      "completedRunId": "d9218848-8d05-4f27-af64-b0ed183e5934",
+      "gitHead": "7b67e45ded28e8aad3f1daf863d760799d6f1ae5",
+      "sourceFingerprint": "sha256:a2af3bf63068118a69b408c361b8a9cc974890d76b196376cf1cb3b9d0c895f3"
+    },
+    "/openwiki/operations/runbooks/airflow-backfill.md": {
+      "pageVersion": "sha256:c6d2690efe204837578f50b9cb40dd24663209432521dca817fa55bdd0131696",
+      "completedBy": "claude-code",
+      "completedRunId": "d9218848-8d05-4f27-af64-b0ed183e5934",
+      "gitHead": "7b67e45ded28e8aad3f1daf863d760799d6f1ae5",
+      "sourceFingerprint": "sha256:a2af3bf63068118a69b408c361b8a9cc974890d76b196376cf1cb3b9d0c895f3"
+    },
+    "/openwiki/operations/runbooks/snowflake-warehouse-saturation.md": {
+      "pageVersion": "sha256:3f4e93e72745f842d25fbe4ee2781f06bd93fd9a7df5ca9631db37aa13f6902b",
+      "completedBy": "claude-code",
+      "completedRunId": "d9218848-8d05-4f27-af64-b0ed183e5934",
+      "gitHead": "7b67e45ded28e8aad3f1daf863d760799d6f1ae5",
+      "sourceFingerprint": "sha256:a2af3bf63068118a69b408c361b8a9cc974890d76b196376cf1cb3b9d0c895f3"
+    },
+    "/openwiki/orchestration/airflow-orders-ingest.md": {
+      "pageVersion": "sha256:ff4e6cefa1e164067f20f54f80999e2bab27ea6f28e26050fa3dcb93383d4d69",
+      "completedBy": "claude-code",
+      "completedRunId": "d9218848-8d05-4f27-af64-b0ed183e5934",
+      "gitHead": "7b67e45ded28e8aad3f1daf863d760799d6f1ae5",
+      "sourceFingerprint": "sha256:a2af3bf63068118a69b408c361b8a9cc974890d76b196376cf1cb3b9d0c895f3"
+    },
+    "/openwiki/orchestration/prefect-reference-data.md": {
+      "pageVersion": "sha256:eb909691ee3b3b0851d17af253f2f696236d32721ee04ea403f19b46a9906764",
+      "completedBy": "claude-code",
+      "completedRunId": "d9218848-8d05-4f27-af64-b0ed183e5934",
+      "gitHead": "7b67e45ded28e8aad3f1daf863d760799d6f1ae5",
+      "sourceFingerprint": "sha256:a2af3bf63068118a69b408c361b8a9cc974890d76b196376cf1cb3b9d0c895f3"
+    },
+    "/openwiki/platforms/databricks.md": {
+      "pageVersion": "sha256:88b7fbdb43c127842342e831c447b65d94da471a399cddd91102e9ad9f253da5",
+      "completedBy": "claude-code",
+      "completedRunId": "d9218848-8d05-4f27-af64-b0ed183e5934",
+      "gitHead": "7b67e45ded28e8aad3f1daf863d760799d6f1ae5",
+      "sourceFingerprint": "sha256:a2af3bf63068118a69b408c361b8a9cc974890d76b196376cf1cb3b9d0c895f3"
+    },
+    "/openwiki/platforms/snowflake.md": {
+      "pageVersion": "sha256:cb435bbb05f014b1f5c9663f29ff565761c001e13081ec68b4b7c6d2231fc805",
+      "completedBy": "claude-code",
+      "completedRunId": "d9218848-8d05-4f27-af64-b0ed183e5934",
+      "gitHead": "7b67e45ded28e8aad3f1daf863d760799d6f1ae5",
+      "sourceFingerprint": "sha256:a2af3bf63068118a69b408c361b8a9cc974890d76b196376cf1cb3b9d0c895f3"
+    },
+    "/openwiki/quickstart.md": {
+      "pageVersion": "sha256:64069955d175b52e0bbf68ab1d20ae608d0836d07b9cb7f3184f1c6126f3d1b8",
+      "completedBy": "claude-code",
+      "completedRunId": "d9218848-8d05-4f27-af64-b0ed183e5934",
+      "gitHead": "7b67e45ded28e8aad3f1daf863d760799d6f1ae5",
+      "sourceFingerprint": "sha256:a2af3bf63068118a69b408c361b8a9cc974890d76b196376cf1cb3b9d0c895f3"
+    }
+  }
+}

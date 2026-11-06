@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:d9bdb6a307553793b2f54700dbc53c8beb1492756004417d3d40c7fd94ef43be",
+  "claims": [
+    {
+      "id": "claim_c0cfda8a085743f68e749321e9e8a149",
+      "statement": "The lakehouse catalog holds curated bronze, silver and gold schemas in the dp-primary-metastore Unity Catalog metastore.",
+      "evidence": [
+        {
+          "resource": "repo://platform-infra/terraform/databricks/workspace.tf#L4-L16",
+          "version": "repo-lines-v1:sha256:2e9e812f4c492c5db8280d74441480bb736460b8b36b0cedaa6e731a0b5c534a:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdiYjkzMjg0NDA5OThkZTE4NTYxMDFiNWI3OGZlNzNiNDQyOTQzZjVhOTg0NjQ2ZTJlMmEwZjY1ODlhZmRhZjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ4OTdjMmZmMGZhYjBiNjY4Y2E2Mzc5MzhhMjU3NDZkZTE4YzAxOGI2MDNiM2U0N2IyOTM1NzIyNzIzNDMxNjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkzMDAxYmRlYTBmOTc0MTgyYzk0OTZkZTUwZjA1MTJlYTJkNjkyNTI4NDBkZGI3MTE0MjE0MzYzMGUzZjY3M2UifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_08b2dbc61ff6497ca02713ae589ae5f5",
+      "statement": "TRANSFORM_WH serves dbt and Airflow loads and BI_WH serves dashboards and analyst queries.",
+      "evidence": [
+        {
+          "resource": "repo://platform-infra/terraform/snowflake/warehouses.tf#L13-L13",
+          "version": "repo-lines-v1:sha256:05e744971af9ed3dd7546fa555b1dffed45bd594ab3a785521dc164644e8c9b0:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDVlNzQ0OTcxYWY5ZWQzZGQ3NTQ2ZmE1NTViMWRmZmVkNDViZDU5NGFiM2E3ODU1MjFkYzE2NDY0NGU4YzliMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDVlNzQ0OTcxYWY5ZWQzZGQ3NTQ2ZmE1NTViMWRmZmVkNDViZDU5NGFiM2E3ODU1MjFkYzE2NDY0NGU4YzliMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjA3OTRmNzEzYmI3NjJkYmFjZmMwMTVmZDFkYTlhYmQ5MDZiZTc0YjczMjQ5MjM4YmMzZDU5M2Q5ZjQ2ZjgwMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNWJjYjAyNjMwMjJiZjM0MWFhYzAyOTkxYTQ1OTA4MzRhM2E0ZWNlZDRhMDUwODc3YThkNDZjOWY0ZTBlZjdiYyJ9"
+        },
+        {
+          "resource": "repo://platform-infra/terraform/snowflake/warehouses.tf#L24-L24",
+          "version": "repo-lines-v1:sha256:4d5ce853c236bf351debd3ef56f67b3c57ea965fc1ef0f1241a3a2a9852f4ced:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGQ1Y2U4NTNjMjM2YmYzNTFkZWJkM2VmNTZmNjdiM2M1N2VhOTY1ZmMxZWYwZjEyNDFhM2EyYTk4NTJmNGNlZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGQ1Y2U4NTNjMjM2YmYzNTFkZWJkM2VmNTZmNjdiM2M1N2VhOTY1ZmMxZWYwZjEyNDFhM2EyYTk4NTJmNGNlZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmFjNzYzMjE5NjMxNjExOGEzYjVkNzE2YzhhZGY1YWEyYTY1YmMxMmJlMDA3N2U1N2VmMmZmYjkxYzFlM2Y5OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTczMjE2ZTQyMjE3OTI4M2Y1ZjQyODM2MDk4OWY3YTMyYzY4ZTRmZDNmZjY1YWU4MWFhNWM0OTkxY2U3YmNlZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_d54ca549c55e4aa286189f9115f0e1bd",
+      "statement": "Airflow DAGs run on dp-airflow-prod and Prefect flows run on the dp-k8s-pool work pool, with all new pipelines on Prefect.",
+      "evidence": [
+        {
+          "resource": "repo://orchestration/README.md#L5-L8",
+          "version": "repo-lines-v1:sha256:5e0acc9f724979b04e6c3b3e0b59fa4aacb5fbf9d73ce7666afd496ac0e40145:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjBlNDY5ODViMjQwYzQyNzcxNDBjNGQzYzc4YjA5M2RjZTRmZGJjODIwYjRlNzJjMWZjZDk3MDAzODdhMWY2YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTFhNGVmYWM0M2E3MDI3YTRlNjI2NTRhYTkyYTFlNjJiZDZjOTlkZTQ5NGY0ZmFiN2E1Y2NiYjM5ZjllODRlZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODMxMDRiZTlkOWU1Njc2YmJlN2YwMTA2ZjUwYTg5NGFjNjY4OWIyYWJhOTE0ZDkzYWQ3NzVjNjAwNjkzNmNlZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzgyNGQ4MmFlMDJiZDg4N2RiMDY0YWRhODcyZmJmMTliNTk4NTU2ZTM1NGYwMmVmMWEyMGIxZmEzZDdhMDQ5MSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_ac94c32b7a6c47ebb24476411a23ecf7",
+      "statement": "The orders path runs landing sensor, Databricks silver_orders_merge, then Snowflake GOLD.BUILD_DAILY_REVENUE in that order.",
+      "evidence": [
+        {
+          "resource": "repo://orchestration/airflow/dags/orders_ingest.py#L52-L52",
+          "version": "repo-lines-v1:sha256:38b1d484684eba39872e6da86712221d515179126033700e72612086d7abbfaf:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzhiMWQ0ODQ2ODRlYmEzOTg3MmU2ZGE4NjcxMjIyMWQ1MTUxNzkxMjYwMzM3MDBlNzI2MTIwODZkN2FiYmZhZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzhiMWQ0ODQ2ODRlYmEzOTg3MmU2ZGE4NjcxMjIyMWQ1MTUxNzkxMjYwMzM3MDBlNzI2MTIwODZkN2FiYmZhZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZGQ2MjI5YjRkMWY4OTVlMWE5ZThmNzkzMWY4NDBlYjFmOWM2MjY4YjM1NDc1MjdjMWQ1OWQzN2QwMzRmMGY3OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_1ac1f6c89281470d963d660770c15015",
+      "statement": "orders_ingest starts at 05:30 UTC daily with a 4 hour SLA and is tagged tier-1.",
+      "evidence": [
+        {
+          "resource": "repo://orchestration/airflow/dags/orders_ingest.py#L17-L17",
+          "version": "repo-lines-v1:sha256:75b6aa293b47750fb7741c881932c11aa82e1a83f47663515cfe90c2c7262d99:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzViNmFhMjkzYjQ3NzUwZmI3NzQxYzg4MTkzMmMxMWFhODJlMWE4M2Y0NzY2MzUxNWNmZTkwYzJjNzI2MmQ5OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzViNmFhMjkzYjQ3NzUwZmI3NzQxYzg4MTkzMmMxMWFhODJlMWE4M2Y0NzY2MzUxNWNmZTkwYzJjNzI2MmQ5OSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzk2ZTQ4MjI0ZGY4M2I1MTc1YjFkZGQzODVlY2VhN2MyMGZiYmI2YjRmYzUyYzMwN2EwMDAyNDhjYWJmN2Q4ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTA3NzRhMWExZTk0NGE4NzFlYzliMzdmYjYzZmQ4NjVkMDE1NmY2ODg3ODdhNzRmOWM2NmZiMmY0MGM3YThkNSJ9"
+        },
+        {
+          "resource": "repo://orchestration/airflow/dags/orders_ingest.py#L24-L28",
+          "version": "repo-lines-v1:sha256:85193d100277eac94e969b31fc013453c340d99ea7e81e5d2317880952cd0078:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZmMwZjVhY2IyMDlhYWJmNWI1NzliZmJjMTA5OTY3NGQ0ZWYxZWRjMTdmYWE2N2U1MWJmNmY3MTNlYzgwZGM1NiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWZiYzRiMDQ5MDU4N2JmMzZhMWFjNWY0YThjMmVlMjIyNDE3ZTczZWIzODRhOTY1YjJjZjVmNDkzZjBjMTBmNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMmFmMGNiNjE5MTI0OTVhNGNhODM1OGM0ODJiNjM3M2YwNTQ4M2RmOThkMGFmMTE4ODYzNTg5NDUyOGQwZGIyMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNGE5M2YxOWNlY2VjOTE3OWEyZWY5ZmZlOGFkYTA4MjRhOTA3MmEyNmY1ZDQzN2VmYWQ4OTAxZDE1Y2IzNjU3MyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_7b9c719af31747819d29e8c4f24c252c",
+      "statement": "lakehouse.gold.daily_revenue depends on lakehouse.silver.orders, which comes from landing.orders_raw.",
+      "evidence": [
+        {
+          "resource": "repo://catalog/unity_catalog_export.json#L19-L19",
+          "version": "repo-lines-v1:sha256:624ed2964353b55b9eb7ada1d618744f81e172d8eb9104d875e2a2949881e15b:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjI0ZWQyOTY0MzUzYjU1YjllYjdhZGExZDYxODc0NGY4MWUxNzJkOGViOTEwNGQ4NzVlMmEyOTQ5ODgxZTE1YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjI0ZWQyOTY0MzUzYjU1YjllYjdhZGExZDYxODc0NGY4MWUxNzJkOGViOTEwNGQ4NzVlMmEyOTQ5ODgxZTE1YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGJjNDdjOGUwNTdlNjc3ZWZmNWRlMGYwNzgzMTdlOGYzM2Y5OGRmNmI3ZGQ3ZGIwNDU3NDg3ZDM2NGQ0YmYxMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZGI1MTZmM2E4NzM4MDFkMjhhNzRlMzYwZWMxN2JhMmQxMWNiMDQxNzE4NjlmNDNkOWZmMGYzNmMxNmE3YmFkOCJ9"
+        },
+        {
+          "resource": "repo://catalog/unity_catalog_export.json#L34-L34",
+          "version": "repo-lines-v1:sha256:72d9f245be4fb8bf14dc94e3c1d55a3197c1258ebde9d566837310b32bba2596:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzJkOWYyNDViZTRmYjhiZjE0ZGM5NGUzYzFkNTVhMzE5N2MxMjU4ZWJkZTlkNTY2ODM3MzEwYjMyYmJhMjU5NiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzJkOWYyNDViZTRmYjhiZjE0ZGM5NGUzYzFkNTVhMzE5N2MxMjU4ZWJkZTlkNTY2ODM3MzEwYjMyYmJhMjU5NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZGRhODI3MTlmMWE2MDMzM2Q1YTIzM2Q0YjRmYWE5NWQ5NzNkNDFmNmU3Y2E3ZWE3ZjQyMjU1N2E3MzgzNzI3YSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGNhZTE2YjcxZDQxZDQ5MzVkM2Q2ZTA1Njc1MTExMTM4Y2E3NWQzYjBiM2ZmNmViMjE1NjEyOGE0ZjU3ZDkyZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_ca904340f9eb411d9b03cecf9d06fe6c",
+      "statement": "reference_codes is fed from vendor_sftp.code_sets by the reference-data-refresh Prefect flow and is tier 2.",
+      "evidence": [
+        {
+          "resource": "repo://catalog/unity_catalog_export.json#L42-L50",
+          "version": "repo-lines-v1:sha256:2792574a09d48e948f262df2e14f833de53af9e6dc93e90a188e8064290a95d7:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2JlNzgyZDZiNmFlZTk1ODAxNTY0ZDliN2M2Mzc3M2FmMjE1YTQxMTUwYjAyYTE0NTE5Yzk2YTk5OTBjMWVjYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWMzNDVjNjBmMWVlZWY3YmNmZTY2MWQyOGZlZmQ2OWI2NDkxNTFkYTRkZjI1NWE2ZjQyZDU4ZGE4ZjQxODJlOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjJkMTYxMzE0MWUyNWY0YjM1ZDY4ZDNjYmRiZTZkMjI3NjRiZjM4ZmRiYTg5YjQ5OTQ3ZDRjOWRiYzVlYjI2NiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTk4YmYxOTgzMmFlOTk5ZGE5YThiZDhhNGE1NmM3ZTA1MGQyMTFlMTA0ZDI3Y2EyZTU0ZjIwMDhkOTE1ODZiMSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_1a005ca0176a488ca9c73d64ac5ff2d1",
+      "statement": "Bigeye monitors lakehouse.silver.orders and lakehouse.gold.daily_revenue and notifies PagerDuty dp-platform-oncall.",
+      "evidence": [
+        {
+          "resource": "repo://platform-infra/bigeye/monitors.yml#L18-L18",
+          "version": "repo-lines-v1:sha256:f23c9d1b9f35fdf2420634aebde0711d44f74b67d05b0260351c09368edfac32:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjIzYzlkMWI5ZjM1ZmRmMjQyMDYzNGFlYmRlMDcxMWQ0NGY3NGI2N2QwNWIwMjYwMzUxYzA5MzY4ZWRmYWMzMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjIzYzlkMWI5ZjM1ZmRmMjQyMDYzNGFlYmRlMDcxMWQ0NGY3NGI2N2QwNWIwMjYwMzUxYzA5MzY4ZWRmYWMzMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmU4OGQ5NTgzMzRkNGY1YjkzNzEwNTUyNTg3ZjhmMzQyNWMzZGZmOGQ0M2NjZWMxMDllNjgyMTFjY2M1YWM0OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWQ3MWNjN2ZlZWM5NjRlODlhMTExY2YyYjBlNWM3ZDNkZjk5MjA4NjBlYTYzMWIyYWI4MmZmNjMxNWViNDFjNyJ9"
+        },
+        {
+          "resource": "repo://platform-infra/bigeye/monitors.yml#L22-L24",
+          "version": "repo-lines-v1:sha256:0c17bf3dc37be01b18d9a6743c6041aa4fd97a28e98283d9cf43766888402742:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjc5OTdiMDc5NzYwMzAxNWZlODNiMWMxOGQ2MjE0NTI5YjBiYmQ3MTY1NjNhZDdiMDc3ZmU4MmMzNDQwZTViNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjgwOWU0YTZkZGUzOWQ0YTkxYjNhNmIwOGM5MzNjOWIzOWIyZTJjY2NjM2FkYzEzNjMyYTM2M2M5ZjM5YzEzYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWQ3MWNjN2ZlZWM5NjRlODlhMTExY2YyYjBlNWM3ZDNkZjk5MjA4NjBlYTYzMWIyYWI4MmZmNjMxNWViNDFjNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://platform-infra/bigeye/monitors.yml#L5-L5",
+          "version": "repo-lines-v1:sha256:99df9de25075c69909c8cd14d320bdc2b3b2a9a95b01882bcb8a28c378b05a7d:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTlkZjlkZTI1MDc1YzY5OTA5YzhjZDE0ZDMyMGJkYzJiM2IyYTlhOTViMDE4ODJiY2I4YTI4YzM3OGIwNWE3ZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTlkZjlkZTI1MDc1YzY5OTA5YzhjZDE0ZDMyMGJkYzJiM2IyYTlhOTViMDE4ODJiY2I4YTI4YzM3OGIwNWE3ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTUxNjJhNjZhYTZlM2UzN2ViMjEwZDJmNmNiYzg5NWFhZTA5ZDU1MzA4MjAxNjdiYWQ2MzJkZTQ3N2Y1MzFkOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMmEzNDlmYjg2NTdlYTI5NThkMzA2ZGYxODBhODBmMGEyMDBiYTAwODc0MmM3ZDJkYThiOGE5NzU2NWM5ODEzOCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_da4e24d1d0d146f3a558adeea0d7b5a4",
+      "statement": "Connections databricks_default and snowflake_transform come from the secrets backend, shared by both orchestrators.",
+      "evidence": [
+        {
+          "resource": "repo://docs/decisions/adr-003-prefect-for-new-pipelines.md#L18-L18",
+          "version": "repo-lines-v1:sha256:4f8dbcbc654911bbb71b5d0ec4b62818faa60cf88a3e2bd0713d4497236bb0fe:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGY4ZGJjYmM2NTQ5MTFiYmI3MWI1ZDBlYzRiNjI4MThmYWE2MGNmODhhM2UyYmQwNzEzZDQ0OTcyMzZiYjBmZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGY4ZGJjYmM2NTQ5MTFiYmI3MWI1ZDBlYzRiNjI4MThmYWE2MGNmODhhM2UyYmQwNzEzZDQ0OTcyMzZiYjBmZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2EzOTk1MjljMGFmYmU4NzU2ZDYxMWZiZjRiNzc2ZGM5ODZiMzUzNjRjOWNlZDdiZWFmZjY1ZDNmZTcwOWM5ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://orchestration/README.md#L10-L11",
+          "version": "repo-lines-v1:sha256:1307ef934b7caa528aaef65e9115e259fe6d39845d6a1bca2b918ad0e7ceb4d5:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTJjZjViZmE3NWU0NWRmZjFmMmJjOTAzZTczYmE0NjMxYmYyNWYwMjVlYzFiZTcwNmE2YmE1NGM0YTg5MWE0YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjMyM2E1YmJmNDQxMTRkZjRmNmE3MTEyZDMzMzBhZjU2ZTFmM2U1NTA0YTQ4ZTlhOGEzYzc2ZGFjZThmNmY0NCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmU1N2IyYjRlNzIzMWJkMDhlMmE3YjMwOTljZmEyZDYwNjc0N2Y5MDBlYjE0N2ZiNzU0MGY3NjA5MjVlY2E5ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_6a0ff686df9340b0be490f064aaa172b",
+      "statement": "Databricks cluster policies fix the cost_center tag to data-platform.",
+      "evidence": [
+        {
+          "resource": "repo://platform-infra/terraform/databricks/workspace.tf#L25-L25",
+          "version": "repo-lines-v1:sha256:2f2008f574ccec4499982806244d91ecd45ae9c04f3dacdd41e3570f99c1abba:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmYyMDA4ZjU3NGNjZWM0NDk5OTgyODA2MjQ0ZDkxZWNkNDVhZTljMDRmM2RhY2RkNDFlMzU3MGY5OWMxYWJiYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmYyMDA4ZjU3NGNjZWM0NDk5OTgyODA2MjQ0ZDkxZWNkNDVhZTljMDRmM2RhY2RkNDFlMzU3MGY5OWMxYWJiYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzU3OTA3MjU4YTlkZmMzMmY5YjM4NDU0NjQ2MjM1NzFkODFmNzM5ODNmNWRlOGU4NmM2ZWFlYzBlZjZhOTVmNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZGNmOTVmMmEyZmY0NTQ0MmUxMzVkMDRmNjZmYjI1NGJhNzAxMGVlMzJiZThiM2FjYTAwMjczZTE3N2QwOWYyMyJ9"
+        },
+        {
+          "resource": "repo://platform-infra/terraform/databricks/workspace.tf#L34-L34",
+          "version": "repo-lines-v1:sha256:2f2008f574ccec4499982806244d91ecd45ae9c04f3dacdd41e3570f99c1abba:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmYyMDA4ZjU3NGNjZWM0NDk5OTgyODA2MjQ0ZDkxZWNkNDVhZTljMDRmM2RhY2RkNDFlMzU3MGY5OWMxYWJiYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmYyMDA4ZjU3NGNjZWM0NDk5OTgyODA2MjQ0ZDkxZWNkNDVhZTljMDRmM2RhY2RkNDFlMzU3MGY5OWMxYWJiYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDU1YmVmNDRiY2ViN2M3MTdhOTg3YWJlMWQ5YjI2ZGU1Y2U5MTkyOTQ3MTExZGQ5MzRlMmM3ZTI4NGRhOGI2NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZGNmOTVmMmEyZmY0NTQ0MmUxMzVkMDRmNjZmYjI1NGJhNzAxMGVlMzJiZThiM2FjYTAwMjczZTE3N2QwOWYyMyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_0e2843b5d8bb43ce94906e11e8063913",
+      "statement": "The TRANSFORM_MONTHLY resource monitor suspends at 100 percent of quota.",
+      "evidence": [
+        {
+          "resource": "repo://platform-infra/terraform/snowflake/warehouses.tf#L27-L33",
+          "version": "repo-lines-v1:sha256:5fd7dc9b1ea0d2da46dafdf6808a5824e95f5ad0f8bb7aadb3be896adfc26e47:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGFkMzJhMjZjMTU1ZGQzYmQwNzU4ODM0OTRjZjNjYjI5MjlmMWViNWRjMmYwYTJjMzA3ZTFiZGNhNjE2N2NhOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDEyY2EzNDVjY2Y3NWJmOWMwODA2YmNlNjk1YmU4ZGU4MDhiNzk5ODQyNTFhN2E1NGQyMDJjZjYxMDFkZDQ1MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzJkZmJiZjA0YmZjYTNlOWNlOGQwYzgyZTlkNjBiZTJhY2EyMDI5N2ZkOTFhZTAzOWI4ZTIxNmFlMzk0Nzc1ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_9b63c306eb734e14b28a3045bf34a60d",
+      "statement": "Infrastructure changes ship through pull requests with terraform plan on every PR.",
+      "evidence": [
+        {
+          "resource": "repo://platform-infra/README.md#L9-L10",
+          "version": "repo-lines-v1:sha256:72e941de0b8e472937ee9cb3238fd1f6c2598db338d428ff5c351f6d1f6a770a:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmY5Yjc5NzMxNmJhNzYyYzI3ZmFhNjRiM2FjNjRhZDkyMDI1NTkxZjU5NWFiOTUyZGQxODFlNWY0NTk0ODBjOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTg2ZjEyYmQxOGI4Yjk0MDBhNzEzYzg0ZDE1MGI4YTg2MzIyMTIyYjQ0OThiNmUxNGQ5NmE4Zjg5YjJlYzZlMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzM1YWI3ZDUxMWViMmY2ZjI5YzU4ZTQzNjYyNzZmNzAxMzI3ZGViYTczZmQyMWRmY2ZjNDgxMTdmOTI3OGFkNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWM4ZGNlOGRiODQ2YzQyMGJmOWQ5ZWFiNzg0MTAyMjE4YWUzYzRjNTJlODZmYmQ1ZmE4YTJlMmE3OTA5MzIyZiJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.9.0",
+    "at": "2026-11-06T00:45:25.143Z"
+  }
+}

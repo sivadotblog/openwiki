@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:3f4e93e72745f842d25fbe4ee2781f06bd93fd9a7df5ca9631db37aa13f6902b",
+  "claims": [
+    {
+      "id": "claim_7254c76e25fb48b096ec452b62c4bd4e",
+      "statement": "Symptoms are queued queries on TRANSFORM_WH or BI_WH, long Airflow Snowflake tasks, and dashboard latency alerts.",
+      "evidence": [
+        {
+          "resource": "repo://docs/runbooks/snowflake-warehouse-saturation.md#L3-L4",
+          "version": "repo-lines-v1:sha256:63fd32dadc3c2df319c06e743a4d4525c80b62cad3a3918bcecafd79e937e118:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMGQzYmRjMDUzZDMxZjI2ZDcyNDNhM2MxYzg0ZmVmZjdjYWM3ZTRhMDI1MmVkNGU4NzlmMDVhNmY3NDQ3MDA1MCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTkxYWJjOWMzN2ZkNzI1ODRjNjAwYzUwMzk0ZTc1YWNlZDg4ODM4ZmQzNTRkY2YwNTRhMjNjY2Y2YmVkMDY3ZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjIsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDYxNDI5NjNlZmM1Y2I3MmQ0M2NlMTJjYjg2NDIwMjI1ZDg1MjdmNTE2YjAxNzkzZGM1N2NjMmZiY2FhMDg4ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2QwY2IxMDkwMTkyNTc5ZWEzOWE4NTU3MjAwNzRhYWY3OTEzZDBmY2JiZDlhYjRlOGNhZDRlNjUyYTg2ZTQ0OCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_2bf2089b8df2456cb4777f042c716ab4",
+      "statement": "Diagnosis uses information_schema.warehouse_load_history over the last 2 hours for TRANSFORM_WH.",
+      "evidence": [
+        {
+          "resource": "repo://docs/runbooks/snowflake-warehouse-saturation.md#L6-L6",
+          "version": "repo-lines-v1:sha256:88fb2477e755fd34a62e446678073d1bc8257728f4e18ba8db07f52dfaf79df8:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODhmYjI0NzdlNzU1ZmQzNGE2MmU0NDY2NzgwNzNkMWJjODI1NzcyOGY0ZTE4YmE4ZGIwN2Y1MmRmYWY3OWRmOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODhmYjI0NzdlNzU1ZmQzNGE2MmU0NDY2NzgwNzNkMWJjODI1NzcyOGY0ZTE4YmE4ZGIwN2Y1MmRmYWY3OWRmOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDkyNDgxNzAzNWE1ZTFkMjk0ZjA5ZjhmY2RhM2E3NDIzMTY0MWEzZjNlNTMwMTFkNjIwYWU4MTJiNzNkOTllZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjE0MzQxYmMyMzNkODU5YWM4YmZiYjI1ZDI1ZWY5N2I5MDEyZDBjNzMxMmI1NGQ2ZDFiNTEwZmEzYmY0MjQ1NCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_96e76a5c41b34133ac902699e0fc20fa",
+      "statement": "If avg_queued_load is above 1 for 15 minutes, raise max_cluster_count by one and open a platform-infra PR to make it permanent or revert it.",
+      "evidence": [
+        {
+          "resource": "repo://docs/runbooks/snowflake-warehouse-saturation.md#L7-L9",
+          "version": "repo-lines-v1:sha256:614341bc233d859ac8bfbb25d25ef97b9012d0c7312b54d6d1b510fa3bf42454:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYWExMDQ5NDhmZjZkMzRjZWJkMWM2NjI5ZTY1Y2Y3OGUzNzg4MWUxODMxZjg1ODNmZjdiNDJlMzNhNWQ3ZTM0NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTgxNjhhOTlkZTU4MDllMWRjNGQ0NWQ2YThjYTgwNDE5Nzk4OGRkMjQyMTA2MGIyZGUzZjg5NDIxNzI5MjA4YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNWVmNTk3YjgzMzljYjIyMTdhY2Q2YjYxZGM5MTcxYTU3ODdiNDQ2ZjkyNzQ1MmZiYmI5ZGU1ZDRiOTkzZGIzZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGU5YjFjNzg4MmM4YzIyZDBmMTNlMjA5ZDkxMzA4NTk4MmEyMDYxNjExZTY5ZTAxNjUwNjJiZjY3YWMxOTdiYSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_792bc07089ec4a3f8b577c45b10d0687",
+      "statement": "Heavy queries are found in snowflake.account_usage.query_history.",
+      "evidence": [
+        {
+          "resource": "repo://docs/runbooks/snowflake-warehouse-saturation.md#L10-L10",
+          "version": "repo-lines-v1:sha256:674440f30d4dd13fdfe65369a58054130190e95a377cb9a1b2c60e3a50a680c8:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjc0NDQwZjMwZDRkZDEzZmRmZTY1MzY5YTU4MDU0MTMwMTkwZTk1YTM3N2NiOWExYjJjNjBlM2E1MGE2ODBjOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjc0NDQwZjMwZDRkZDEzZmRmZTY1MzY5YTU4MDU0MTMwMTkwZTk1YTM3N2NiOWExYjJjNjBlM2E1MGE2ODBjOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjE0MzQxYmMyMzNkODU5YWM4YmZiYjI1ZDI1ZWY5N2I5MDEyZDBjNzMxMmI1NGQ2ZDFiNTEwZmEzYmY0MjQ1NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYmM3MzkwMmM3NjRkNzI2YmQ3MmI0ZDBhMTcyMzQ3ZTk2NmM4ZDJmNTk3NWVkYTEwMjA4ZDI2M2IwMGZjN2ViNyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_c28cdfb807424012b85b787237c612a0",
+      "statement": "Above 90 percent of the monitor quota, tell #dp-oncall before resizing; at 100 percent TRANSFORM_WH is suspended.",
+      "evidence": [
+        {
+          "resource": "repo://docs/runbooks/snowflake-warehouse-saturation.md#L11-L12",
+          "version": "repo-lines-v1:sha256:a935421fb1f4d2fee43d8e0c2c2b9e64cd00e2148f93c3feb7377b5c858a2749:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYmZlZjk2NTAzODY0MGE4NjBhYWM3NmNiZGRhNGQxYzc1ZDRhOWQ4ODFmYmI1N2ZjN2ZlN2IyMzIxZjYwNjdkNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiM2VjMzdmMGY0MjJkYjc4ZjMzZGNiZDhlZjY0YmI4N2JhNGEwODZjYzI1Yzc2Y2NhM2ViYmNhN2Y3YjZjYzY2NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2E5NDIxYjU4NWUxNDUyOGI0YTI3YjY4MGQyY2JkMzYwNzIyZTVkMTBkOGE0ZjQ4YTZiODNlYjQxMjUzNWQwOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjIsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGQ2YTkwMmJkNjZiNTFmZjY1NGIxOTYxNDdkODQ0MTc4NDA0YzY2MmY2ZmM4ZTcyNzJjMDQ0YTE5ZTdiMjIyOSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_9e6faeb47df8404bac8af4905c5e5913",
+      "statement": "Resizing above LARGE needs approval from the platform lead.",
+      "evidence": [
+        {
+          "resource": "repo://docs/runbooks/snowflake-warehouse-saturation.md#L14-L14",
+          "version": "repo-lines-v1:sha256:43df19dc1b2fc0a8eb0795d9aa8b4884f1cb622204c29f585169bd40ef871718:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDNkZjE5ZGMxYjJmYzBhOGViMDc5NWQ5YWE4YjQ4ODRmMWNiNjIyMjA0YzI5ZjU4NTE2OWJkNDBlZjg3MTcxOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDNkZjE5ZGMxYjJmYzBhOGViMDc5NWQ5YWE4YjQ4ODRmMWNiNjIyMjA0YzI5ZjU4NTE2OWJkNDBlZjg3MTcxOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmM3MzkwMmM3NjRkNzI2YmQ3MmI0ZDBhMTcyMzQ3ZTk2NmM4ZDJmNTk3NWVkYTEwMjA4ZDI2M2IwMGZjN2ViNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b92ce77e7d5a459a9d82b31537a84044",
+      "statement": "TRANSFORM_WH max_cluster_count is 3 in Terraform.",
+      "evidence": [
+        {
+          "resource": "repo://platform-infra/terraform/snowflake/warehouses.tf#L10-L10",
+          "version": "repo-lines-v1:sha256:8ff9b03ce4ccc7d4361620c52e3b35ca4e61e11a50b624814a06c37aa458ad81:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGZmOWIwM2NlNGNjYzdkNDM2MTYyMGM1MmUzYjM1Y2E0ZTYxZTExYTUwYjYyNDgxNGEwNmMzN2FhNDU4YWQ4MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGZmOWIwM2NlNGNjYzdkNDM2MTYyMGM1MmUzYjM1Y2E0ZTYxZTExYTUwYjYyNDgxNGEwNmMzN2FhNDU4YWQ4MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzg5YWQ2MmU2NTc3YjEyM2FlY2EyM2U0YTAxZDcwNzU3ZDFhZjA5MmZlOWZmN2JkZTViZWYxMjdhMzI0NzJmMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjIwZTI3ZGFjMjQ1Mzc5MzQ3MzRmOWYwMDA2NjhhNzg3MTdhMTIwYjYzODZjNDI4NDFmMjRhYjBhMjYzNjI4NiJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.9.0",
+    "at": "2026-11-06T00:45:25.143Z"
+  }
+}

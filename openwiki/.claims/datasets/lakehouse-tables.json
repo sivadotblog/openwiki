@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:ce6bc232d33eb32fe57f5518f24a4d0c53a45bdf3d6473be8765aaadc8d923a8",
+  "claims": [
+    {
+      "id": "claim_b7df466a08ce49d0930c8345a064a0d8",
+      "statement": "lakehouse.silver.orders is owned by data-platform-eng, merged daily by silver_orders_merge from the landing zone.",
+      "evidence": [
+        {
+          "resource": "repo://catalog/unity_catalog_export.json#L5-L10",
+          "version": "repo-lines-v1:sha256:00c80b00fc4485ab4dfdba9d32cb1adcb6a3087f0a92df828e23a6f57a10872e:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjljYTg5MWJmZjdhYzFmN2NlYWFlNDBlZjA1MTA2NmJlOWVmZTQ3YjRlNDI4MWU4NmMzMTliZTJjNTVlYmNlNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFmMjdiZjdmMTk3MWJiYWJlNDQwNjQ0NTA3Y2E1MzYwYzUzZWMyMjg5OTkxZjg1ZWQ2MzA0ZTZhMzZhNTUwZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTRlNWQ2OGY1NmU2NjY1NzE0MzUwZWQ0YmI5NzAxYjEyNzk1YWY2Mjc2YjAzMjczMjhiNGQxYTZmNDVmYTEyMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2YwMmQyNmQ0YmQ5Y2FmOWJhNTU1MTAzYTViNzBlZGRmMGY0MjE3MGRmNmJjYzliODE3Nzg0ZDdmYTAwY2UwNCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_79e7a58cf0c642fe92d158f98d53c446",
+      "statement": "lakehouse.silver.orders columns are order_id (primary key), customer_key (surrogate, not PII), order_ts (UTC), amount (USD), and status.",
+      "evidence": [
+        {
+          "resource": "repo://catalog/unity_catalog_export.json#L11-L17",
+          "version": "repo-lines-v1:sha256:eb2c67b7bf84582dc5e6bfadd535c35baa3fa38216819168738c1010f8ae6839:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMGNlNWMwMDQ5NDM4OTI2ODFhNmM3NTQ4ODBiOTQ0NDc2NzcxZmMzYWNmM2Y5MDdhMDVlMTc1ZjJhZmMzYmUzNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODk0MTkxMTk3OTlhNTA0NWY5Zjk5OTFjZjFmOTEwYTQ4ZmNiY2U0NTgyZGUwMTc2YzgzMmE2NGFiYzdmZjM2YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjdlMWE5MWIyNjI4NjY0MTA5MDA4YmFkYTMyMTk0Y2IwM2FmMWViY2NiOWYzMjBmZjYzOTNlNTNhYzZlODZlNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTJhMmIwM2VkZTY0MmMzMDYxNjY4ZThjYTBmNzg4ZmVjN2VhOWVkYTVmYWU3MDgwYTMzOGMzNmRhMTkwOWYxZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_782aa161e1ab4adaa139b6c1b0b44782",
+      "statement": "lakehouse.silver.orders is tier 1 in the commerce domain with upstream landing.orders_raw and a 26 hour SLA.",
+      "evidence": [
+        {
+          "resource": "repo://catalog/unity_catalog_export.json#L18-L20",
+          "version": "repo-lines-v1:sha256:12a2b03ede642c3061668e8ca0f788fec7ea9eda5fae7080a338c36da1909f1d:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjc3M2VkYTNjYmI5NDFiYjEwN2QyYjk0MTdhNGY5NmE0ZGNlNWUxNzlkNmVmYjE1OTZlMjgyNTAyZmQwZGVkZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjk3ZGFiOGM0ZDE4OTgzNDY0MWVkMzA0OGI5ODA4NTIwYWI0ZDI4OWQ1ZGJlNWE2ZmVmNjBmODkzYWJkM2Q1MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjQzNThkZGI3NzRjYTM3MDNlMjA1OWVlMjU3OWY5OTI4NWQ3YmVhMDkwMTY5NmIyZjhkODlkMTg2OGEyMjgyZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzgxYTJiOGZlOWQyY2FkNzVkYjM0ZmEwZTdiNGE2MDhlZmJjODA2YjBiOGE3MDJlZDA3ZjFmNzZmZWVhNmU1YiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_018d564e21b94234afd01399457962c9",
+      "statement": "lakehouse.gold.daily_revenue is owned by analytics-eng and built in Snowflake by GOLD.BUILD_DAILY_REVENUE.",
+      "evidence": [
+        {
+          "resource": "repo://catalog/unity_catalog_export.json#L22-L27",
+          "version": "repo-lines-v1:sha256:739f256b038d43fa6ab26b082689469a7b8e2cf8ab42adc37ff1b0ebd80030dd:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjljYTg5MWJmZjdhYzFmN2NlYWFlNDBlZjA1MTA2NmJlOWVmZTQ3YjRlNDI4MWU4NmMzMTliZTJjNTVlYmNlNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWUzNjY5YjU5ZmIzMTFlOTkwMmQzNjg2NmRlMTNmMzRjMzYyOGUyNGYwMTZkOTcxMjQ3OWYxMDFhNGUzNGQ3NSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTUwZWE1YTQ3OWU4NTQzMGUzMDcxMjA2ZjA3MGY0Y2ZkYzk4NDg4YjVkMGNkYjQ4ZDdkZmI0MzVkMTJmOGU4OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWUzMDFiYWU4YTliYWRmMjQzMThkZDdhZjA2Yzc5YjdmZDAwN2ZmODIxMWU1MDBlMTVjYTRiYmUyNTEzZWI1MCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a4be01a1e4f444d8b705eb6e7da09ad1",
+      "statement": "lakehouse.gold.daily_revenue has columns revenue_date, status, revenue_usd.",
+      "evidence": [
+        {
+          "resource": "repo://catalog/unity_catalog_export.json#L28-L32",
+          "version": "repo-lines-v1:sha256:4642a2306cea29a1be6a3eafcd74286a18a87ae37872e0129bcc0a63a4748d04:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMGNlNWMwMDQ5NDM4OTI2ODFhNmM3NTQ4ODBiOTQ0NDc2NzcxZmMzYWNmM2Y5MDdhMDVlMTc1ZjJhZmMzYmUzNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODk0MTkxMTk3OTlhNTA0NWY5Zjk5OTFjZjFmOTEwYTQ4ZmNiY2U0NTgyZGUwMTc2YzgzMmE2NGFiYzdmZjM2YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTI1NzI1ZDVhYWYzYTA2ZGMxYWE2Zjc3YzNiZDlmNTIxZDA1NTAxZjdjYWEzYjBkNWVlNGZiM2FiNGU1YzE0MyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZmVhOTJlNTlhNGU5OThmZjRjMjgzYmJjODY0ZGE3ODQ4N2MwYzk2OTlhMjdlNDkxNGJhNjQxYTg0MjlmMWU2ZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_25e936edd92448c19fc6dd59b8006158",
+      "statement": "lakehouse.gold.daily_revenue is tier 1 with upstream lakehouse.silver.orders and a 30 hour SLA.",
+      "evidence": [
+        {
+          "resource": "repo://catalog/unity_catalog_export.json#L33-L35",
+          "version": "repo-lines-v1:sha256:fea92e59a4e998ff4c283bbc864da78487c0c9699a27e4914ba641a8429f1e6e:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjc3M2VkYTNjYmI5NDFiYjEwN2QyYjk0MTdhNGY5NmE0ZGNlNWUxNzlkNmVmYjE1OTZlMjgyNTAyZmQwZGVkZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTFiMTlhMjBjMWQ0MWRhZTI2YmY5NjliNTM2OTJlMDE1MDgxYTY1ZGVkMTAwMjcxNTExNGZkYTg1MzZkOTRkOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTIyNGQ2ZjA3YWY2MTc3MDA1YTViMDIzYjU2YzYwMzYwMzFmOTU3ZmZhZmFhYThhMjBjMDg1MmY3NjA5ZGU4YyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzgxYTJiOGZlOWQyY2FkNzVkYjM0ZmEwZTdiNGE2MDhlZmJjODA2YjBiOGE3MDJlZDA3ZjFmNzZmZWVhNmU1YiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_4f2c5e6ea1584304a557d2a998003812",
+      "statement": "lakehouse.silver.reference_codes is owned by data-platform-eng and refreshed weekly by the reference-data-refresh flow.",
+      "evidence": [
+        {
+          "resource": "repo://catalog/unity_catalog_export.json#L37-L42",
+          "version": "repo-lines-v1:sha256:0ab6d70b785535533057aeb64bfd938678a91049d05ac44dd18fc789f0dfdbcb:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjljYTg5MWJmZjdhYzFmN2NlYWFlNDBlZjA1MTA2NmJlOWVmZTQ3YjRlNDI4MWU4NmMzMTliZTJjNTVlYmNlNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2JlNzgyZDZiNmFlZTk1ODAxNTY0ZDliN2M2Mzc3M2FmMjE1YTQxMTUwYjAyYTE0NTE5Yzk2YTk5OTBjMWVjYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWEyMWE2ODkxNTQ0MjhjYTBjYjcwZjI1NzM2ZDgxMGJkMTAzMTE0ODA0NGE3ZjQyNDQ3ZGQzM2Y3ODVkYmYwZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTc5MmU0MGJhMzlkYTBjYjk2MTgzM2IzYzAyNzBlMWNlNTdhNTJlMTRjMzZiZDQ0ZGE4ZmUzMGEzZWQ3ZDNkZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_4178e58affe2401eb06d088c76686e0c",
+      "statement": "lakehouse.silver.reference_codes is tier 2 in the reference domain with upstream vendor_sftp.code_sets and a 192 hour SLA.",
+      "evidence": [
+        {
+          "resource": "repo://catalog/unity_catalog_export.json#L49-L51",
+          "version": "repo-lines-v1:sha256:3f8f0614bce39a6157f4e27e21605366265ced02e219add771c1cf3bab6bf3bd:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDBjMGZkMjNkY2RlNDE1ZTc5N2JjMzY4M2JjOTI0YjUyYWM3YWY3MDJjOWIzOWQwNTNlMTU5MzRhOTY4YmNmZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmFkZjJlOGQwY2I5MzRjZjdhNGVhMDhiMTJjY2U4OGFkNzUwMGIyOWIxYzhmOGY3MDRhOWQyOGI2NTBhNWY5YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjllZTA0ZDJmNDAzNDY2YWJjMmM5ZjgyMWEwZTAxMGRkZmI1OGExOWFmYmI2ZjJiZTI2ZDJhZDY2ZjdkMWJjZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGI0OGIzMTdlMTlkZDc0N2M3OGQ5MjViMzYxN2NmOGUxMmI3MWYxODY3NTJkY2I1ZmNmYTkzN2UzZjM0YWU0ZiJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.9.0",
+    "at": "2026-11-06T00:45:25.143Z"
+  }
+}
