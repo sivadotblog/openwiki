@@ -55,7 +55,7 @@ STATUS_WORDS = {
     "public preview": "public-preview",
 }
 
-RANK = {"private-preview": 0, "experimental": 1, "beta": 1, "public-preview": 2, "ga": 3}
+RANK = {"private-preview": 0, "experimental": 1, "beta": 1, "public-preview": 2, "mixed": 2, "ga": 3}
 
 # Title rules. Order matters: the first match wins. Each rule is a fixed regex.
 TITLE_RULES = [
@@ -240,7 +240,7 @@ def feed_entries(match: re.Pattern) -> list[Entry]:
 
 @dataclass
 class Banner:
-    status: str  # ga when no banner found
+    status: str  # banner status, or "none" when the page has no preview banner
     scope: str  # page | section
     preview_name: str | None
     page_title: str
@@ -260,6 +260,9 @@ def page_banner(key: str) -> Banner | None:
         for i, t in enumerate(span):
             if t[0] == "a" and "release-types" in t[1]:
                 word = t[2].lower()
+                lead = " ".join(u[1] for u in span[max(0, i - 3):i] if u[0] == "t").lower()
+                if word in STATUS_WORDS and re.search(r"\bsome\b|\bcertain\b|\bparts?\b", lead):
+                    return "mixed", None  # e.g. "Some operations remain in Beta"
                 if word in STATUS_WORDS:
                     # The preview toggle name is the first bold text after the link, if any.
                     name = None
@@ -281,7 +284,7 @@ def page_banner(key: str) -> Banner | None:
             # Docs renamed the section. Anchors are hints, the page is the identity.
             if page:
                 return Banner(page[0], "page", page[1], title, anchor_missing=True)
-            return Banner("ga", "page", None, title, anchor_missing=True)
+            return Banner("none", "page", None, title, anchor_missing=True)
         level = tokens[start][1]
         end = next((i for i in range(start + 1, len(tokens))
                     if tokens[i][0] == "h" and tokens[i][1] <= level), len(tokens))
@@ -290,7 +293,7 @@ def page_banner(key: str) -> Banner | None:
             return Banner(sect[0], "section", sect[1], title)
     if page:
         return Banner(page[0], "page", page[1], title)
-    return Banner("ga", "page" if not anchor else "section", None, title)
+    return Banner("none", "page" if not anchor else "section", None, title)
 
 
 # ---------------------------------------------------------------- build
@@ -335,7 +338,14 @@ def build(product: str) -> tuple[dict, list[dict]]:
             f["status"] = "unresolved"
             review.append({"reason": "docs page or section not found", "feature": k})
             continue
-        f.update(title=b.page_title, status=b.status, status_source=f"docs-{b.scope}-banner")
+        # No banner only proves "not marked as preview". Call it GA only when a GA note exists,
+        # because retired or merged features also lose their banner.
+        has_ga_note = any(h["status"] == "ga" for h in f["history"])
+        if b.status == "none":
+            status, source = ("ga", f"no-{b.scope}-banner+ga-release-note") if has_ga_note else ("unmarked", f"no-{b.scope}-banner")
+        else:
+            status, source = b.status, f"docs-{b.scope}-banner"
+        f.update(title=b.page_title, status=status, status_source=source)
         if b.preview_name:
             f["preview_toggle"] = b.preview_name
         f["latest_release_note_status"] = latest
@@ -343,12 +353,18 @@ def build(product: str) -> tuple[dict, list[dict]]:
             f["anchor_missing"] = True
             review.append({"reason": "section anchor no longer on page; used page banner",
                            "feature": k, "action": "info"})
-        if latest != b.status:
-            ahead = RANK[b.status] > RANK[latest]
+        if status == "unmarked":
+            review.append({"reason": "no preview banner and no GA release note: GA, retired, or a context link",
+                           "feature": k, "release_note": latest, "release_note_title": f["history"][-1]["title"],
+                           "action": "needs-review"})
+        elif status == "mixed":
+            review.append({"reason": "page says only some parts are in preview",
+                           "feature": k, "release_note": latest, "action": "needs-review"})
+        elif latest != status:
+            ahead = RANK[status] > RANK[latest]
             review.append({
-                "reason": ("docs ahead of release notes (promoted without a matching note in sources)"
-                           if ahead else "docs behind release notes"),
-                "feature": k, "docs": b.status, "release_note": latest,
+                "reason": "docs ahead of release notes" if ahead else "docs behind release notes",
+                "feature": k, "docs": status, "release_note": latest,
                 "release_note_title": f["history"][-1]["title"],
                 "action": "info" if ahead else "needs-review",
             })

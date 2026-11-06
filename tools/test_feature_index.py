@@ -67,13 +67,16 @@ def test_banners(monkeypatch=None):
     })
     b = fi.page_banner("oltp/projects/observability-ai-insights")
     assert (b.status, b.scope, b.preview_name, b.page_title) == ("beta", "page", "Lakebase Insights", "Detect issues with Insights")
-    assert fi.page_banner("oltp/projects/snapshots#create-snapshot").status == "ga"
+    assert fi.page_banner("oltp/projects/snapshots#create-snapshot").status == "none"
     gone = fi.page_banner("oltp/projects/snapshots#gone")
-    assert (gone.status, gone.anchor_missing) == ("ga", True)
+    assert (gone.status, gone.anchor_missing) == ("none", True)
     ins = fi.page_banner("oltp/projects/observability-ai-insights#missing")
     assert (ins.status, ins.anchor_missing) == ("beta", True)
     assert fi.page_banner("x/thing#new").status == "public-preview"
-    assert fi.page_banner("x/thing#old").status == "ga"
+    assert fi.page_banner("x/thing#old").status == "none"
+    fi._cache[fi.BASE + "x/api"] = ('<main><h1>API guide</h1><p>Note</p><p>Some operations remain in '
+                                    '<a href="../release-types">Beta</a>.</p><h2 id="a">A</h2></main>')
+    assert fi.page_banner("x/api").status == "mixed"
 
 
 if __name__ == "__main__":
