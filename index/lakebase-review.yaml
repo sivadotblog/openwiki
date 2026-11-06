@@ -1,71 +1,44 @@
 # Items the rules could not settle. A human resolves these.
 review:
-- reason: release note status differs from docs banner
-  feature: agents/agent-memory/managed-memory
-  docs: ga
-  release_note: beta
-  release_note_title: Managed agent memory and sessions are in Beta
-- reason: release note status differs from docs banner
-  feature: agents/agent-memory/managed-sessions
-  docs: ga
-  release_note: beta
-  release_note_title: Managed agent memory and sessions are in Beta
-- reason: release note status differs from docs banner
-  feature: machine-learning/feature-store/online-feature-store
-  docs: ga
-  release_note: public-preview
-  release_note_title: Databricks Online Feature Stores (Public Preview)
-- reason: release note status differs from docs banner
+- reason: docs ahead of release notes (promoted without a matching note in sources)
   feature: oltp/instances
   docs: ga
   release_note: public-preview
   release_note_title: Lakebase, a managed PostgreSQL OLTP database, is in Public Preview
-- reason: release note status differs from docs banner
-  feature: oltp/projects
-  docs: ga
-  release_note: beta
-  release_note_title: Managed agent memory and sessions are in Beta
-- reason: release note status differs from docs banner
-  feature: oltp/projects/lakebase-cdf
-  docs: ga
-  release_note: public-preview
-  release_note_title: Lakebase Change Data Feed (CDF) is now in Public Preview
-- reason: release note status differs from docs banner
+  action: info
+- reason: docs behind release notes
+  feature: oltp/projects/api-usage
+  docs: beta
+  release_note: ga
+  release_note_title: Lakebase Postgres APIs are now generally available
+  action: needs-review
+- reason: docs ahead of release notes (promoted without a matching note in sources)
   feature: oltp/projects/lakebase-genie
   docs: ga
   release_note: beta
   release_note_title: Diagnose and fix Lakebase issues with Genie, using telemetry in Unity Catalog (Beta)
-- reason: release note status differs from docs banner
+  action: info
+- reason: docs ahead of release notes (promoted without a matching note in sources)
   feature: oltp/projects/manage-projects
   docs: ga
   release_note: public-preview
   release_note_title: Budget policy support for Lakebase database instances and synced tables (Public Preview)
-- reason: release note status differs from docs banner
+  action: info
+- reason: docs ahead of release notes (promoted without a matching note in sources)
   feature: oltp/projects/monitor
   docs: ga
   release_note: beta
   release_note_title: Diagnose and fix Lakebase issues with Genie, using telemetry in Unity Catalog (Beta)
-- reason: release note status differs from docs banner
-  feature: oltp/projects/observability-ai-insights
-  docs: ga
-  release_note: beta
-  release_note_title: Lakebase Insights moves to per-project settings, with on-demand runs (Beta)
-- reason: release note status differs from docs banner
-  feature: oltp/projects/observability-telemetry-reference
-  docs: ga
-  release_note: beta
-  release_note_title: Lakebase observability telemetry in system tables (Beta)
-- reason: docs page or section not found
+  action: info
+- reason: section anchor no longer on page; used page banner
   feature: oltp/projects/snapshots#create-snapshot
-- reason: docs page or section not found
+  action: info
+- reason: section anchor no longer on page; used page banner
   feature: oltp/projects/snapshots#snapshot-schedules
-- reason: release note status differs from docs banner
+  action: info
+- reason: docs ahead of release notes (promoted without a matching note in sources)
   feature: oltp/projects/sync-tables
   docs: ga
   release_note: beta
   release_note_title: ai_search can search Lakebase synced tables (Beta)
-- reason: release note status differs from docs banner
-  feature: sql/language-manual/functions/ai_search
-  docs: ga
-  release_note: beta
-  release_note_title: ai_search can search Lakebase synced tables (Beta)
+  action: info

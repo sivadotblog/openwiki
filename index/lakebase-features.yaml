@@ -12,36 +12,6 @@ features:
       status: public-preview
       title: Budget policy support for Lakebase database instances and synced tables (Public Preview)
       source: https://learn.microsoft.com/azure/databricks/release-notes/product/2025/august#budget-policy-support-for-lakebase-database-instances-and-synced-tables-public-preview
-  agents/agent-memory/managed-memory:
-    title: Agent memory
-    status: ga
-    status_source: docs-page-banner
-    latest_release_note_status: beta
-    history:
-    - date: '2026-09-16'
-      status: beta
-      title: Managed agent memory and sessions are in Beta
-      source: https://learn.microsoft.com/azure/databricks/release-notes/product/2026/september#managed-agent-memory-and-sessions-are-in-beta
-  agents/agent-memory/managed-sessions:
-    title: Agent sessions
-    status: ga
-    status_source: docs-page-banner
-    latest_release_note_status: beta
-    history:
-    - date: '2026-09-16'
-      status: beta
-      title: Managed agent memory and sessions are in Beta
-      source: https://learn.microsoft.com/azure/databricks/release-notes/product/2026/september#managed-agent-memory-and-sessions-are-in-beta
-  machine-learning/feature-store/online-feature-store:
-    title: Databricks Online Feature Stores
-    status: ga
-    status_source: docs-page-banner
-    latest_release_note_status: public-preview
-    history:
-    - date: '2025-09-05'
-      status: public-preview
-      title: Databricks Online Feature Stores (Public Preview)
-      source: https://learn.microsoft.com/azure/databricks/release-notes/product/2025/september#databricks-online-feature-stores-public-preview
   oltp/instances:
     title: Lakebase Provisioned
     status: ga
@@ -52,19 +22,9 @@ features:
       status: public-preview
       title: Lakebase, a managed PostgreSQL OLTP database, is in Public Preview
       source: https://learn.microsoft.com/azure/databricks/release-notes/product/2025/june#lakebase-a-managed-postgresql-oltp-database-is-in-public-preview
-  oltp/projects:
-    title: Lakebase Postgres
-    status: ga
-    status_source: docs-page-banner
-    latest_release_note_status: beta
-    history:
-    - date: '2026-09-16'
-      status: beta
-      title: Managed agent memory and sessions are in Beta
-      source: https://learn.microsoft.com/azure/databricks/release-notes/product/2026/september#managed-agent-memory-and-sessions-are-in-beta
   oltp/projects/api-usage:
     title: Lakebase API guide
-    status: ga
+    status: beta
     status_source: docs-page-banner
     latest_release_note_status: ga
     history:
@@ -98,7 +58,7 @@ features:
       source: https://learn.microsoft.com/en-us/azure/databricks/release-notes/lakebase/#lakebase-is-now-generally-available-on-azure
   oltp/projects/lakebase-cdf:
     title: Lakebase Change Data Feed
-    status: ga
+    status: public-preview
     status_source: docs-page-banner
     latest_release_note_status: public-preview
     history:
@@ -184,8 +144,9 @@ features:
       source: https://learn.microsoft.com/en-us/azure/databricks/release-notes/lakebase/#diagnose-and-fix-lakebase-issues-with-genie-using-telemetry-in-unity-catalog-beta
   oltp/projects/observability-ai-insights:
     title: Detect issues with Insights
-    status: ga
+    status: beta
     status_source: docs-page-banner
+    preview_toggle: Lakebase Insights
     latest_release_note_status: beta
     history:
     - date: '2026-07-24'
@@ -198,8 +159,9 @@ features:
       source: https://learn.microsoft.com/en-us/azure/databricks/release-notes/lakebase/#lakebase-insights-moves-to-per-project-settings-with-on-demand-runs-beta
   oltp/projects/observability-telemetry-reference:
     title: Lakebase telemetry in system tables
-    status: ga
+    status: beta
     status_source: docs-page-banner
+    preview_toggle: Lakebase Observability in System Tables
     latest_release_note_status: beta
     history:
     - date: '2026-09-23'
@@ -227,7 +189,11 @@ features:
       title: Lakebase snapshots and backup schedule APIs are generally available
       source: https://learn.microsoft.com/en-us/azure/databricks/release-notes/lakebase/#lakebase-snapshots-and-backup-schedule-apis-are-generally-available
   oltp/projects/snapshots#create-snapshot:
-    status: unresolved
+    title: Snapshots
+    status: ga
+    status_source: docs-page-banner
+    anchor_missing: true
+    latest_release_note_status: ga
     history:
     - date: '2026-09-15'
       status: beta
@@ -239,7 +205,11 @@ features:
       source: https://learn.microsoft.com/en-us/azure/databricks/release-notes/lakebase/#lakebase-snapshots-and-backup-schedule-apis-are-generally-available
       via: oltp/projects/snapshots
   oltp/projects/snapshots#snapshot-schedules:
-    status: unresolved
+    title: Snapshots
+    status: ga
+    status_source: docs-page-banner
+    anchor_missing: true
+    latest_release_note_status: ga
     history:
     - date: '2026-09-22'
       status: beta
@@ -264,27 +234,9 @@ features:
       status: beta
       title: ai_search can search Lakebase synced tables (Beta)
       source: https://learn.microsoft.com/azure/databricks/release-notes/product/2026/september#ai_search-can-search-lakebase-synced-tables-beta
-  security/network/front-end/service-direct-privatelink:
-    title: Configure inbound Private Link for performance-intensive services
-    status: ga
-    status_source: docs-page-banner
-    latest_release_note_status: ga
-    history:
-    - date: '2026-02-18'
-      status: beta
-      title: Inbound Private Link for performance-intensive services (Beta)
-      source: https://learn.microsoft.com/azure/databricks/release-notes/product/2026/february#inbound-private-link-for-performance-intensive-services-beta
-    - date: '2026-03-09'
-      status: public-preview
-      title: Inbound Private Link for performance-intensive services (Public Preview)
-      source: https://learn.microsoft.com/azure/databricks/release-notes/product/2026/march#inbound-private-link-for-performance-intensive-services-public-preview
-    - date: '2026-09-28'
-      status: ga
-      title: Inbound Private Link for performance-intensive services is now generally available
-      source: https://learn.microsoft.com/azure/databricks/release-notes/product/2026/september#inbound-private-link-for-performance-intensive-services-is-now-generally-available
   sql/language-manual/functions/ai_search:
     title: ai_search function
-    status: ga
+    status: beta
     status_source: docs-page-banner
     latest_release_note_status: beta
     history:
