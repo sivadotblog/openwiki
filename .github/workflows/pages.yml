@@ -1,10 +1,9 @@
-name: Publish wiki to GitHub Pages
+name: Publish OpenWiki to GitHub Pages
 
-# Uses OpenWiki's native static visualizer (interactive graph + Markdown reader).
 on:
   push:
     branches: [main]
-    paths: ["wiki/**", ".github/workflows/pages.yml"]
+    paths: ["openwiki/**", ".github/workflows/pages.yml"]
   workflow_dispatch:
 
 permissions:
@@ -25,7 +24,7 @@ jobs:
         with:
           node-version: "22"
       - name: Export OpenWiki visualizer
-        run: npx --yes openwiki@0.9.0 visualize wiki --export _site
+        run: npx --yes openwiki@0.9.0 visualize openwiki --export _site
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

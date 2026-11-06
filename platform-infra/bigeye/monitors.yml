@@ -1,0 +1,24 @@
+# Bigeye data quality monitors managed as code. Sample source for the OpenWiki demo.
+type: BIGCONFIG_FILE
+table_deployments:
+  - deployments:
+      - fq_table_name: lakehouse.silver.orders
+        table_metrics:
+          - metric_type: { predefined_metric: FRESHNESS }
+            threshold: { type: CONSTANT, upper_bound: 26 }   # hours
+          - metric_type: { predefined_metric: COUNT_ROWS }
+            threshold: { type: AUTOTHRESHOLD, sensitivity: MEDIUM }
+        columns:
+          - column_name: order_id
+            metrics:
+              - metric_type: { predefined_metric: PERCENT_NULL }
+                threshold: { type: CONSTANT, upper_bound: 0 }
+              - metric_type: { predefined_metric: COUNT_DUPLICATES }
+                threshold: { type: CONSTANT, upper_bound: 0 }
+      - fq_table_name: lakehouse.gold.daily_revenue
+        table_metrics:
+          - metric_type: { predefined_metric: FRESHNESS }
+            threshold: { type: CONSTANT, upper_bound: 30 }
+notification_channels:
+  - slack: "#dp-data-quality-alerts"
+  - pagerduty: dp-platform-oncall
