@@ -72,6 +72,17 @@ dpwiki status        # shows platforms/snowflake.md has 1 stale claim
 dpwiki update        # agent revises that page only
 ```
 
+## Browse it
+
+The wiki is published to GitHub Pages at https://sivadotblog.github.io/openwiki/ using
+OpenWiki's native visualizer: an interactive page graph next to a Markdown reader.
+`.github/workflows/pages.yml` runs `npx openwiki visualize wiki --export _site` on every
+push that changes `wiki/`. To view it locally:
+
+```sh
+npx openwiki visualize wiki --port 4400
+```
+
 ## Use it from Claude Code
 
 The MCP server is read-only and does not call a model.
@@ -120,7 +131,7 @@ named `wiki: update`. It needs the `ANTHROPIC_API_KEY` secret and the repository
 | Code mode for one repo, personal mode for connectors | One team mode that grounds claims in repos and catalog exports |
 | Claims only for repository evidence | Claims for files and catalog tables |
 | Coding agent integrations drive generation over MCP | MCP is read-only retrieval; generation runs from the CLI or CI |
-| Interactive graph visualizer | Not included. GitHub renders the Markdown and Mermaid. |
+| Interactive graph visualizer | Reused as is: `openwiki visualize` publishes this wiki to GitHub Pages |
 
 ## Status
 

@@ -228,8 +228,8 @@ Snowflake gold table.
 
 ```mermaid
 flowchart LR
-  L["wait_for_landing\\n/landing/orders/ds/_SUCCESS"] --> S["silver_orders\\nDatabricks job silver_orders_merge"]
-  S --> G["gold_daily_revenue\\nCALL GOLD.BUILD_DAILY_REVENUE on TRANSFORM_WH"]
+  L["wait_for_landing<br/>/landing/orders/ds/_SUCCESS"] --> S["silver_orders<br/>Databricks job silver_orders_merge"]
+  S --> G["gold_daily_revenue<br/>CALL GOLD.BUILD_DAILY_REVENUE on TRANSFORM_WH"]
 ```
 
 | Setting | Value |

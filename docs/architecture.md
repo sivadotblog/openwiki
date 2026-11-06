@@ -5,21 +5,21 @@
 ```mermaid
 flowchart LR
   subgraph Sources
-    R1["platform-infra repo\nTerraform, Bigeye"]
-    R2["orchestration repo\nAirflow, Prefect"]
-    D["team docs\nrunbooks, ADRs"]
-    C["catalog export\nUnity Catalog JSON"]
+    R1["platform-infra repo<br/>Terraform, Bigeye"]
+    R2["orchestration repo<br/>Airflow, Prefect"]
+    D["team docs<br/>runbooks, ADRs"]
+    C["catalog export<br/>Unity Catalog JSON"]
   end
   subgraph dpwiki
-    REG["Connector registry\nscan / read / version"]
-    PF["Preflight\nsource diff + claim check"]
-    PL["Planner\n(model)"]
-    PJ["Page jobs\n(model + bounded tools)"]
-    FN["Finalizer\nprovenance, indexes, links"]
+    REG["Connector registry<br/>scan / read / version"]
+    PF["Preflight<br/>source diff + claim check"]
+    PL["Planner<br/>(model)"]
+    PJ["Page jobs<br/>(model + bounded tools)"]
+    FN["Finalizer<br/>provenance, indexes, links"]
   end
-  W["wiki/\nMarkdown + .claims/"]
+  W["wiki/<br/>Markdown + .claims/"]
   PR["Pull request"]
-  MCP["MCP server\nsearch / read"]
+  MCP["MCP server<br/>search / read"]
   CC["Claude Code and other agents"]
 
   R1 & R2 & D & C --> REG --> PF --> PL --> PJ --> FN --> W --> PR

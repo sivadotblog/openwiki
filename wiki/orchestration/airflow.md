@@ -14,10 +14,10 @@ sources:
 - resource: src://orchestration/airflow/dags/orders_ingest.py
 generated:
   by: dpwiki/0.1.0
-  at: '2026-11-06T00:07:53+00:00'
+  at: '2026-11-06T00:20:00+00:00'
 verified:
   by: dpwiki/0.1.0
-  at: '2026-11-06T00:07:53+00:00'
+  at: '2026-11-06T00:20:00+00:00'
 ---
 
 # Airflow
@@ -36,8 +36,8 @@ Snowflake gold table.
 
 ```mermaid
 flowchart LR
-  L["wait_for_landing\n/landing/orders/ds/_SUCCESS"] --> S["silver_orders\nDatabricks job silver_orders_merge"]
-  S --> G["gold_daily_revenue\nCALL GOLD.BUILD_DAILY_REVENUE on TRANSFORM_WH"]
+  L["wait_for_landing<br/>/landing/orders/ds/_SUCCESS"] --> S["silver_orders<br/>Databricks job silver_orders_merge"]
+  S --> G["gold_daily_revenue<br/>CALL GOLD.BUILD_DAILY_REVENUE on TRANSFORM_WH"]
 ```
 
 | Setting | Value |

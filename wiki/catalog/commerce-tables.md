@@ -15,10 +15,10 @@ sources:
 - resource: catalog://lakehouse-catalog/lakehouse.silver.reference_codes
 generated:
   by: dpwiki/0.1.0
-  at: '2026-11-06T00:07:53+00:00'
+  at: '2026-11-06T00:20:00+00:00'
 verified:
   by: dpwiki/0.1.0
-  at: '2026-11-06T00:07:53+00:00'
+  at: '2026-11-06T00:20:00+00:00'
 ---
 
 # Commerce and reference tables

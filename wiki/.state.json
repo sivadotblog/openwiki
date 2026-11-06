@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-06T00:07:53+00:00",
+  "last_run": "2026-11-06T00:20:01+00:00",
   "producer": "dpwiki/0.1.0",
   "sources": {
     "catalog://lakehouse-catalog/lakehouse.gold.daily_revenue": "table-v1:sha256:2f00ef075f1bb6b3310f5d117c5d8f5a1cd98cd9ecb1b3674e33d30077487173",
